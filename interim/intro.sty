@@ -1,0 +1,31 @@
+% "intro.sty"
+
+% K. J. Turner	University of Stirling	08/05/92
+
+% This LaTeX style file defines the "intro" macro to generate
+% unnumbered (introductory) sections of a document. It might be used
+% for a Foreword, Preface, Acknowledgements, etc. For example:
+%
+%   \intro{Foreword}
+
+\def\@makeintrohead#1{
+  \markboth{#1}{#1}
+  \vspace*{30pt}
+  {
+    \parindent 0pt \raggedright
+    \huge \bf #1 \par
+    \nobreak \vskip 30pt
+  }
+}
+
+\def\@intro#1{
+ \typeout{#1.}
+ \addcontentsline{toc}{chapter}{#1}
+ \@makeintrohead{#1}
+ \@afterheading
+}
+
+\def\intro#1{
+  \cleardoublepage \thispagestyle{plain}
+  \global\@topnum\z@ \@afterindentfalse \@intro{#1}
+}

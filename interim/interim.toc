@@ -1,0 +1,16 @@
+\contentsline {chapter}{\numberline {1}Introduction}{1}
+\contentsline {section}{\numberline {1.1}Background and Context}{1}
+\contentsline {section}{\numberline {1.2}Scope and Objectives}{2}
+\contentsline {chapter}{\numberline {2}State-of-The-Art}{3}
+\contentsline {section}{\numberline {2.1}Technology}{3}
+\contentsline {subsection}{\numberline {2.1.1}Blockchain}{3}
+\contentsline {subsection}{\numberline {2.1.2}Docker}{4}
+\contentsline {section}{\numberline {2.2}Permissioned Blockchain}{5}
+\contentsline {subsection}{\numberline {2.2.1}Hyperledger Fabric}{6}
+\contentsline {section}{\numberline {2.3}Successful projects made with Hyperledger Fabric}{6}
+\contentsline {subsection}{\numberline {2.3.1}Altoros}{6}
+\contentsline {subsection}{\numberline {2.3.2}Verify.Me}{7}
+\contentsline {subsection}{\numberline {2.3.3}TradeLens}{8}
+\contentsline {chapter}{\numberline {3}Problem description and analysis}{9}
+\contentsline {section}{\numberline {3.1}How Hyperledger Fabric works}{9}
+\contentsline {section}{\numberline {3.2}Self-sovereign identity}{10}

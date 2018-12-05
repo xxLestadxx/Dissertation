@@ -1,0 +1,36 @@
+% graphic.sty	K. J. Turner	03/09/06
+
+% Include centred graphics in LaTeX. If a suffix is not given, files are
+% checked in the order EPS, EMF, WMF (for DVI output) or PDF (for PDF output).
+
+% EPS files do not need a size (e.g. width/height or bounding box), EMF and WMF
+% do, PDF does if not created with eps2pdf.
+
+% Examples of usage:
+%
+%   \graphic{draw1}				use draw1.eps (by default)
+%
+%   \graphic[width=2cm,height=2cm]{draw1.emf}	use draw1.emf with width/height
+%
+%   \graphic[scale=0.2]{draw1.eps}		use draw1.eps with scale
+%
+%   \graphic[bb=0 0 200 2002]{draw1.pdf}	use draw1.pdf with bounding box
+
+\ProvidesPackage{graphic}[2006/03/09 WMF/EPS/PDF Graphics]
+
+\RequirePackage{ifpdf}
+
+\ifpdf
+  \usepackage[pdftex]{graphicx}
+  \DeclareGraphicsExtensions{.pdf}
+\else
+  \usepackage{graphicx}
+  \DeclareGraphicsExtensions{.eps,.emf,.wmf}
+  \DeclareGraphicsRule{.emf}{bmp}{}{}
+  \DeclareGraphicsRule{.wmf}{bmp}{}{}
+\fi
+
+\def\graphic{\@ifnextchar[{\@graphic}{\@graphic[]}}
+
+\def\@graphic[#1]#2{\hspace*{\fill}\includegraphics[#1]{#2}\hspace*{\fill}}
+
