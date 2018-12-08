@@ -11,6 +11,8 @@
 \contentsline {subsection}{\numberline {2.3.1}Altoros}{6}
 \contentsline {subsection}{\numberline {2.3.2}Verify.Me}{7}
 \contentsline {subsection}{\numberline {2.3.3}TradeLens}{8}
+\contentsline {subsection}{\numberline {2.3.4}BitNation}{8}
+\contentsline {subsection}{\numberline {2.3.5}E-Residency}{8}
 \contentsline {chapter}{\numberline {3}Problem description and analysis}{9}
 \contentsline {section}{\numberline {3.1}How Hyperledger Fabric works}{9}
 \contentsline {section}{\numberline {3.2}Self-sovereign identity}{10}
