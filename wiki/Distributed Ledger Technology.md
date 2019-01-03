@@ -1,8 +1,8 @@
 ## Distributed Ledger Technology is: 
 
-This page will be elaborated and finished later, for now here are some reliable (in my opinion) websites
+### Consensus 
 
-
+In general, a consensus algorithm is a process in computer science used to achieve agreement on a single data value among distributed processes or systems. Consensus algorithms are designed to achieve reliability in a network involving multiple unreliable nodes. Solving that issue – known as the consensus problem – is important in distributed computing and multi-agent systems.
 
 #### Cross-border payments
 
@@ -35,7 +35,18 @@ DLT has the ability to maintain tamper-resistent records. DLT arrangements could
 
 #### Technical issues 
  - __Scalability__ - ledgers that add transactional histories on top of one another, such as blockchains, may challendge storage capacity over time. Also having effect over the transaction speed.  
- - __Interoperability__ - Through times different DLT systems have to cooperate, and there may be the case where legacy systems have to cooperate with newly made ones. Also diverse set of particiants interacting in the respective systems. So for the user to be able to use smoothly the relecant system will be of critical importance. 
+ - __Interoperability__ - Through times different DLT systems have to cooperate, and there may be the case where legacy systems have to cooperate with newly made ones. Also diverse set of particiants interacting in the respective systems. So for the user to be able to use smoothly the relevant system will be of critical importance. 
+ - __Standards development__ - needed for providing base layer of interoperability across different DLT arrangements and legacy systems. Consistency. 
+ - __Cryptographic key and acccess data management__ - If the keys are lost, it may result in permanent lost of the data for the user as well.
+
+ - __Information Management__ - user access and actions control. Control over erros or known fraudulent account take-overs. 
+
+ #### Financial design issues 
+ - __Financial instruments__ 
+ - __Monetary instruments__   
+ - __Financial intermediaries__  
+
+ ### Challanges to adoption and implementation: risk management
 
 ##### Glossary: 
 
