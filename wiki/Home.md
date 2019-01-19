@@ -14,6 +14,8 @@ A distributed ledger is a database that is consensually shared and synchronized 
 
 #### What is Hyperledger Composer ? 
 
+https://hyperledger.github.io/composer/v0.19/reference/commands 
+
 #### What is Ethereum ? 
 
 #### What is Bitcoin ? 

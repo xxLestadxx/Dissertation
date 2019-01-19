@@ -12,7 +12,7 @@
 Control access to namespace, asset or property of an asset by a participant type or participant instance
 
 #### Conditional rule 
-Boolean JavaScript expression ecaluated at runtime to __ALLOW__ or __DENY__ access to the resource by the participant. 
+Boolean JavaScript expression evaluated at runtime to __ALLOW__ or __DENY__ access to the resource by the participant. 
 
 #### Rule 
 - consists of __Resource__, __Participant__, __Operation__, __Transaction__ and __Condition__
@@ -31,6 +31,7 @@ Boolean JavaScript expression ecaluated at runtime to __ALLOW__ or __DENY__ acce
     - business logic cannot be by-passed 
     - data stays consistent 
     - Prevents unauthorized changes
+    - Any time a transaction is invoked a record is created in the _Historian Record_ 
 - __Condition__ - a valid JS conditional expression may be specified and evaluated at runtime.
     - Symbolic access to the execution context 
         - Resource = r 
