@@ -75,6 +75,12 @@ _The visual vocabulary expressed in facts is as follows: Transaction T4 in block
 
 ### World State DB options
 
+- currently can be either LevelDB (simple db) or CouchDB (complex db)
+- __LevelDB__ is the default and is particularly appropriate when ledger states are simple key-value pairs. A LevelDB database is closely co-located with a network node - it is embedded within the same operating system process. 
+- CouchDB is a particularly appropriate choice when ledger states are structured as JSON documents because CouchDB supports the rich queries and update of richer data types often found in business transactions. Implementation-wise, CouchDB runs in a separate operating system process, but there is still a 1:1 relation beween a network node and a CouchDB instance. All of this is invisible to chaincode. More about how CouchDB works [here](https://hyperledger-fabric.readthedocs.io/en/release-1.3/couchdb_as_state_database.html
+).
+
 #### References : 
 1. https://hyperledger-fabric.readthedocs.io/en/release-1.3/ledger/ledger.html
 1. https://hyperledger-fabric.readthedocs.io/en/release-1.3/txflow.html
+1. https://hyperledger-fabric.readthedocs.io/en/release-1.3/couchdb_as_state_database.html
