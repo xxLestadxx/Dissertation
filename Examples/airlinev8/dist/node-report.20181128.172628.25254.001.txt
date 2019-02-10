@@ -1,0 +1,212 @@
+================================================================================
+==== Node Report ===============================================================
+
+Event: exception, location: "OnUncaughtException"
+Filename: node-report.20181128.172628.25254.001.txt
+Dump event time:  2018/11/28 17:26:28
+Module load time: 2018/11/28 17:26:28
+Process ID: 25254
+Command line: node /home/lestad/.nvm/versions/node/v8.11.3/bin/composer archive list -a 
+
+Node.js version: v8.11.3
+(http_parser: 2.8.0, v8: 6.2.414.54, uv: 1.19.1, zlib: 1.2.11, ares: 1.10.1-DEV,
+ modules: 57, nghttp2: 1.32.0, napi: 3, openssl: 1.0.2o, icu: 60.1, unicode: 10.0,
+ cldr: 32.0, tz: 2017c)
+
+node-report version: 2.2.1 (built against Node.js v8.11.3, glibc 2.23, 64 bit)
+
+OS version: Linux 4.15.0-39-generic #42~16.04.1-Ubuntu SMP Wed Oct 24 17:09:54 UTC 2018
+(glibc: 2.23)
+
+Machine: lestad-Inspiron-3542 x86_64
+
+================================================================================
+==== JavaScript Stack Trace ====================================================
+
+Object.parseArgs [as _parseArgs] (/home/lestad/.nvm/versions/node/v8.11.3/lib/node_modules/composer-cli/node_modules/yargs/yargs.js:1:1)
+Object.get [as argv] (/home/lestad/.nvm/versions/node/v8.11.3/lib/node_modules/composer-cli/node_modules/yargs/yargs.js:1:1)
+Object.<anonymous> (/home/lestad/.nvm/versions/node/v8.11.3/lib/node_modules/composer-cli/cli.js:1:1)
+Module._compile (module.js:1:1)
+Object.Module._extensions..js (module.js:1:1)
+Module.load (module.js:1:1)
+tryModuleLoad (module.js:1:1)
+Function.Module._load (module.js:1:1)
+Function.Module.runMain (module.js:1:1)
+startup (bootstrap_node.js:1:1)
+bootstrap_node.js:1:1
+
+================================================================================
+==== Native Stack Trace ========================================================
+
+ 0: [pc=0x7ff76df2b4fb] nodereport::OnUncaughtException(v8::Isolate*) [/home/lestad/.nvm/versions/node/v8.11.3/lib/node_modules/composer-cli/node_modules/node-report/api.node]
+ 1: [pc=0xe78d02] v8::internal::Isolate::Throw(v8::internal::Object*, v8::internal::MessageLocation*) [node]
+ 2: [pc=0xff144d] v8::internal::Runtime_Throw(int, v8::internal::Object**, v8::internal::Isolate*) [node]
+ 3: [pc=0x269db9a042fd] 
+
+================================================================================
+==== JavaScript Heap and Garbage Collector =====================================
+
+Heap space name: new_space
+    Memory size: 16,777,216 bytes, committed memory: 16,710,200 bytes
+    Capacity: 8,249,344 bytes, used: 7,493,360 bytes, available: 755,984 bytes
+Heap space name: old_space
+    Memory size: 17,625,088 bytes, committed memory: 16,183,640 bytes
+    Capacity: 15,944,192 bytes, used: 15,886,872 bytes, available: 57,320 bytes
+Heap space name: code_space
+    Memory size: 2,097,152 bytes, committed memory: 1,394,208 bytes
+    Capacity: 1,328,672 bytes, used: 1,328,672 bytes, available: 0 bytes
+Heap space name: map_space
+    Memory size: 1,593,344 bytes, committed memory: 1,251,064 bytes
+    Capacity: 1,535,312 bytes, used: 1,216,248 bytes, available: 319,064 bytes
+Heap space name: large_object_space
+    Memory size: 2,928,640 bytes, committed memory: 2,928,640 bytes
+    Capacity: 1,461,306,528 bytes, used: 2,872,992 bytes, available: 1,458,433,536 bytes
+
+Total heap memory size: 41,021,440 bytes
+Total heap committed memory: 38,467,752 bytes
+Total used heap memory: 28,798,144 bytes
+Total available heap memory: 1,459,565,904 bytes
+
+Heap memory limit: 1,501,560,832
+
+================================================================================
+==== Resource Usage ============================================================
+
+Process total resource usage:
+  User mode CPU: 0.603080 secs
+  Kernel mode CPU: 0.060308 secs
+  Average CPU Consumption : 66.3388%
+  Maximum resident set size: 60,833,792 bytes
+  Page faults: 149 (I/O required) 16385 (no I/O required)
+  Filesystem activity: 2232 reads 32 writes
+
+Event loop thread resource usage:
+  User mode CPU: 0.553433 secs
+  Kernel mode CPU: 0.051025 secs
+  Average CPU Consumption : 60.4458%
+  Filesystem activity: 2232 reads 32 writes
+
+================================================================================
+==== Node.js libuv Handle Summary ==============================================
+
+(Flags: R=Ref, A=Active)
+Flags  Type      Address             Details
+[-A]   async     0x00000000027a0130  
+[-A]   check     0x00007ffcb4c3ced0  
+[RA]   idle      0x00007ffcb4c3cf48  
+[--]   prepare   0x00007ffcb4c3cfc0  
+[--]   check     0x00007ffcb4c3d038  
+[-A]   async     0x0000000002166740  
+[R-]   timer     0x0000000002810a50  repeat: 0, timeout expired: 111964081 ms ago
+[R-]   tty       0x0000000002828468  width: 74, height: 39, file descriptor: 9, write queue size: 0, writable
+[-A]   signal    0x0000000002810be0  signum: 28 (SIGWINCH)
+[R-]   tty       0x0000000002810618  width: 74, height: 39, file descriptor: 11, write queue size: 0, writable
+[-A]   async     0x00007ff76e134cc0  
+
+================================================================================
+==== System Information ========================================================
+
+Environment variables
+  XDG_VTNR=7
+  LC_PAPER=bg_BG.UTF-8
+  LC_ADDRESS=bg_BG.UTF-8
+  XDG_SESSION_ID=c2
+  XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/lestad
+  LC_MONETARY=bg_BG.UTF-8
+  CLUTTER_IM_MODULE=xim
+  SESSION=ubuntu
+  NVM_CD_FLAGS=
+  GPG_AGENT_INFO=/home/lestad/.gnupg/S.gpg-agent:0:1
+  TERM=xterm-256color
+  VTE_VERSION=4205
+  XDG_MENU_PREFIX=gnome-
+  SHELL=/bin/bash
+  QT_LINUX_ACCESSIBILITY_ALWAYS_ON=1
+  WINDOWID=69206026
+  LC_NUMERIC=bg_BG.UTF-8
+  UPSTART_SESSION=unix:abstract=/com/ubuntu/upstart-session/1000/17389
+  GNOME_KEYRING_CONTROL=
+  GTK_MODULES=gail:atk-bridge:unity-gtk-module
+  NVM_DIR=/home/lestad/.nvm
+  USER=lestad
+  LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+  QT_ACCESSIBILITY=1
+  LC_TELEPHONE=bg_BG.UTF-8
+  XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+  XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+  SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+  SESSION_MANAGER=local/lestad-Inspiron-3542:@/tmp/.ICE-unix/17884,unix/lestad-Inspiron-3542:/tmp/.ICE-unix/17884
+  DEFAULTS_PATH=/usr/share/gconf/ubuntu.default.path
+  FABRIC_VERSION=hlfv1
+  XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg
+  DESKTOP_SESSION=ubuntu
+  PATH=/home/lestad/anaconda3/bin:/home/lestad/.nvm/versions/node/v8.11.3/bin:/home/lestad/.yarn/bin:/home/lestad/.config/yarn/global/node_modules/.bin:/home/lestad/fabric-tools/bin:/home/lestad/fabric-tools/bin:/home/lestad/.yarn/bin:/home/lestad/.config/yarn/global/node_modules/.bin:/bin:/sbin:/home/lestad/.local/share/umake/bin:/home/lestad/tutorialspoint/sample/bin:/usr/local/go/bin:/home/lestad/bin:/home/lestad/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/lestad/.go/bin:/home/lestad/.go/bin
+  QT_IM_MODULE=ibus
+  QT_QPA_PLATFORMTHEME=appmenu-qt5
+  HLF_INSTALL_PATH=/home/lestad/fabric-tools
+  LC_IDENTIFICATION=bg_BG.UTF-8
+  XDG_SESSION_TYPE=x11
+  PWD=/home/lestad/Projects/HLF-Course-Domain-Model/airlinev8/dist
+  JOB=dbus
+  XMODIFIERS=@im=ibus
+  GNOME_KEYRING_PID=
+  LANG=en_US.UTF-8
+  GDM_LANG=en_US
+  MANDATORY_PATH=/usr/share/gconf/ubuntu.mandatory.path
+  LC_MEASUREMENT=bg_BG.UTF-8
+  COMPIZ_CONFIG_PROFILE=ubuntu
+  IM_CONFIG_PHASE=1
+  GDMSESSION=ubuntu
+  SESSIONTYPE=gnome-session
+  GTK2_MODULES=overlay-scrollbar
+  SHLVL=1
+  HOME=/home/lestad
+  XDG_SEAT=seat0
+  LANGUAGE=en_US
+  GOROOT=/usr/local/go
+  GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+  XDG_SESSION_DESKTOP=ubuntu
+  LOGNAME=lestad
+  XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop:/var/lib/snapd/desktop
+  QT4_IM_MODULE=xim
+  DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-9xdLoXDLi6
+  NVM_BIN=/home/lestad/.nvm/versions/node/v8.11.3/bin
+  LESSOPEN=| /bin/lesspipe %s
+  GOPATH=/home/lestad/.go
+  INSTANCE=
+  XDG_RUNTIME_DIR=/run/user/1000
+  DISPLAY=:0
+  XDG_CURRENT_DESKTOP=Unity
+  GTK_IM_MODULE=ibus
+  LESSCLOSE=/bin/lesspipe %s %s
+  LC_TIME=bg_BG.UTF-8
+  LC_NAME=bg_BG.UTF-8
+  XAUTHORITY=/home/lestad/.Xauthority
+  _=/home/lestad/.nvm/versions/node/v8.11.3/bin/composer
+  OLDPWD=/home/lestad/Projects/HLF-Course-Domain-Model/airlinev8
+  SUPPRESS_NO_CONFIG_WARNING=y
+
+Resource limits                        soft limit      hard limit
+  core file size (blocks)                       0       unlimited
+  data seg size (kbytes)                unlimited       unlimited
+  file size (blocks)                    unlimited       unlimited
+  max locked memory (bytes)                 65536           65536
+  max memory size (kbytes)              unlimited       unlimited
+  open files                              1048576         1048576
+  stack size (bytes)                      8388608       unlimited
+  cpu time (seconds)                    unlimited       unlimited
+  max user processes                        31259           31259
+  virtual memory (kbytes)               unlimited       unlimited
+
+Loaded libraries
+  /lib/x86_64-linux-gnu/libdl.so.2
+  /lib/x86_64-linux-gnu/librt.so.1
+  /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+  /lib/x86_64-linux-gnu/libm.so.6
+  /lib/x86_64-linux-gnu/libgcc_s.so.1
+  /lib/x86_64-linux-gnu/libpthread.so.0
+  /lib/x86_64-linux-gnu/libc.so.6
+  /lib64/ld-linux-x86-64.so.2
+  /home/lestad/.nvm/versions/node/v8.11.3/lib/node_modules/composer-cli/node_modules/node-report/api.node
+
+================================================================================

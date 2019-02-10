@@ -6,6 +6,7 @@
 - everything is permitted if the file is non-existent
 - rules are associated with recource
 - Has an action - Allow or Deny.
+- __Participants__ execute __transactions__ and there transactions can emit __events__. Applications can __subscribe__ to those events. The events are defined as part of the model.  
 ### Rule controls permission to CRUD on Resource(s)
 
 #### Simple Rule 

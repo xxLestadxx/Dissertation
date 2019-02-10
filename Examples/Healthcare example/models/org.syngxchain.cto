@@ -1,0 +1,14 @@
+namespace org.syngxchain
+asset Recipe identified by contractId {
+  o String contractId
+  --> Patient patient 
+  --> Physician physician 
+  --> Appointment appointment
+  --> PreDoctorCheckup PatientCheckupList
+  o String prescriptionDate
+  o Double tablets
+  o Double dosage
+  o ProductType type 
+  o String notes
+  o Double consultingCharges
+}

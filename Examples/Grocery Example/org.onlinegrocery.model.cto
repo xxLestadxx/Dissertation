@@ -1,0 +1,29 @@
+namespace org.onlinegrocery.model
+
+asset grocery identified by groceryId {
+  o String groceryId
+  o String groceryname
+  o Double price
+  --> buyer Buyer optional
+  --> seller Seller 
+}
+
+participant buyer identified by buyerId{
+ o String buyerId
+ o String firstName
+ o String lastName
+ o Integer balances
+}
+
+participant seller identified by sellerId { 
+o String sellerId
+o String firstName
+o String lastName
+o Integer balances
+}
+
+transaction BuyGroc{
+ --> buyer reqbuyer
+ --> grocery reqGrocery
+}
+

@@ -1,0 +1,40 @@
+This is a healthcare example taken from "Enterprise Blockchain development with hyperledger Fabric and Composer" by Ernesto Lee and Sudip Ghosh
+
+### AIM
+
+Implementing a healthcare-based business network 
+
+#### Desinging the Model : 
+
+In this scenario we need 6 types participants, 7 types of assest, 9 types transaction. For naming convention each element (Participant, Asset, Transaction) of business network will have a different name in the model file. However, to understand what naming convention has been maintained in code, here we have used bracket (Pharmacy has been maintaned as Vendor in source code). 
+
+#### Participants : 
+- Patient (Patient) 
+- Doctor (Physician) 
+- Nurse (Nurse) 
+- Clerk (Clerk) 
+- Pharmacy (Vendor) 
+- Insurance Provider (HealthInsuranceCompany) 
+
+#### Assets :
+- Appointment (Appointment)
+- Insurance Ledger (Insuranceledger)
+- Pre-doctor Checkup (PreDoctorCheckup)
+- Rx (Recipe) 
+- Rx Bill ( RecipeBill ) 
+- Consulting Bill to Insurance (InsuranceBilltoDoct)
+- Order (Order)   
+
+#### Transactions: 
+- Request Insurance (requestInsurance) 
+- Approve Insurance Request (approveInsurance) 
+- Confirm Appointment (confirmAppointment) 
+- Create Rx (createRecipe) 
+- Pay Rx Bill ( payRecipeBill) 
+- Medicine Order (ShipmentOrder) 
+- Medicine Shipped ( ShipmentShipped ) 
+- Medicine Received ( ShipmentReceived) 
+- Pay Consultation Bill as Health Insurance Company (PayConsultationBillFHI) 
+
+
+
