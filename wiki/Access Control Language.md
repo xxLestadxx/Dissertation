@@ -62,3 +62,7 @@ rule NameOfTheRule {
 
     } 
 ``` 
+
+#### References: 
+1. Udemy course 
+2. https://hyperledger.github.io/composer/v0.19/reference/acl_language

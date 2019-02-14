@@ -1,21 +1,20 @@
 namespace org.kingdom.person
 
 enum personStatus {
-  o Free 
-  o Slave
+  o Free
+  o Slave 
 }
 
 participant Citizen identified by citizenID {
     o String citizenID
     o String name
-
+	--> identificationCard owned
 }
 
 asset identificationCard identified by cardID {
   o String cardID
   o Integer socialScore
   o personStatus status
-  --> Citizen owner
 }
 
 transaction socialScoreIncrease{
@@ -23,7 +22,9 @@ transaction socialScoreIncrease{
 }
 
 transaction statusChange {
-  --> identificationCard IDCard
+  --> identificationCard free
+  --> identificationCard slave
 }
+
 
 
