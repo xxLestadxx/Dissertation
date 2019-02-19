@@ -1,4 +1,5 @@
 namespace org.syngxchain
+
 asset Recipe identified by contractId {
   o String contractId
   --> Patient patient 
@@ -12,3 +13,288 @@ asset Recipe identified by contractId {
   o String notes
   o Double consultingCharges
 }
+
+asset Appointment identified by appointmentID {
+  o String appointmentID
+  o String RequestTime
+  o String notes
+  o appointmentWithInsurance InsuranceFlag
+  --> Insuranceledger InsuranceID optional
+  --> Patient patient
+  --> Physician confirmedBy optional
+  o AppointmentStatus status 
+  o DiseaseClassification diseaseType
+}
+
+enum appointmentWithInsurance {
+  o Yes
+  o No
+}
+
+asset PreDoctorCheckup identified by checkupID {
+  o String checkupID
+  --> Appointment appointment
+  o Double BodyTemperature
+  o String BloodPressure
+  o String pulse
+  o Double Height
+  o Double Weight
+  o String Notes
+}
+
+asset RecipeBill identified by RecipeBillID {
+  o String RecipeBillID
+  --> Patient patient
+  --> Recipe recipe 
+  --> Physician reciever
+  o RecipeBillStatus status 
+}
+
+asset Order identified by orderID {
+  o String orderID
+  o String unitCount
+  o OrderStatus status
+  o Double price optional
+  --> Patient patient
+  --> Recipe recipe
+  --> Vendor Supplier
+}
+
+enum RecipeBillStatus{
+  o Pending
+  o Paid
+}
+
+enum DiseaseClassification {
+  o Eye
+  o General
+  o Gyno
+  o Teeth
+  o Skin
+  o Digestive
+}
+
+enum AppointmentStatus {
+  o Pending
+  o Confirmed
+}
+
+enum ProductType {
+  o IBOPROUFEN
+  o ASPIRIN 
+  o XANAX
+  o VIAGRA
+}
+
+enum OrderStatus { 
+  o Placed 
+  o In_Transit
+  o Delivered
+}
+
+concept Address {
+  o String city
+  o String country
+  o String street 
+  o String zip
+}
+
+enum Gender {
+  o Male
+  o Female
+  o Others
+}
+
+participant Patient identified by PMI {
+  o String PMI
+  o String FirstName
+  o String LastName
+  o String email
+  o String phone
+  o Gender gender 
+  o Integer Age
+  o Double accountBalance
+  o Address address 
+  o Double DueBalance optional
+}
+
+participant Nurse identified by NSI {
+  o String NSI
+  o String FirstName
+  o String LastName
+  o String email
+  o String phone
+  o Gender gender 
+  o Integer Age
+  o Address address
+  o String HighestDegree
+}
+
+participant HealthInsuranceCompany identified by HSI {
+  o String HSI
+  o String CompanyName
+  o String License
+  o String email
+  o String phone
+  o Integer ratings 
+  o Address address
+  o Double accountBalance
+  o Double DueBalance optional
+}
+
+enum subsplan{
+  o Silver 
+  o Gold 
+  o Diamond
+  o Platinum
+}
+
+enum insStatus{
+  o Pending
+  o Approved
+}
+
+asset InsuranceBilltoDoct identified by BillID {
+  o String BillID
+  --> HealthInsuranceCompany payer
+  --> Insuranceledger reffInsuranceLedger
+  --> Recipe rx 
+  --> Physician reciever
+  o RecipeBillStatus status
+}
+
+asset Insuranceledger identified by insuranceID {
+  o String insuranceID
+  --> HealthInsuranceCompany owner
+  --> Patient subscriber 
+  o subsplan subscriptionPlan
+  o Double Coverage
+  o String Validity
+  o Double SubscriptionCharge
+  o insStatus status  
+}
+
+transaction requestInsurance {
+  --> HealthInsuranceCompany owner
+  --> Patient subscriber
+  o subsplan subscriptionPlan
+}
+
+transaction PayConsultationBillFHI {
+  --> InsuranceBilltoDoct bill
+  --> HealthInsuranceCompany payer
+}
+
+transaction approveInsurance {
+  --> HealthInsuranceCompany owner
+  --> Insuranceledger insuranceDetails
+}
+
+participant Clerk identified by CSI {
+  o String CSI
+  o String FirstName
+  o String LastName
+  o String email
+  o String phone
+  o Gender gender 
+  o Integer Age
+  o Address address
+  o String HighestDegree
+}
+
+participant Physician identified by NPI {
+  o String NPI
+  o String LicenseNo
+  o String HighestDegree
+  o DiseaseClassification Specialization
+  o String FirstName
+  o String LastName
+  o String email
+  o String phone
+  o Gender gender 
+  o Integer Age
+  o Double accountBalance
+  o Address address
+}
+
+participant Vendor identified by vendorID {
+  o String vendorID
+  o String companyName
+  o String regdno
+  o String email
+  o String phone
+  o Double accountBalance
+  o Integer rating
+  o Address address
+}
+
+abstract transaction ShipmentTransaction {
+  --> Order order
+}
+
+transaction ShipmentOrder {
+  o String orderID
+  o String unitCount
+  --> Patient creator
+  --> Recipe recipe
+  --> Vendor Supplier
+}
+
+transaction ShipmentShipped extends ShipmentTransaction {
+  --> Vendor Shiper
+  o Double amount
+}
+
+transaction ShipmentReceived extends ShipmentTransaction {
+  --> Patient receiver
+}
+
+transaction confirmAppointment{
+  --> Physician doctor
+  --> Appointment appoint
+}
+
+transaction payRecipeBill {
+  --> Patient payer
+  --> RecipeBill bill
+}
+
+transaction createRecipe {
+  o String contractID
+  --> Patient patient
+  --> Physician physician
+  --> Appointment appointment
+  --> PreDoctorCheckup PatientCheckupList
+  o String prescriptionDate
+  o Double tablets
+  o Double dosage
+  o ProductType type
+  o String notes 
+  o Double consultingCharges
+}
+
+event AppointmentConfirmation {
+  --> Appointment appointment 
+  --> Patient patient
+  --> Physician doctor
+}
+
+event RecipeCreation {
+  --> Recipe recipe
+  --> Physician doctor
+}
+
+event RecipeBillCreation {
+  --> RecipeBill bill
+}
+
+event PayingBill {
+  --> RecipeBill bill
+  --> Patient payer
+  --> Physician receiver
+}
+
+event order {
+  --> Order order
+}
+
