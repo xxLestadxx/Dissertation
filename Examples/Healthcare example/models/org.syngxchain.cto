@@ -19,7 +19,7 @@ asset Appointment identified by appointmentID {
   o String RequestTime
   o String notes
   o appointmentWithInsurance InsuranceFlag
-  --> Insuranceledger InsuranceID optional
+  --> Insuranceledger insuranceID optional
   --> Patient patient
   --> Physician confirmedBy optional
   o AppointmentStatus status 
