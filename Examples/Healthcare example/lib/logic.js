@@ -366,7 +366,7 @@
            var insurPatientID = insurancedet.subscriber.PMI;
            var reqPatient = confirmation.appoint.patient.PMI;
            var insuranceStatus = insurancedet.status;
-           if(insurPatientID === reqPatient && insuranceStatus === 'Approved'){
+           if((insurPatientID === reqPatient) && (insuranceStatus === 'Approved')){
                if(diseasegroup === doctorSpecialist){
                    if(requestAppoint.status === 'Pending'){
                        return getAssetRegistry('org.syngxchain.Appointment')
@@ -426,4 +426,112 @@
  * @transaction
  */
 
+ function orderReceivd(order){
+     var receiver = order.receiver;
+     var order = order.order;
+     if(receiver.PMI === order.creator.PMI){
+         if(receiver.accountBalance > order.price){
+             return getAssetRegistry('org.syngxchain.Order')
+             .then(function(orderUpdate){
+                 order.status = 'Delivered';
+                 orderUpdate.update(order);
+                 var creatingOrderEvent = getFactory();
+                 var notificationB = creatingOrderEvent.newEvent('org.syngxchain','order');
+                 notificationB.order = order;
+                 emit(notificationB);
+             })
+             .then(function(){
+                 return getParticipantRegistry('org.syngxchain.Patient');
+             })
+             .then(function(updatePatient){
+                 receiver.accountBalance = receiver.accountBalance - order.price;
+                 return updatePatient.update(receiver);
+             })
+             .then(function(){
+                 return getParticipantRegistry('org.syngxchain.Vendor');
+             })
+             .then(function(updateVendor){
+                 order.Supplier.accountBalance = order.Supplier.accountBalance + order.price;
+                 return updateVendor.update(order.Supplier);
+             })
+             .catch(function(error){
+                 throw new Error (error);
+             });
+         }else{
+             throw new Error ('you dont have sufficient balance');
+         }
+     }else{
+         throw new Error ('you are not the proper receiver');
+     }
+ }
  
+ /**
+  * Pharmacy need to confirm the order and update the order
+  * @param {org.syngxchain.ShipmentShipped} order
+  * @transaction
+  */
+
+  function orderShipped(order){
+      var supplier = order.Shipper;
+      var price = order.amount;
+      var order = order.order;
+      if (supplier.vendorID === order.Supplier.vendorID){
+          return getAssetRegistry('org.syngxchain.Order')
+          .then(function(orderUpdate){
+              order.price = price;
+              order.status = 'In_Transit';
+              return orderUpdate.update(order);
+              var creatingOrderEvent = getFactory();
+              var notificationB = creatingOrderEvent.newEvent('org.syngxchain','Order');
+              notificationB.order = order;
+              emit(notificationB);
+          })
+          .catch(function(error){
+              throw new Error (error);
+          });
+      }else{
+          throw new Error ('You are not the valid supplier to process this order');
+      }
+  }
+
+
+/**
+ * Physicians need to create orders to prescribe
+ * @param {org.syngxchain.ShipmentOrder} order
+ * @transaction
+ */
+
+ function createOrder(order){
+     var orderID = order.orderID;
+     var count = order.unitCount;
+     var orderCreator = order.creator;
+     var rx = order.recipe;
+     var vendor = order.Supplier;
+     var initialStatus = 'Pending';
+     if(orderCreator.PMI === rx.patient.PMI){
+         console.log('balance is', orderCreator.DueBalance);
+         if((orderCreator.DueBalance < 1) || (orderCreator.DoctorBalance === undefined)){
+             return getAssetRegistry('org.syngxchain.Order')
+             .then(function(orderC){
+                 var orderF = getFactory();
+                 var orderObject = orderF.newResource('org.syngxchain', 'Order', orderID);
+                 orderObject.unitCount = count;
+                 orderObject.status = 'Placed';
+                 orderObject.creator = orderCreator;
+                 orderObject.recipe = rx;
+                 orderObject.Supplier = vendor;
+                 return orderC.add(orderObject);
+                 var creatingOrderEvent = getFactory();
+                 var notificationB = creatingOrderEvent.newEvent('org.syngxchain', 'Order');
+                 notificationB.order = orderObject;
+                 emit(notificationB);
+             }).catch(function(error){
+                 throw new Error (error);
+             });
+         }else {
+             throw new Error ('Please clear your due');
+         }
+     } else{
+         throw new Error ('This order only can be created by patient of provided rx ');
+     }
+ }
