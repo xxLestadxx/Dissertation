@@ -1,0 +1,26 @@
+/**
+* New query file
+*/
+
+query AllSyngxchainTx {
+  description: "Show all SynergyXchain transaction"
+  statement: 
+    SELECT org.hyperledger.composer.system.HistorianRecord FROM HistorianRegistry
+    WHERE (transactionType == 'confirmAppointment' OR transactionType == 'createRecipe' OR transactionType == 'payRecipeBill' OR transactionType == 'ShipmentOrder' OR transactionType == 'ShipmentReceived' OR transactionType == 'ShipmentShipped')
+}
+
+query AllInsurancePending {
+  description: "Show Pending insurance list"
+  statement: 
+    SELECT org.syngxchain.Insuranceledger
+    WHERE ((owner == _$company) OR (status == 'Pending'))
+}
+
+query AllAppointmentPending {
+  description: "Show Pending Appointment list"
+  statement: 
+    SELECT org.syngxchain.Appointment
+    WHERE (status == 'Pending')
+}
+
+
