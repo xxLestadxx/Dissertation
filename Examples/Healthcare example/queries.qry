@@ -6,7 +6,7 @@ query AllSyngxchainTx {
   description: "Show all SynergyXchain transaction"
   statement: 
     SELECT org.hyperledger.composer.system.HistorianRecord FROM HistorianRegistry
-    WHERE (transactionType == 'confirmAppointment' OR transactionType == 'createRecipe' OR transactionType == 'payRecipeBill' OR transactionType == 'ShipmentOrder' OR transactionType == 'ShipmentReceived' OR transactionType == 'ShipmentShipped')
+    WHERE (transactionType == 'confirmAppointment' OR transactionType == 'createRecipe' OR transactionType == 'payRecipeBill' OR transactionType == 'ShipmentOrder' OR transactionType == 'ShipmentRecieved' OR transactionType == 'ShipmentShipped')
 }
 
 query AllInsurancePending {

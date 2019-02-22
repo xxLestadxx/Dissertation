@@ -11,8 +11,8 @@
   function approveInsuranceReq (request){
       var requestor = request.owner;
       var insurLedger = request.insuranceDetails;
-      var apporver = insurLedger.owner;
-      if(requestor.HSI === apporver.HSI){
+      var approver = insurLedger.owner;
+      if(requestor.HSI === approver.HSI){
           return getAssetRegistry('org.syngxchain.Insuranceledger')
           .then(function(insurL){
               insurLedger.status = 'Approved';
@@ -22,8 +22,8 @@
               return getParticipantRegistry('org.syngxchain.HealthInsuranceCompany');
           })
           .then(function(InsComp){
-              apporver.AccountBalance = approver.AccountBalance + insurLedger.SubscriptionCharge;
-              return InsComp.update(apporver);
+              approver.AccountBalance = approver.AccountBalance + insurLedger.SubscriptionCharge;
+              return InsComp.update(approver);
           })
           .then(function(){
               return getParticipantRegistry('org.syngxchain.Patient');
@@ -105,7 +105,7 @@
      function payConsultation(rbill){
          var a = 5; 
          var bill = rbill.bill;
-         var requestor = bill.payer;
+         var requestor = rbill.payer;
          if(requestor.HSI === bill.payer.HSI){
              return getAssetRegistry('org.syngxchain.InsuranceBilltoDoct')
              .then(function(InsurBillUpdate){
@@ -116,7 +116,7 @@
                  return getParticipantRegistry('org.syngxchain.HealthInsuranceCompany');
              })
              .then(function(HealthInsuranceUpdate){
-                 requestor.DueBalance = requestor. DueBalance - bill.rx.consultingCharges;
+                 requestor.DueBalance = requestor.DueBalance - bill.rx.consultingCharges;
                  requestor.AccountBalance = requestor.AccountBalance + bill.rx.consultingCharges;
                  return HealthInsuranceUpdate.update(requestor);
              })
@@ -124,7 +124,7 @@
                  return getParticipantRegistry('org.syngxchain.Physician');
              })
              .then(function(DoctorUpdate){
-                 var rxDoc = bill.receiver;
+                 var rxDoc = bill.reciever;
                  rxDoc.accountBalance = rxDoc.accountBalance + bill.rx.consultingCharges;
                  return DoctorUpdate.update(rxDoc);
              })
@@ -177,7 +177,7 @@
                     var notificationB = PayingBillEvent.newEvent('org.syngxchain', 'PayingBill');
                     notificationB.bill = requestRecipeBill;
                     notificationB.payer = requestRecipeBill;
-                    notificationB.receiver = doctor;
+                    notificationB.reciever = doctor;
                     emit(notificationB);
                 })
                 .catch(function(error){
@@ -255,7 +255,7 @@
                       billObject.payer = insuranceCompany;
                       billObject.rx = recipeObject;
                       billObject.reffInsuranceLedger = appointment.insuranceID;
-                      billObject.receiver = doctor;
+                      billObject.reciever = doctor;
                       billObject.status = 'Pending';
                       return recipeBill.add(billObject);
                   })
@@ -314,9 +314,9 @@
                       var billObject = factory.newResource('org.syngxchain', 'RecipeBill', contID);
                       billObject.payer = patient;
                       billObject.recipe = recipeObject;
-                      billObject.receiver = doctor;
+                      billObject.reciever = doctor;
                       billObject.status = 'Pending';
-                      return recipeBill.add(billObject);
+                      recipeBill.add(billObject);
                       // It is like this in the book /p 161
                       var RecipementEvent = getFactory();
                       var notification = RecipementEvent.newEvent('org.syngxchain', 'RecipeCreation');
@@ -373,7 +373,7 @@
                        .then(function(appoint){
                            requestAppoint.status = 'Confirmed';
                            requestAppoint.confirmedBy = requestDoctor;
-                           return appoint.update(Appoint);
+                           appoint.update(requestAppoint);
                            var appointmentEvent = getFactory();
                            var notification = appointmentEvent.newEvent('org.syngxchain','AppointmentConfirmation');
                            notification.appointment = requestAppoint;
@@ -400,7 +400,7 @@
                    .then(function(appoint){
                         requestAppoint.status = 'Confirmed';
                         requestAppoint.confirmedBy = requestDoctor;
-                        return appoint.update(requestAppoint);
+                        appoint.update(requestAppoint);
                         var appointmentEvent = getFactory();
                         var notification = appointmentEvent.newEvent('org.syngxchain','AppointmentConfirmation');
                         notification.appointment = requestAppoint;
@@ -422,15 +422,15 @@
 
 /**
  * Pharmacy need to confirm the order and update the order 
- * @param {org.syngxchain.ShipmentReceived} order
+ * @param {org.syngxchain.ShipmentRecieved} order
  * @transaction
  */
 
  function orderReceivd(order){
-     var receiver = order.receiver;
+     var reciever = order.reciever;
      var order = order.order;
-     if(receiver.PMI === order.creator.PMI){
-         if(receiver.accountBalance > order.price){
+     if(reciever.PMI === order.patient.PMI){
+         if(reciever.accountBalance > order.price){
              return getAssetRegistry('org.syngxchain.Order')
              .then(function(orderUpdate){
                  order.status = 'Delivered';
@@ -444,8 +444,8 @@
                  return getParticipantRegistry('org.syngxchain.Patient');
              })
              .then(function(updatePatient){
-                 receiver.accountBalance = receiver.accountBalance - order.price;
-                 return updatePatient.update(receiver);
+                reciever.accountBalance = reciever.accountBalance - order.price;
+                 return updatePatient.update(reciever);
              })
              .then(function(){
                  return getParticipantRegistry('org.syngxchain.Vendor');
@@ -461,7 +461,7 @@
              throw new Error ('you dont have sufficient balance');
          }
      }else{
-         throw new Error ('you are not the proper receiver');
+         throw new Error ('you are not the proper reciever');
      }
  }
  
@@ -480,9 +480,9 @@
           .then(function(orderUpdate){
               order.price = price;
               order.status = 'In_Transit';
-              return orderUpdate.update(order);
+              orderUpdate.update(order);
               var creatingOrderEvent = getFactory();
-              var notificationB = creatingOrderEvent.newEvent('org.syngxchain','Order');
+              var notificationB = creatingOrderEvent.newEvent('org.syngxchain','order');
               notificationB.order = order;
               emit(notificationB);
           })
@@ -514,17 +514,17 @@
              return getAssetRegistry('org.syngxchain.Order')
              .then(function(orderC){
                  var orderF = getFactory();
-                 var orderObject = orderF.newResource('org.syngxchain', 'Order', orderID);
+                 var orderObject = orderF.newResource('org.syngxchain','Order', orderID);
                  orderObject.unitCount = count;
                  orderObject.status = 'Placed';
-                 orderObject.creator = orderCreator;
+                 orderObject.patient = orderCreator;
                  orderObject.recipe = rx;
                  orderObject.Supplier = vendor;
-                 return orderC.add(orderObject);
                  var creatingOrderEvent = getFactory();
-                 var notificationB = creatingOrderEvent.newEvent('org.syngxchain', 'Order');
+                 var notificationB = creatingOrderEvent.newEvent('org.syngxchain', 'order');
                  notificationB.order = orderObject;
                  emit(notificationB);
+                 return orderC.add(orderObject);
              }).catch(function(error){
                  throw new Error (error);
              });

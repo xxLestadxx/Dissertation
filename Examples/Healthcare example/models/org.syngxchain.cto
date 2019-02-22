@@ -138,7 +138,7 @@ participant HealthInsuranceCompany identified by HSI {
   o String phone
   o Integer ratings 
   o Address address
-  o Double accountBalance
+  o Double AccountBalance
   o Double DueBalance optional
 }
 
@@ -241,12 +241,12 @@ transaction ShipmentOrder {
 }
 
 transaction ShipmentShipped extends ShipmentTransaction {
-  --> Vendor Shiper
+  --> Vendor Shipper
   o Double amount
 }
 
-transaction ShipmentReceived extends ShipmentTransaction {
-  --> Patient receiver
+transaction ShipmentRecieved extends ShipmentTransaction {
+  --> Patient reciever
 }
 
 transaction confirmAppointment{
@@ -291,10 +291,11 @@ event RecipeBillCreation {
 event PayingBill {
   --> RecipeBill bill
   --> Patient payer
-  --> Physician receiver
+  --> Physician reciever
 }
 
 event order {
   --> Order order
 }
+
 
