@@ -3,6 +3,7 @@
 - this is identity of a user, their credentials
 - it holds the keys & certificates and the connection profile
 - the user can have multiple business cards for different networks
+- BNC (blokchain network card) provides all of the information that is needed to connect to a BBN (blockchain business network). You can only access a BBN through a valid BNC. A BNC contains an Identity for a single Participant within a deployed BN. BNC are used in the Hyperledger Composer Playground to connect to deployed BN.
 
 #### Storage 
 Can be stored on :
@@ -30,3 +31,4 @@ var cardType = {type: 'composer-wallet-inmemory' }
 
 #### Reference 
 1. https://www.udemy.com/hyperledger/
+1. red book of IBM

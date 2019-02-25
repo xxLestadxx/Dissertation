@@ -1,0 +1,51 @@
+namespace org.ssidentity
+//It is going to be a model based on Bulgaria 
+
+concept Address {
+  o String city
+  o String country
+  o String street 
+  o String zip
+}
+
+enum Gender {
+  o Male
+  o Female
+  o Others
+}
+
+participant Person identified by personID {
+  o String personID
+}
+
+participant HighSchool identified by highSchoolID {
+  o String highSchoolID
+}
+
+//DS wants only approvement that the person has diploma
+participant DrivingSchool identified by drivingSchoolID {
+  o String drivingSchoolID
+}
+
+//It will want the grades from A levels as well 
+participant University identified by universityID {
+  o String universityID
+}
+
+//contains the A levels of the people ? probably i will reshape this shit 
+asset Diploma identified by DiplomaID {
+  o String DiplomaID
+}
+
+asset Passport identified by passportID {
+  o String passportID
+}
+
+event PassportCreation {
+  o Passport passport
+}
+
+event DiplomaCreation {
+  o Diploma diploma
+  o HighSchool highschool
+}
