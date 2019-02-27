@@ -16,36 +16,88 @@ enum Gender {
 
 participant Person identified by personID {
   o String personID
+  o String firstName
+  o String lastName
+  o String phone
+  o String email
+  o Gender gender
+  o Integer age
+  o Address address
 }
 
 participant HighSchool identified by highSchoolID {
   o String highSchoolID
+  o String highschoolName 
+  o String email
+  o String phone
+  o Integer rating
+  o Address address
 }
 
-//DS wants only approvement that the person has diploma
+//DS wants only approvement that the person has diploma and that the person is above 18 years old 
 participant DrivingSchool identified by drivingSchoolID {
   o String drivingSchoolID
+  o String drivingSchoolName
+  o Integer rating
+  o Address address
 }
 
-//It will want the grades from A levels as well 
+//It will want the grades for math, english and Computer science equivalent to the A levels  
 participant University identified by universityID {
   o String universityID
+  o String universityName
+  o String email
+  o String phone
+  o Integer rating
+  o Address address
 }
 
-//contains the A levels of the people ? probably i will reshape this shit 
-asset Diploma identified by DiplomaID {
-  o String DiplomaID
+//contains the grades for Math, English and Computer Science, equivalent to A levels
+asset Diploma identified by diplomaID {
+  o String diplomaID
+  o String mathGrade
+  o String englishGrade
+  o String csGrade
+  --> HighSchool highschool 
+  --> Person person
 }
 
+asset DrivingPapers identified by drivingPapersID {
+  o String drivingPapersID
+  --> Person person
+  o DiplomaStatus diplomaStatus
+}
+
+enum DiplomaStatus{
+  o Pending
+  o Confirmed
+}
+/*
 asset Passport identified by passportID {
   o String passportID
+  --> Person person
 }
 
 event PassportCreation {
   o Passport passport
 }
+*/
+
+transaction createDiploma {
+  o String diplomaID
+  o String mathGrade
+  o String englishGrade
+  o String csGrade
+  --> HighSchool highschool 
+  --> Person person
+}
 
 event DiplomaCreation {
   o Diploma diploma
-  o HighSchool highschool
+  o HighSchool highSchool
+}
+
+event DiplomaConfirmation {
+  --> HighSchool highSchool
+  --> DrivingPapers drivingPapers
 }
