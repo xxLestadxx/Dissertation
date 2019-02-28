@@ -7,10 +7,50 @@
 
 /**
  * Diploma creation, that is the certificate from the highschool
- * @param {org.ssidentity.CreateDiploma} createDiploma
+ * @param {org.ssidentity.createDiploma} createDiploma To create the diploma
+ * @transaction
+ */
+function createDiploma(createDiploma){
+    var diplomaID = createDiploma.diplomaID;
+       return getAssetRegistry('org.ssidentity.Diploma')
+        .then(function(diploma){
+        var diplomaFactory = getFactory();	 
+        var diplomaObject = diplomaFactory.newResource('org.ssidentity','Diploma', diplomaID);       	  
+        diplomaObject.mathGrade = createDiploma.mathGrade;
+        diplomaObject.englishGrade = createDiploma.englishGrade;
+        diplomaObject.csGrade = createDiploma.csGrade;
+        diplomaObject.hs = createDiploma.hs;
+        diplomaObject.person = createDiploma.person;
+        return diploma.add(diplomaObject);
+    })
+    .catch(function(error){
+        throw new Error (error);
+    });
+}
+
+/**
+ * Diploma creation, that is the certificate from the highschool
+ * @param {org.ssidentity.createDrivingLicence} createDL To create the diploma
  * @transaction
  */
 
- function CreateDiploma(createDiploma){
-     var diplomaID = createDiploma.Diplo
- }
+ function createDrivingLicence(createDL){
+     var dlID = createDL.drivingLicenceID;
+     var person = createDL.person;
+     var diploma = createDL.diploma;
+     if(person.personID === diploma.person.personID){
+         return getAssetRegistry('org.ssidentity.DrivingLicence')
+         .then(function(dl){
+           var factory = getFactory();
+           var dlObject = factory.newResource('org.ssidentity','DrivingLicence', dlID);
+           dlObject.person = person;
+           dlObject.diplomaStatus = 'Confirmed';  
+           return dl.add(dlObject);
+         })
+         .catch(function(error){
+             throw new Error (error);
+         });
+        }else{
+            throw new Error('You are not the person owning this diploma');
+        }
+     }

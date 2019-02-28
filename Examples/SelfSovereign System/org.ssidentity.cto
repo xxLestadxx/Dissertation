@@ -55,49 +55,54 @@ participant University identified by universityID {
 //contains the grades for Math, English and Computer Science, equivalent to A levels
 asset Diploma identified by diplomaID {
   o String diplomaID
-  o String mathGrade
-  o String englishGrade
-  o String csGrade
-  --> HighSchool highschool 
+  o Double mathGrade  range = [2.0, 6.0]
+  o Double englishGrade range = [2.0,6.0]
+  o Double csGrade range = [2.0,6.0]
+  --> HighSchool hs 
   --> Person person
 }
 
-asset DrivingPapers identified by drivingPapersID {
-  o String drivingPapersID
+asset DrivingLicence identified by drivingLicenceID {
+  o String drivingLicenceID
   --> Person person
+  --> DrivingSchool ds
   o DiplomaStatus diplomaStatus
+}
+
+asset UniversityDiploma identified by uniDiplomaID {
+  o String uniDiplomaID
+  o Integer finalGrade range = [0, 100] optional
+  o enrollStatus estatus
+}
+
+enum enrollStatus {
+  o Enrolled
+  o Graduated
+  o Left
 }
 
 enum DiplomaStatus{
   o Pending
   o Confirmed
+  o Declined
 }
-/*
-asset Passport identified by passportID {
-  o String passportID
-  --> Person person
-}
-
-event PassportCreation {
-  o Passport passport
-}
-*/
 
 transaction createDiploma {
   o String diplomaID
-  o String mathGrade
-  o String englishGrade
-  o String csGrade
-  --> HighSchool highschool 
+  o Double mathGrade
+  o Double englishGrade
+  o Double csGrade
+  --> HighSchool hs
   --> Person person
 }
 
-event DiplomaCreation {
-  o Diploma diploma
-  o HighSchool highSchool
+transaction createDrivingLicence {
+  o String drivingLicenceID
+  --> Person person
+  --> Diploma diploma
+  --> DrivingSchool ds
 }
 
-event DiplomaConfirmation {
-  --> HighSchool highSchool
-  --> DrivingPapers drivingPapers
+transaction enrollInUniversity {
+
 }
