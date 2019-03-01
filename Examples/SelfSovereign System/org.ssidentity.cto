@@ -21,7 +21,7 @@ participant Person identified by personID {
   o String phone
   o String email
   o Gender gender
-  o Integer age
+  o Integer age range = [0, 120]
   o Address address
 }
 
@@ -72,7 +72,9 @@ asset DrivingLicence identified by drivingLicenceID {
 asset UniversityDiploma identified by uniDiplomaID {
   o String uniDiplomaID
   o Integer finalGrade range = [0, 100] optional
-  o enrollStatus estatus
+  o enrollStatus status
+  --> Person person
+  --> University uni
 }
 
 enum enrollStatus {
@@ -104,5 +106,17 @@ transaction createDrivingLicence {
 }
 
 transaction enrollInUniversity {
+  o String uniDiplomaID
+  o Double mathGrade  range = [2.0, 6.0]
+  o Double englishGrade range = [2.0,6.0] 
+  o Double csGrade range = [2.0,6.0]
+  --> Person person
+  --> Diploma diploma
+  --> University uni
+}
 
+transaction graduateUni {
+  --> University uni
+  --> UniversityDiploma uniDiploma
+  --> Person person
 }

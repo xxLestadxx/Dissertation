@@ -29,16 +29,18 @@ function createDiploma(createDiploma){
 }
 
 /**
- * Diploma creation, that is the certificate from the highschool
- * @param {org.ssidentity.createDrivingLicence} createDL To create the diploma
+ * Driving lessons starting creation, that is the certificate from the highschool
+ * @param {org.ssidentity.createDrivingLicence} createDL
  * @transaction
  */
 
  function createDrivingLicence(createDL){
-     var dlID = createDL.drivingLicenceID;
-     var person = createDL.person;
-     var diploma = createDL.diploma;
-     if(person.personID === diploma.person.personID){
+    var dlID = createDL.drivingLicenceID;
+    var person = createDL.person;
+    var diploma = createDL.diploma;
+    if(person.personID === diploma.person.personID){
+         if(person.age >= 18){
+             
          return getAssetRegistry('org.ssidentity.DrivingLicence')
          .then(function(dl){
            var factory = getFactory();
@@ -51,6 +53,68 @@ function createDiploma(createDiploma){
              throw new Error (error);
          });
         }else{
-            throw new Error('You are not the person owning this diploma');
+            throw new Error('You are underage');
         }
+    }else{
+        throw new Error ('You are not the person owning this diploma');
+    }
+}
+
+/**
+ * Diploma creation, that is the certificate from the highschool
+ * @param {org.ssidentity.enrollInUniversity} enrollUni 
+ * @transaction
+ */
+ function enrollInUniversity(enrollUni){
+     var uniDiplomaID = enrollUni.uniDiplomaID;
+     var mathGrade = enrollUni.mathGrade;
+     var englishGrade = enrollUni.englishGrade;
+     var csGrade = enrollUni.csGrade;
+     if(enrollUni.person.personID === enrollUni.diploma.person.personID){
+        if((enrollUni.diploma.mathGrade >= mathGrade) &&
+            (enrollUni.diploma.englishGrade >= englishGrade) &&
+            (enrollUni.diploma.csGrade >= csGrade)){
+                return getAssetRegistry('org.ssidentity.UniversityDiploma')
+                .then(function(uniDip){
+                  var factory = getFactory();
+                  var uniDipObject = factory.newResource('org.ssidentity','UniversityDiploma', uniDiplomaID);
+                  uniDipObject.status = 'Enrolled';
+                  uniDipObject.person = enrollUni.person;
+                  uniDipObject.uni = enrollUni.uni; 
+                  return uniDip.add(uniDipObject);
+                })
+                .catch(function(error){
+                    throw new Error (error);
+                });
+
+            }else{
+                throw new Error ('Your grades are not good enough. Try again next year')
+            }
+     }else{
+         throw new Error ('Not the correct person with diploma');
      }
+     
+ }
+
+ /**
+ * To graduate uni
+ * @param {org.ssidentity.graduateUni} grad 
+ * @transaction
+ */
+
+ function graduateUniversity(grad){
+     if(grad.uniDiploma.person.personID === grad.person.personID){
+        if(grad.uniDiploma.uni.universityID === grad.uni.universityID){
+            return getAssetRegistry('org.ssidentity.UniversityDiploma')
+            .then(function(graduated){
+                grad.uniDiploma.status = 'Graduated'
+                grad.uniDiploma.finalGrade = 76;
+                return graduated.update(grad.uniDiploma);
+            })
+        }else{
+            throw new Error ('You have not graduated from this university');
+        }
+     }else{
+         throw new Error ('This is not the person that graduated');
+     }
+ }
