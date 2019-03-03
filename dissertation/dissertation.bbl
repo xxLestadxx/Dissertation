@@ -1,0 +1,42 @@
+\begin{thebibliography}{1}
+
+\bibitem{Greene-Williams-1997}
+D.~Greene and P.~C. Williams.
+\newblock {\em Linear Accelerators for Radiation Therapy}.
+\newblock IOP Publishing Ltd., Bristol and Philadelphia, 1997.
+
+\bibitem{ISO-8807}
+ISO/IEC.
+\newblock {\em Information Processing Systems -- {Open} Systems Interconnection
+  -- L{\footnotesize\it OTOS} -- {A} Formal Description Technique based on the
+  Temporal Ordering of Observational Behaviour}.
+\newblock ISO/IEC 8807. International Organization for Standardization, Geneva,
+  Switzerland, 1989.
+
+\bibitem{Jacobson-Andersen-1997}
+J.~Jacobson and O.~Andersen.
+\newblock Software controlled medical devices.
+\newblock Technical Report SP-Rapport 1997:11, European Network of Clubs for
+  Reliability and Safety of Software, Apr. 1997.
+\newblock ISBN 91-7848-669-6.
+
+\bibitem{Ji-Turner-1999c}
+{Ji He} and K.~J. Turner.
+\newblock Specification and verification of synchronous hardware using {\sc
+  lotos}.
+\newblock In J.~Wu, S.~T. Chanson, and Q.~Gao, editors, {\em Proc.\ Formal
+  Methods for Protocol Engineering and Distributed Systems (FORTE XII/PSTV
+  XIX)}, pages 295--312, London, UK, Oct. 1999. Kluwer Academic Publishers.
+
+\bibitem{Turner-2000a}
+K.~J. Turner.
+\newblock World-wide {Environment} for {Learning} \textsc{Lotos}.
+\newblock \url{http://www.cs.stir.ac.uk/well/}, June 2000.
+
+\bibitem{Turner-2007a}
+K.~J. Turner.
+\newblock Representing and analysing composed web services using
+  \textsc{Cress}.
+\newblock {\em Network and Computer Applications}, 30(2):541--562, Apr. 2007.
+
+\end{thebibliography}

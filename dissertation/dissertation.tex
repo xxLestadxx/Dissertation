@@ -1,0 +1,313 @@
+% dissertation.tex	K. J. Turner	10/09/13
+
+% Dissertation outline
+
+\documentclass[a4paper,11pt]{report}
+
+\usepackage{dissertation}
+
+\title{Smart contracts on Hyperledger Fabric}			
+
+\author{Yordan Gospodinov}			
+
+\date{April 2019}			
+
+\degree{B. Sc. in Computer Science}
+
+\begin{document}
+
+\maketitle				
+
+\pagenumbering{roman}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Abstract %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\intro{Abstract}
+
+Summarise the dissertation within one page. Introductory headings like this are
+entered using the {\it intro} paragraph style. It is suggested that the abstract
+be structured as follows:
+
+\begin{description}
+
+  \item[Problem:]
+  what you tackled, and why this needed a solution
+
+  \item[Objectives:]
+  what you set out to achieve, and how this addressed the problem
+
+  \item[Methodology:]
+  how you went about solving the problem
+
+  \item[Achievements:]
+  what you managed to achieve, and how far it meets your objectives.
+
+\end{description}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Attestation %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\intro{Attestation}
+
+I understand the nature of plagiarism, and am aware of the University's policy
+on this. I certify that this dissertation reports original work by me during my
+University project except for the following (adjust according to the
+circumstances):
+
+\begin{itemize}
+
+  \item
+  The technology review in section~\ref{technical-section2} was largely adapted
+  from \cite{Greene-Williams-1997} plus
+  \url{www.software-review.org/article9815.html}.
+
+  \item
+  The code discussed in section~\ref{technical-section1} was created by Acme
+  Corporation (\url{www.acme-corp.com/JavaExpert}) and was used in accordance
+  with the licence supplied.
+
+  \item
+  The code discussed in section~\ref{technical-subsection1} was written by my
+  supervisor.
+
+  \item
+  The code discussed in section~\ref{technical-subsubsection2} was developed by
+  me during a vacation placement with the collaborating company. In addition,
+  this used ideas I had already developed in my own time.
+
+\end{itemize}
+
+\bigskip
+
+{\bf Signature:} \hspace{20em} {\bf Date:}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Acknowledgements %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\intro{Acknowledgements}
+
+First and foremost I would like to thank to Dr. Andrea Bracciali for introducing me to blockchain. What's more I am grateful for his patience, guidance and support, without which I would not have been able to grow into what I am today. Thank you.
+
+I am grateful to my parents for giving me the opportunity to study in University of Stirling. 
+
+I am grateful to my classmates for helping me out, when I could not understand something, and just for being around, it was fun. 
+
+I would like to thank the library for having the nice, quiet, fourth floor, and for always buying the books I requested. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Contents %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\tableofcontents
+
+\listoffigures                  % Uncomment as required
+
+% \listoftables                 % Uncomment as required
+
+\clearpage
+
+\pagenumbering{arabic}
+
+\setcounter{page}{1}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Introduction %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Introduction}
+
+\label{introduction}
+
+Chapters are entered using the \textit{{\bs}chapter} command; they start on a
+new page. Ordinary text is presented in 11 point Times, single-spaced,
+single-sided pages. In general, use the default spacing that headings and
+paragraphs give you. If you need to use quotes, preferably use single curly
+quotes `\ldots'.
+
+\textit{Italics text} uses the \textit{{\bs}textit} command, while \textbf{bold
+text} uses the \textit{{\bs}textbf} command. Chapters, sections, etc.\ are
+identified by the \textit{{\bs}label} command, and are referenced by the
+\textit{{\bs}ref} command (e.g.\ chapter~\ref{conclusion}).
+
+\section{Background and Context}
+
+\label{introduction-background}
+
+Give the background to your project and context of what you have done. Sections
+are entered using the \textit{{\bs}section} command.
+
+\section{Scope and Objectives}
+
+\label{introduction-objectives}
+
+Define the scope and objectives of your project.
+
+\section{Achievements}
+
+\label{introduction-achievements}
+
+Summarise what you have achieved.
+
+\section{Overview of Dissertation}
+
+Briefly overview the contents of what follows in the dissertation.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  State-of-The-Art %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{State-of-The-Art}
+
+\label{state}
+Summarise current knowledge and what others have done in the various topics of
+your dissertation. Write for someone familiar with computing, but not
+necessarily expert in the particular topics of your project.
+
+It is important to write a {\em critical} literature review that identifies gaps
+in current solutions and that clearly shows how the project was driven to
+address these gaps. This chapter  should therefore feed into well-defined
+requirements for the project. Avoid a banal description of related work that
+does not carefully analyse its strengths and weaknesses.
+
+Give references to other work by using citations like
+\cite{Ji-Turner-1999c}. Use the \textit{{\bs}cite} command to cite references.
+Books \cite{Greene-Williams-1997}, standards \cite{ISO-8807}, reports
+\cite{Jacobson-Andersen-1997}, journal articles \cite{Turner-2007a}, conference
+papers \cite{Ji-Turner-1999c}, and web pages \cite{Turner-2000a} are
+conventionally presented in slightly different ways. If a web page does not have
+a date, you should give the date on which you consulted it.
+
+Citations are created with a {\it thebibliography} environment and
+\textit{{\bs}bibitem} commands in a `.bbl' file. Unless you are willing to
+invest time in creating Bib\TeX\ bibliographies, you can do this by hand.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Technical Chapters %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Technical Chapters}            % Insert your chapter titles
+
+\label{technical}
+
+The body of the dissertation consists of a number of chapters named
+appropriately ({\em not} `Technical Chapter'). Follow a logical progression in
+how you present your work. This might be a time sequence of development
+activities, the phases of the software development cycle, the modules of your
+system, etc.
+
+Appropriate chapters might be called Requirements, Design, Implementation and
+Evaluation. The emphasis should be on requirements, design and evaluation, with
+implementation details being of lesser importance. The requirements should be
+clearly stated, following from the client needs and weaknesses identified in the
+state-of-the-art review. The design should include discussion of the choices
+that were available and why particular decisions were made. The evaluation
+should relate back to the requirements, and demonstrate the extent to which
+these were met. Low-level material should appear in appendixes.
+
+\section{First Section}
+
+\label{technical-section1}
+
+Subdivide your text into sections with the \textit{{\bs}section} command.
+
+\subsection{First Subsection}
+
+\label{technical-subsection1}
+
+If necessary, also use subsections. Subsections are entered using the
+\textit{{\bs}subsection} command.
+
+\subsubsection{First Subsubsection}
+
+\label{technical-subsubsection1}
+
+If you really need subsubsections, enter these using the
+\textit{{\bs}subsubsection} command.
+
+\subsubsection{Second Subsubsection}
+
+\label{technical-subsubsection2}
+
+And yet more subsubsections if need be.
+
+\subsection{Second Subsection}
+
+\label{technical-subsection2}
+
+And, as required, more subsections.
+
+\section{Second Section}
+
+\label{technical-section2}
+
+Figures are created with the \textit{figure} environment, while tables are
+created with the \textit{table} environment. They are identified by the
+\textit{{\bs}label} command, and are referenced by the \textit{{\bs}ref}
+command. Graphics are inserted with the \textit{{\bs}graphic} command. Captions
+are entered using the \textit{{\bs}caption} command. As an example of a figure,
+consider figure~\ref{figure}.
+
+The native format for \LaTeX\ graphics is EPS (Encapsulated PostScript).
+Graphical editors are usually capable of producing EPS. When outputting to PDF
+(Portable Document Format), the native graphics format is also PDF. Conversion
+of EPS to PDF is supported by a number of TeX\ toolsets.
+
+\begin{figure}
+
+  \graphic{figure}
+
+  \caption{Highly Technical Diagram}
+
+  \label{figure}
+
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Conclusion %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Conclusion}
+
+\label{conclusion}
+
+\section{Evaluation}
+
+\label{conclusion-evaluation}
+
+If you do not have a separate chapter on testing, explain here in detail how you
+went about systematically testing your system. If appropriate, also include
+end users in your testing. Summarise your main results, and explain how you have
+advanced the state-of-the-art. Stand back and evaluate what you have achieved
+and how well you have met the objectives. Evaluate your achievements against the
+objectives stated in section~\ref{introduction-objectives}. Demonstrate that you
+have tackled the project in a professional manner.
+
+\section{Future Work}
+
+\label{conclusion-future}
+
+Explain any limitations in your results and how things might be improved.
+Discuss how your work might be developed further. Reflect on your results in
+isolation and in relation to what others have achieved in the same field. This
+self-analysis is particularly important. You should give a critical evaluation
+of what went well, and what might be improved.
+
+% Citations
+
+\bibliographystyle{abbrv}
+
+\bibliography{dissertation}
+
+% Appendixes
+
+\appendix
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  User Guide %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{User Guide}			% Insert your appendix titles
+
+\label{guide}
+
+The appendixes should contain reference material or detailed material that would
+detract from the flow in the body of the dissertation. Appendixes might include
+a user guide, a list of abbreviations, detailed program descriptions, etc.
+Appendixes are introduced with the \textit{{\bs}appendix} command. Appendix
+headings otherwise use \textit{{\bs}chapter}, \textit{{\bs}section}, etc.\ as
+usual.
+
+\end{document}
