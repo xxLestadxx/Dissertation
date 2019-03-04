@@ -6,7 +6,6 @@ To do:
 - manual of Hyperledger Fabric, it will be in the wiki Page of this github repo // under wiki folder
 ---
 
-- Query for personID 
 - make sure that the person is giving his ID and it's not taken by somebody just like that. 
 - certify with public key and see the private one ? (can it be done in Fabric and how)
 - ID -> encripty -> authority -> decript -> ID
@@ -34,3 +33,5 @@ Done:
 ✔ Interim report
 
 ✔ Creation of a system based on a "kingdom model" with free and slaved people
+
+✔ Query for personID - when using the REST for id you have to provide the full "name" - ex: resource:org.example.trading.Trader#exampleTraderID
