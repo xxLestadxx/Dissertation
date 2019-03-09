@@ -3,18 +3,24 @@
 \contentsline {chapter}{Acknowledgements}{iii}
 \contentsline {chapter}{\numberline {1}Introduction}{1}
 \contentsline {section}{\numberline {1.1}Background and Context}{1}
-\contentsline {section}{\numberline {1.2}Scope and Objectives}{1}
-\contentsline {section}{\numberline {1.3}Achievements}{1}
-\contentsline {section}{\numberline {1.4}Overview of Dissertation}{1}
-\contentsline {chapter}{\numberline {2}State-of-The-Art}{2}
-\contentsline {chapter}{\numberline {3}Technical Chapters}{3}
-\contentsline {section}{\numberline {3.1}First Section}{3}
-\contentsline {subsection}{\numberline {3.1.1}First Subsection}{3}
-\contentsline {subsubsection}{First Subsubsection}{3}
-\contentsline {subsubsection}{Second Subsubsection}{3}
-\contentsline {subsection}{\numberline {3.1.2}Second Subsection}{3}
-\contentsline {section}{\numberline {3.2}Second Section}{4}
-\contentsline {chapter}{\numberline {4}Conclusion}{5}
-\contentsline {section}{\numberline {4.1}Evaluation}{5}
-\contentsline {section}{\numberline {4.2}Future Work}{5}
-\contentsline {chapter}{\numberline {A}User Guide}{7}
+\contentsline {section}{\numberline {1.2}Scope and Objectives}{2}
+\contentsline {section}{\numberline {1.3}Achievements}{3}
+\contentsline {section}{\numberline {1.4}Overview of Dissertation}{3}
+\contentsline {chapter}{\numberline {2}State-of-The-Art}{4}
+\contentsline {section}{\numberline {2.1}Successful projects made with Hyperledger Fabric}{4}
+\contentsline {subsection}{\numberline {2.1.1}Altoros}{4}
+\contentsline {subsection}{\numberline {2.1.2}Verify.Me}{4}
+\contentsline {subsection}{\numberline {2.1.3}TradeLens}{5}
+\contentsline {subsection}{\numberline {2.1.4}BitNation}{6}
+\contentsline {subsection}{\numberline {2.1.5}E-Residency}{6}
+\contentsline {chapter}{\numberline {3}Technical Chapters}{7}
+\contentsline {section}{\numberline {3.1}First Section}{7}
+\contentsline {subsection}{\numberline {3.1.1}First Subsection}{7}
+\contentsline {subsubsection}{First Subsubsection}{7}
+\contentsline {subsubsection}{Second Subsubsection}{7}
+\contentsline {subsection}{\numberline {3.1.2}Second Subsection}{7}
+\contentsline {section}{\numberline {3.2}Second Section}{8}
+\contentsline {chapter}{\numberline {4}Conclusion}{9}
+\contentsline {section}{\numberline {4.1}Evaluation}{9}
+\contentsline {section}{\numberline {4.2}Future Work}{9}
+\contentsline {chapter}{\numberline {A}User Guide}{11}

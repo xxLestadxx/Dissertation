@@ -1,7 +1,19 @@
 # Dissertation
 
 To do:
+---
+- Focus on development 
+    - a participant entry for every unique participant
+    - adding an asset
+    - adding and playing with ACL and Queries
+- 5 to 10 tests that the system should pass 
+    - showing interaction 
+    - showing how good or how bad is the system
+    0 adding a test case to show the limitation of the system
+    - showing negative results is good - at least you know what not to do. 
+- User manual for how to install the system and how to use it - to be as a chapter. 
 
+---
 - documentation of the process of creation of Self-sovereign identity system 
 - manual of Hyperledger Fabric, it will be in the wiki Page of this github repo // under wiki folder
 ---

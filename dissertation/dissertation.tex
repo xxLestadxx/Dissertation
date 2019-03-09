@@ -5,11 +5,19 @@
 \documentclass[a4paper,11pt]{report}
 
 \usepackage{dissertation}
+\usepackage{identfirst}
+\usepackage{graphicx}
+\usepackage{chngcntr}
+\counterwithout{figure}{chapter}
 
 \title{Smart contracts on Hyperledger Fabric}			
 
-\author{Yordan Gospodinov}			
+\author{
+{Yordan Gospodinov} \\
+{\small{Supervised by Dr. Andrea Bracciali}}
+}
 
+\renewcommand{\baselinestretch}{1.1}
 \date{April 2019}			
 
 \degree{B. Sc. in Computer Science}
@@ -59,7 +67,7 @@ circumstances):
 
   \item
   The technology review in section~\ref{technical-section2} was largely adapted
-  from \cite{Greene-Williams-1997} plus
+  %from \cite{Greene-Williams-1997} plus
   \url{www.software-review.org/article9815.html}.
 
   \item
@@ -99,9 +107,9 @@ I would like to thank the library for having the nice, quiet, fourth floor, and 
 
 \tableofcontents
 
-\listoffigures                  % Uncomment as required
+\listoffigures                
 
-% \listoftables                 % Uncomment as required
+% \listoftables                 
 
 \clearpage
 
@@ -116,29 +124,56 @@ I would like to thank the library for having the nice, quiet, fourth floor, and 
 
 \label{introduction}
 
-Chapters are entered using the \textit{{\bs}chapter} command; they start on a
-new page. Ordinary text is presented in 11 point Times, single-spaced,
-single-sided pages. In general, use the default spacing that headings and
-paragraphs give you. If you need to use quotes, preferably use single curly
-quotes `\ldots'.
-
-\textit{Italics text} uses the \textit{{\bs}textit} command, while \textbf{bold
-text} uses the \textit{{\bs}textbf} command. Chapters, sections, etc.\ are
-identified by the \textit{{\bs}label} command, and are referenced by the
-\textit{{\bs}ref} command (e.g.\ chapter~\ref{conclusion}).
+Recently a new technology emerged into the world that is called blockchain. The idea is that it is a distributed decentralized database of blocks of transactions. The reason why I find it so interesting is that it has the potential to change many aspects of life, by changing the way of accessibility and security of a data. Hyperledger Fabric is a blockchain framework designed especially to make the system easily adoptable for different business use cases. The main two objectives of this project are: to research how the smart contracts in Hyperledger Fabric works; to make a prototype of self-sovereign system with the gathered knowledge. 
 
 \section{Background and Context}
 
 \label{introduction-background}
 
-Give the background to your project and context of what you have done. Sections
-are entered using the \textit{{\bs}section} command.
+Information has always been one of the most valuable assets a person could have. Through times information was traded in many different ways, from barter to monetization. Recently the information about an individual has become a great selling point, because it can be used in variety of fields, from science to business. However, the collection of this data is becoming a problem.
+
+	As individuals, our identities are, to some extend, not ours anymore. If we cannot certify who we are, we became no one in the eyes of business and government. Needless to say that have we lost all of the documents that certify our place in the city, company, country, Earth, we would be in a big trouble. \cite{allen2016path}
+	
+		Another approach to critical and private information is how it is being used live. Whenever we want to identify ourselves somewhere, the usual document for identification would be either an ID or a passport. Here is the problem concerning all information on this document. It turns out that whenever a person wants to prove his or her existence, the party that requires this identification, can take and keep a record of all sensitive data on that document. In some countries this may be illegal. This data then could be used for not a rightful purpose. \cite{alboaie2017private}
+		
+Furthermore whenever a person is signing in to receive some kind of certificate, whether that would be a school or an academy, he or she is leaving sensitive data with this company. In most countries, whenever a person starts living in a city, he or she has to identify himself/herself to the council. In the end, there is a lot of institutions that keep sensitive data for an individual. This is a problem, because some of those institutions or businesses have different levels of security. So, an attacker only needs to pick the easiest target, and he will get a great deal of sensitive data. 
+
+	I believe all of these problems are just a subproblems of a bigger challenges - what is an identity today and how to be able to give private access to our data. The solution could provide us awareness for a better control of our own data, as well as to be able to share only what’s exactly needed to provide to those companies and institutions.
+
 
 \section{Scope and Objectives}
 
 \label{introduction-objectives}
 
-Define the scope and objectives of your project.
+The scope will involve Blockchain technology and what is digital identity. This project will focus on Hyperledger Fabric. This is a permissionless blockchain modular framework, especially developed for businesses.
+ 
+Being a modular framework, a lot of the scope will involve around resolving how customizable Fabric can be. To be personalized is of an essence for the creation of a good system. The other main features to be examined are the scalability and usability of this blockchain framework.   
+
+The knowledge build up from the research will be implemented in a prototype program as a final part of the project. The prototype of the self-sovereign program will focus on the decentralized nature. This work will aim to present advantages of the decentralizing element that can save resources and protect the personal data of the end-user. Last but not least, I am going to talk about how the ledger is making the whole system trustful, thus no one of the parties needs to worry about being cheated. 
+ 	
+The objectives of the project include the following :  
+\begin{itemize}
+\item Understanding how Hyperledger Fabric work;
+	\begin{itemize}
+	\item Installing all prerequisites;
+	\item Installing Hyperledger Fabric; 
+	\item Running a simple network with 2 organizations; 
+	\item Learning how to add more parties into an already running system;
+	\item Trying out how the chaincode (smart contracts) work;
+	\item Trying to install and control newly added chaincode on a running system.
+	\end{itemize}
+\item Building a fully functional Fabric blockchain with several different parties;
+\item What an ID is  and identity and how it is defined in the digital world;
+\item Deeper understanding of self-sovereign identity, what it is and how it should/could be best defined in a blockchain platform in order to be used genuinely and without misappropriation;
+	\begin{itemize}
+	\item Trying out different configurations on Fabric;
+	\item Trying out different chaincode functions, to find out the best for the use case.
+	\end{itemize}
+\item Building a prototype of self-sovereign identity system ;
+\item Complete final report .
+
+\end{itemize}
+
 
 \section{Achievements}
 
@@ -156,27 +191,68 @@ Briefly overview the contents of what follows in the dissertation.
 \chapter{State-of-The-Art}
 
 \label{state}
-Summarise current knowledge and what others have done in the various topics of
-your dissertation. Write for someone familiar with computing, but not
-necessarily expert in the particular topics of your project.
+\section{Successful projects made with Hyperledger Fabric}
+\label{successfulFabric}
 
-It is important to write a {\em critical} literature review that identifies gaps
-in current solutions and that clearly shows how the project was driven to
-address these gaps. This chapter  should therefore feed into well-defined
-requirements for the project. Avoid a banal description of related work that
-does not carefully analyse its strengths and weaknesses.
+\subsection{Altoros}
+\label{altoros}
+Altoros is a software company that delivers different solutions. One of the problems their customers have is issuing bonds. The customer, Russia's National Settlement Depository (NSD), wanted a system that allows automate bond placement and accounting with blockchain, while minimizing risks of reconciliation and ensuring transparency. The reason they chose Fabric is for its support of confidential transactions and resilience in the production environment. \cite{altoros}
 
-Give references to other work by using citations like
-\cite{Ji-Turner-1999c}. Use the \textit{{\bs}cite} command to cite references.
-Books \cite{Greene-Williams-1997}, standards \cite{ISO-8807}, reports
-\cite{Jacobson-Andersen-1997}, journal articles \cite{Turner-2007a}, conference
-papers \cite{Ji-Turner-1999c}, and web pages \cite{Turner-2000a} are
-conventionally presented in slightly different ways. If a web page does not have
-a date, you should give the date on which you consulted it.
+	What they did was to customize Fabric as needed for the different roles and actions. They set up four different channels so the communication,data transferring, between the peers and the NSD could be safe and secure. Every channel has its own chaincode ( smart contract) that is basically the logistics behind the given channel.
+	
+	One of the challenges they had was that the REST API was still in development. Fortunately, this is not the case anymore. Another challenge is that Fabric does not support cross-channel transactions. \cite{altorosDemo}
+	
+	The benefits of choosing Fabric are: 
+	\begin{itemize}
+	
+\item Faster transactions compared to the traditional solution, where a lot of data exchanging has to be done through a middleman. Thus, not only making it faster but also cheaper. 
+\item Minimizing fraud in a secure trusted network. The permissioned feature does not allow for anyone that does not meet the requirements to monitor what’s happening into the world ledger. What’s more because of the non cross-channel transactions, a peer could observe only the channels he is using. And even when he or she is inspecting another peer’s transaction, because of the encryption, he or she would not get any valuable information. 
+\item Reduces expenses of the bond issuer by making the process faster and simplified
+	\end{itemize}
 
-Citations are created with a {\it thebibliography} environment and
-\textit{{\bs}bibitem} commands in a `.bbl' file. Unless you are willing to
-invest time in creating Bib\TeX\ bibliographies, you can do this by hand.
+\subsection{Verify.Me}
+\label{verifyMe}
+SecureKey is a company providing identity and authentication provider for simplified access to online services and applications. They are using trusted providers such as banks, telcos and governments to make their clients assert identity information and connect to critical online services with digital credentials.
+
+After the government of Canada recognized their problem sending private data to a citizen, they asked for a solution. SecureKey responded to this call in collaboration with IBM with a blockchain based solution. It is a mobile app, that allows the user to connect different types of services providing only specific data. So what happens is the user connects to the blockchain through the phone. Then, it connects with the service actors. It is important to note that in the phone there are only pointers to the data and not the data itself. Whenever a person is sharing his or her identity with the new service he or she can see exactly what information is asked to be provided. \cite{verifyMe}
+
+	The SIM card is used as an anchor of trust. Since the system is
+private and permissioned blockchain, only trusted actors like banks and government can write on it. Upon losing or breaking the phone, the creators reassure that is easy to recover what’s lost. 
+Again, here one of the main reasons to choose Fabric for the development of this service is mainly - the adaptability of the platform and the zero-knowledge proof supported concept. \cite{verifyMeDemo}
+
+The benefits of using Fabric are : 
+\begin{itemize}
+\item Data integrity 
+\item Security and resiliency
+\item No central database or honeypots 
+\item No central point of failure
+\item Cannot track user across relying parties; privacy of the data
+\item Cost efficient due to simplifying the process
+\end{itemize}
+Cons: 
+\begin{itemize}
+\item New - open standards needed 
+\end{itemize}
+
+\subsection{TradeLens}
+\label{tradelens}
+
+	TradeLens is a company founded by collaborative work of Maersk and IBM. Maersk is an integrated container logistics company working on improving the supply chain area. The idea is to make the shipping process cost-efficient, faster and in respect to accessing the needed documents - simpler.
+	 
+	For this task, the collaboration is combining their technical and specialized knowledge to build a system on top of Hyperledger Fabric. What they created is a network, that tracks the supply chain - the documents needed for starting a shipping process, the deal that is made, the location of the containers.
+	 
+	To participate, a user has to pay a price to enter the network. Still it is not confirmed what the requirements are. However, once a user decides to enter he will experience something way different from the usual way of things. Due to the blockchain technology, a user can check a block on the blockchain to track the location of the container or any other process involved. The usual way for this simple task would be to request this information from a middleman. TradeLens are saying they can reduce the paperwork and the need of a mediators, saving lots of time and money in the process. \cite{tradeLensFounders}
+	
+	It is important to be mentioned that TradeLens is not fighting the frauds. If a user input false data at start,that seems to be correct to the endorsement parties, the system won’t be able to catch it. So the network helps to have less fraud, but it is more of a side effect rather than main function.
+	
+	Another great use of this system is that, according to the World Trade Organization, simplifying the supply chain will not only reduce costs, but also help developing countries to increase their export by more than 30\% . [16]
+	
+\subsection{BitNation}
+\label{bitnation}
+
+
+\subsection{E-Residency}
+\label{eResidency}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Technical Chapters %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -290,7 +366,7 @@ of what went well, and what might be improved.
 
 \bibliographystyle{abbrv}
 
-\bibliography{dissertation}
+\bibliography{ref}
 
 % Appendixes
 
