@@ -20,7 +20,7 @@ function createDiploma(createDiploma){
         diplomaObject.englishGrade = createDiploma.englishGrade;
         diplomaObject.csGrade = createDiploma.csGrade;
         diplomaObject.hs = createDiploma.hs;
-        diplomaObject.person = createDiploma.person;
+        diplomaObject.owner = createDiploma.owner;
         return diploma.add(diplomaObject);
     })
     .catch(function(error){
@@ -36,16 +36,16 @@ function createDiploma(createDiploma){
 
  function createDrivingLicence(createDL){
     var dlID = createDL.drivingLicenceID;
-    var person = createDL.person;
+    var owner = createDL.owner;
     var diploma = createDL.diploma;
-    if(person.personID === diploma.person.personID){
-         if(person.age >= 18){
+    if(owner.personID === diploma.owner.personID){
+         if(owner.age >= 18){
              
          return getAssetRegistry('org.ssidentity.DrivingLicence')
          .then(function(dl){
            var factory = getFactory();
            var dlObject = factory.newResource('org.ssidentity','DrivingLicence', dlID);
-           dlObject.person = person;
+           dlObject.owner = owner;
            dlObject.diplomaStatus = 'Confirmed';  
            return dl.add(dlObject);
          })
@@ -70,7 +70,7 @@ function createDiploma(createDiploma){
      var mathGrade = enrollUni.mathGrade;
      var englishGrade = enrollUni.englishGrade;
      var csGrade = enrollUni.csGrade;
-     if(enrollUni.person.personID === enrollUni.diploma.person.personID){
+     if(enrollUni.owner.personID === enrollUni.diploma.owner.personID){
         if((enrollUni.diploma.mathGrade >= mathGrade) &&
             (enrollUni.diploma.englishGrade >= englishGrade) &&
             (enrollUni.diploma.csGrade >= csGrade)){
@@ -79,7 +79,7 @@ function createDiploma(createDiploma){
                   var factory = getFactory();
                   var uniDipObject = factory.newResource('org.ssidentity','UniversityDiploma', uniDiplomaID);
                   uniDipObject.status = 'Enrolled';
-                  uniDipObject.person = enrollUni.person;
+                  uniDipObject.owner = enrollUni.owner;
                   uniDipObject.uni = enrollUni.uni; 
                   return uniDip.add(uniDipObject);
                 })
@@ -91,7 +91,7 @@ function createDiploma(createDiploma){
                 throw new Error ('Your grades are not good enough. Try again next year')
             }
      }else{
-         throw new Error ('Not the correct person with diploma');
+         throw new Error ('Not the correct owner of the diploma');
      }
      
  }
@@ -103,7 +103,7 @@ function createDiploma(createDiploma){
  */
 
  function graduateUniversity(grad){
-     if(grad.uniDiploma.person.personID === grad.person.personID){
+     if(grad.uniDiploma.owner.personID === grad.owner.personID){
         if(grad.uniDiploma.uni.universityID === grad.uni.universityID){
             return getAssetRegistry('org.ssidentity.UniversityDiploma')
             .then(function(graduated){

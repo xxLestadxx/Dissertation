@@ -59,12 +59,12 @@ asset Diploma identified by diplomaID {
   o Double englishGrade range = [2.0,6.0]
   o Double csGrade range = [2.0,6.0]
   --> HighSchool hs 
-  --> Person person
+  --> Person owner
 }
 
 asset DrivingLicence identified by drivingLicenceID {
   o String drivingLicenceID
-  --> Person person
+  --> Person owner
   --> DrivingSchool ds
   o DiplomaStatus diplomaStatus
 }
@@ -73,7 +73,7 @@ asset UniversityDiploma identified by uniDiplomaID {
   o String uniDiplomaID
   o Integer finalGrade range = [0, 100] optional
   o enrollStatus status
-  --> Person person
+  --> Person owner
   --> University uni
 }
 
@@ -95,12 +95,12 @@ transaction createDiploma {
   o Double englishGrade
   o Double csGrade
   --> HighSchool hs
-  --> Person person
+  --> Person owner
 }
 
 transaction createDrivingLicence {
   o String drivingLicenceID
-  --> Person person
+  --> Person owner
   --> Diploma diploma
   --> DrivingSchool ds
 }
@@ -110,7 +110,7 @@ transaction enrollInUniversity {
   o Double mathGrade  range = [2.0, 6.0]
   o Double englishGrade range = [2.0,6.0] 
   o Double csGrade range = [2.0,6.0]
-  --> Person person
+  --> Person owner
   --> Diploma diploma
   --> University uni
 }
@@ -118,5 +118,5 @@ transaction enrollInUniversity {
 transaction graduateUni {
   --> University uni
   --> UniversityDiploma uniDiploma
-  --> Person person
+  --> Person owner
 }
