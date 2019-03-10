@@ -1,0 +1,79 @@
+rule SSIdentityNetworkAdminPermissionSystem {
+  description: "can READ the system registries"
+  participant: "ANY"
+  operation: ALL
+  resource: "org.hyperledger.composer.system.**"
+  action: ALLOW  
+}
+
+rule NetworkAdminUser {
+    description: "Grant business network administrators full access to user resources"
+    participant: "org.hyperledger.composer.system.NetworkAdmin"
+    operation: ALL
+    resource: "**"
+    action: ALLOW
+}
+
+rule NetworkAdminSystem {
+    description: "Grant business network administrators full access to system resources"
+    participant: "org.hyperledger.composer.system.NetworkAdmin"
+    operation: ALL
+    resource: "org.hyperledger.composer.system.**"
+    action: ALLOW
+}
+
+rule HighSchoolToAccessAssetDiploma {
+  description: "This rule allows only the highschool participant to be able to access and do CRUD operations on the asset Diploma"
+  participant: "org.ssidentity.HighSchool"
+  operation: ALL
+  resource: "org.ssidentity.Diploma"
+  action: ALLOW
+}
+
+rule HighSchoolToCreateDiploma {
+  description: "This rule allows only the highschool to be able to execute createDiploma transaction"
+  participant: "org.ssidentity.HighSchool"
+  operation: CREATE
+  resource: "org.ssidentity.createDiploma"
+  action: ALLOW
+}
+
+rule DrivingSchoolToAccessAssetDrivingLicence {
+  description: "This rule allows only the highschool participant to be able to access and do CRUD operations on the asset Diploma"
+  participant: "org.ssidentity.DrivingSchool"
+  operation: ALL
+  resource: "org.ssidentity.DrivingLicence"
+  action: ALLOW
+}
+
+rule DrivingSchoolToCreateDrivingLicence {
+  description: "This rule allows only the highschool to be able to execute createDiploma transaction"
+  participant: "org.ssidentity.HighSchool"
+  operation: CREATE
+  resource: "org.ssidentity.createDrivingLicence"
+  action: ALLOW
+}
+
+rule UniversityToAccessAssetUniversityDiploma {
+  description: "This rule allows only the highschool participant to be able to access and do CRUD operations on the asset Diploma"
+  participant: "org.ssidentity.University"
+  operation: ALL
+  resource: "org.ssidentity.UniversityDiploma"
+  action: ALLOW
+}
+
+rule UniversityToCreateUniversityDiploma {
+  description: "This rule allows only the highschool to be able to execute createDiploma transaction"
+  participant: "org.ssidentity.University"
+  operation: CREATE
+  resource: "org.ssidentity.enrollInUniversity"
+  action: ALLOW
+}
+
+rule UniversityToCreateUpdateDiplomaGraduate {
+  description: "This rule allows only the highschool to be able to execute createDiploma transaction"
+  participant: "org.ssidentity.University"
+  operation: UPDATE
+  resource: "org.ssidentity.enrollInUniversity"
+  action: ALLOW
+}

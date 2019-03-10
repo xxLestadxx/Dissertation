@@ -30,3 +30,14 @@ composer card import -f admin@ssidentity.card
 -> command succeded
 
 composer-rest-server // creates a rest server on localhost:3000
+
+to run angular generator: 
+
+yo hyperledger-composer:angular
+
+-> Application generated
+
+// navigate to the newly created folder 
+// you have to have npm packets installed 
+
+npm start

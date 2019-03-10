@@ -120,3 +120,7 @@ transaction graduateUni {
   --> UniversityDiploma uniDiploma
   --> Person owner
 }
+
+transaction queryDiplomas{
+}
+

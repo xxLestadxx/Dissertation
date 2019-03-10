@@ -1,0 +1,115 @@
+namespace org.ssidentity
+//It is going to be a model based on Bulgaria 
+
+enum Gender {
+  o Male
+  o Female
+  o Others
+}
+
+participant Person identified by personID {
+  o String personID
+  o String firstName
+  o String lastName
+  o String phone
+  o String email
+  o Gender gender
+  o Integer age range = [0, 120]
+}
+
+participant HighSchool identified by highSchoolID {
+  o String highSchoolID
+  o String highschoolName 
+  o String email
+  o String phone
+  o Integer rating
+}
+
+//DS wants only approvement that the person has diploma and that the person is above 18 years old 
+participant DrivingSchool identified by drivingSchoolID {
+  o String drivingSchoolID
+  o String drivingSchoolName
+  o Integer rating
+}
+
+//It will want the grades for math, english and Computer science equivalent to the A levels  
+participant University identified by universityID {
+  o String universityID
+  o String universityName
+  o String email
+  o String phone
+  o Integer rating
+}
+
+//contains the grades for Math, English and Computer Science, equivalent to A levels
+asset Diploma identified by diplomaID {
+  o String diplomaID
+  o Double mathGrade  range = [2.0, 6.0]
+  o Double englishGrade range = [2.0,6.0]
+  o Double csGrade range = [2.0,6.0]
+  --> HighSchool hs 
+  --> Person owner
+}
+
+asset DrivingLicence identified by drivingLicenceID {
+  o String drivingLicenceID
+  --> Person owner
+  --> DrivingSchool ds
+  o DiplomaStatus diplomaStatus
+}
+
+asset UniversityDiploma identified by uniDiplomaID {
+  o String uniDiplomaID
+  o Integer finalGrade range = [0, 100] optional
+  o enrollStatus status
+  --> Person owner
+  --> University uni
+}
+
+enum enrollStatus {
+  o Enrolled
+  o Graduated
+  o Left
+}
+
+enum DiplomaStatus{
+  o Pending
+  o Confirmed
+  o Declined
+}
+
+transaction createDiploma {
+  o String diplomaID
+  o Double mathGrade
+  o Double englishGrade
+  o Double csGrade
+  --> HighSchool hs
+  --> Person owner
+}
+
+transaction createDrivingLicence {
+  o String drivingLicenceID
+  --> Person owner
+  --> Diploma diploma
+  --> DrivingSchool ds
+}
+
+transaction enrollInUniversity {
+  o String uniDiplomaID
+  o Double mathGrade  range = [2.0, 6.0]
+  o Double englishGrade range = [2.0,6.0] 
+  o Double csGrade range = [2.0,6.0]
+  --> Person owner
+  --> Diploma diploma
+  --> University uni
+}
+
+transaction graduateUni {
+  --> University uni
+  --> UniversityDiploma uniDiploma
+  --> Person owner
+}
+
+transaction queryDiplomas{
+}
+
