@@ -21,8 +21,7 @@ To do:
 - make sure that the person is giving his ID and it's not taken by somebody just like that. 
 - certify with public key and see the private one ? (can it be done in Fabric and how)
 - ID -> encripty -> authority -> decript -> ID
-- __proper trust model__
-    - who is certifying which info (Resources/Participants ACL)
+
    
 - who is holding what and what cross checks are possible
 - global picture of identity system
@@ -46,6 +45,8 @@ Done:
 ✔ Creation of a system based on a "kingdom model" with free and slaved people
 
 ✔ Query for personID - when using the REST for id you have to provide the full "name" - ex: resource:org.example.trading.Trader#exampleTraderID
+
+✔ who is certifying which info (Resources/Participants ACL) - again with the given restrictions it can be just an update function. 
 
 ✔ who is using which info (Resources/Participants ACL) - created ACL - rules for what kind of resource can be used by a participant 
  
