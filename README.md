@@ -23,7 +23,7 @@ To do:
 - ID -> encripty -> authority -> decript -> ID
 - __proper trust model__
     - who is certifying which info (Resources/Participants ACL)
-    - who can see the info (Query and ACL)
+   
 - who is holding what and what cross checks are possible
 - global picture of identity system
 - Am I my public key only or I will be able to do more things in the system (add a participant, enter as the participant in the network)
@@ -48,3 +48,5 @@ Done:
 ✔ Query for personID - when using the REST for id you have to provide the full "name" - ex: resource:org.example.trading.Trader#exampleTraderID
 
 ✔ who is using which info (Resources/Participants ACL) - created ACL - rules for what kind of resource can be used by a participant 
+ 
+✔ who can see the info (Query and ACL) - in regards of the ACL, the participants can only see queries and entries of the assets they have access to
