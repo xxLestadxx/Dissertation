@@ -31,4 +31,6 @@ var cardType = {type: 'composer-wallet-inmemory' }
 
 #### Reference 
 1. https://www.udemy.com/hyperledger/
-1. red book of IBM
+2. red book of IBM
+3. https://hyperledger.github.io/composer/v0.19/managing/identity-bind 
+4. https://hyperledger.github.io/composer/v0.19/managing/identity-issue

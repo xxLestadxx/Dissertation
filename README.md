@@ -23,7 +23,11 @@ To do:
 - ID -> encripty -> authority -> decript -> ID
 
    
-- who is holding what and what cross checks are possible
+- who is holding what and what cross checks are possible 
+    - the first asset, created only by the participant is always going to be the weakest link - cannot be sure if the person is uploading his data correctly (where Police can help out with double checking if everything is correct, if possible; is this breaking the ssidentity system?), 
+    - The driving licence is taking as double cross check the age of the person and the ownerID (person) presented in the Diploma asset needed to certificate a certain level of knowledge
+    - enrolling into university transaction is again making crosscheck with the highschool diploma of the person.
+    - The updating of the uni diploma transaction is having a cross check with name of the uni diploma and the one provided and with the owner of the diploma with the one provided in the transaction.  
 - global picture of identity system
 - Am I my public key only or I will be able to do more things in the system (add a participant, enter as the participant in the network)
 - can somebody impersonate me by other means than stealing my ID

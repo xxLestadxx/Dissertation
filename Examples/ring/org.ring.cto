@@ -1,0 +1,24 @@
+namespace org.ring
+
+participant TraderA identified by participantA {
+  o String participantA
+}
+
+participant TraderB identified by participantB {
+  o String participantB
+}
+
+asset Token identified by tokenKey {
+  o String tokenKey
+  o Integer number
+}
+
+transaction passTheToken {
+  --> TraderA ta
+  --> TraderB tb 
+  --> Token token
+}
+
+event passed {
+  --> Token token
+}

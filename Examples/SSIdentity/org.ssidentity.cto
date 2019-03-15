@@ -110,6 +110,16 @@ transaction graduateUni {
   --> Person owner
 }
 
-transaction queryDiplomas{
+event personWantsDiplomaEvent{
+  --> Person owner
 }
 
+transaction personWantsDiploma {
+  --> Person owner
+}
+
+transaction confirmDiploma{
+ --> Person owner 
+ --> Diploma diploma
+ --> HighSchool hs 
+}

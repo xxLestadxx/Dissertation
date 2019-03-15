@@ -96,7 +96,7 @@ rule HighSchoolToSeeTheirDiplomas {
 
 rule UniversitiesToSeeTheirDiplomas {
   description: "Trader can see/work with their own Commodities"
-  participant(t): "org.ssidentity.Person"
+  participant(t): "org.ssidentity.University"
   operation: READ
   resource(c): "org.ssidentity.UniversityDiploma"
   condition: (c.uni.getIdentifier() == t.getIdentifier())
@@ -105,7 +105,7 @@ rule UniversitiesToSeeTheirDiplomas {
 
 rule DrivingSchoolToSeeTheirLicences {
   description: "Trader can see/work with their own Commodities"
-  participant(t): "org.ssidentity.Person"
+  participant(t): "org.ssidentity.DrivingSchool"
   operation: READ
   resource(c): "org.ssidentity.DrivingLicence"
   condition: (c.ds.getIdentifier() == t.getIdentifier())
@@ -142,4 +142,40 @@ rule UniversityToCreateUpdateDiplomaGraduate {
   operation: UPDATE
   resource: "org.ssidentity.enrollInUniversity"
   action: ALLOW
+}
+
+rule PersonSeeOwnHistoryOnly {
+  description: "A Person should be able to see the history of their own transactions only"
+  participant(t): "org.ssidentity.Person"
+  operation: READ
+  resource(v): "org.hyperledger.composer.system.HistorianRecord"
+  condition: (v.participantInvoking.getIdentifier() != t.getIdentifier())
+  action: DENY
+}
+
+rule HighSchoolSeeOwnHistoryOnly {
+  description: "A HighSchool should be able to see the history of their own transactions only"
+  participant(t): "org.ssidentity.HighSchool"
+  operation: READ
+  resource(v): "org.hyperledger.composer.system.HistorianRecord"
+  condition: (v.participantInvoking.getIdentifier() != t.getIdentifier())
+  action: DENY
+}
+
+rule DrivingSeeOwnHistoryOnly {
+  description: "A Driving school should be able to see the history of their own transactions only"
+  participant(t): "org.ssidentity.DrivingSchool"
+  operation: READ
+  resource(v): "org.hyperledger.composer.system.HistorianRecord"
+  condition: (v.participantInvoking.getIdentifier() != t.getIdentifier())
+  action: DENY
+}
+
+rule UniversitySeeOwnHistoryOnly {
+  description: "A University should be able to see the history of their own transactions only"
+  participant(t): "org.ssidentity.University"
+  operation: READ
+  resource(v): "org.hyperledger.composer.system.HistorianRecord"
+  condition: (v.participantInvoking.getIdentifier() != t.getIdentifier())
+  action: DENY
 }

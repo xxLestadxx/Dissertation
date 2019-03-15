@@ -1,0 +1,19 @@
+
+composer participant add -d '{"$class":"org.ssidentity.Person","personID":"Daka","firstName":"Daka","lastName": "Gospodinov","phone":"4324325","email":"daka.gospodinov@stirling.co","gender":"Male","age":23 }' -c admin@ssidentity
+
+composer identity issue -u Daka -a org.ssidentity.Person#Daka -c admin@ssidentity -x
+
+composer participant add -d '{"$class":"org.ssidentity.HighSchool","highSchoolID":"MG","highschoolName":"MG Beron","email": "mgberon@stirling.co","phone":"324323245","rating":100}' -c admin@ssidentity
+
+composer identity issue -u MG -a org.ssidentity.HighSchool#MG -c admin@ssidentity -x
+
+composer participant add -d '{"$class":"org.ssidentity.DrivingSchool","drivingSchoolID":"DS1","drivingSchoolName":"DriveWithUs","rating":100}' -c admin@ssidentity
+
+composer identity issue -u DS1 -a org.ssidentity.DrivingSchool#DS1 -c admin@ssidentity -x
+
+
+composer participant add -d '{"$class":"org.ssidentity.University","universityID":"Stirling","universityName":"University of Stirling","email":"stir.co","phone":"23215324","rating":100}' -c admin@ssidentity 
+
+
+composer identity issue -u Stirling -a org.ssidentity.University#Stirling -c admin@ssidentity -x
+

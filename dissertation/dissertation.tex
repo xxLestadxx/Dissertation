@@ -260,79 +260,91 @@ Cons:
 
 \label{technical}
 
-The body of the dissertation consists of a number of chapters named
-appropriately ({\em not} `Technical Chapter'). Follow a logical progression in
-how you present your work. This might be a time sequence of development
-activities, the phases of the software development cycle, the modules of your
-system, etc.
+The key software and technology used for the creation and development of this project is:
+\begin{itemize}
+\item OS: Ubuntu 16.04 Xenial 64 bit
+\item Hyperledger Fabric - modular blockchain framework
+\item Hyperledger Composer - a tool to create abstract blockchain application, that can then be run on Fabric.
+\item Docker and Docker Composer
+\item Visual Studio Code
+\end{itemize}
 
-Appropriate chapters might be called Requirements, Design, Implementation and
-Evaluation. The emphasis should be on requirements, design and evaluation, with
-implementation details being of lesser importance. The requirements should be
-clearly stated, following from the client needs and weaknesses identified in the
-state-of-the-art review. The design should include discussion of the choices
-that were available and why particular decisions were made. The evaluation
-should relate back to the requirements, and demonstrate the extent to which
-these were met. Low-level material should appear in appendixes.
 
-\section{First Section}
+\section{Distributed Ledger Technologies}
 
-\label{technical-section1}
+\label{dlt}
 
-Subdivide your text into sections with the \textit{{\bs}section} command.
+Ledgers have been in use of the humanity since ancient days. Their medium has been clay, wooden tally sticks, stone, papyrus and paper. They served its purpose as a one-side record-keeping tool. But this also brings concerns around who is going to validate this one-side register. Later in 15th century, the Italian mathematician Luca Pacioli became the first person, recorded, to publish a paper on the double-entry bookkeeping \cite{ledgers}.However, even when all of the parties have their own records of a particular deal, someone, or even a group of the participants, may cheat and keep a different record, from the original. Thus taking advantage over the people who are trying to trade fairly and honorably.
 
-\subsection{First Subsection}
+However, even when all of the parties have their own records of a particular deal, someone, or even a group of the participants, may cheat and keep a different record, from the original. Thus taking advantage over the people who are trying to trade fairly and honorably.
 
-\label{technical-subsection1}
+A distributed ledger technology is a concurrent system, referring to a database that is consistently shared and synchronized across multiple machines/nodes in a network. It allows transactions to be monitored by multiple actors, thereby making a cyberattack more difficult. The participants at each of those machines can access the recordings shared and can keep an identical copy of it. Since it is a distributed ledger, any changes made on it are then reflected and the change is done to all the nodes holding a copy of it \cite{dltref} . However, in order to know which entry should be spread, and which is/are the correct ledger/s the system has to have a consensus among all the peers and reach a final solution.
+\subsubsection{Cosensus}  
+\label{consensus}
 
-If necessary, also use subsections. Subsections are entered using the
-\textit{{\bs}subsection} command.
+In general, a consensus algorithm is a process in computer science used to achieve agreement on a single data value among distributed processes or systems. Consensus algorithms are designed to achieve reliability in a network involving multiple unreliable nodes. Solving that issue – known as the consensus problem – is important in distributed computing and multi-agent systems.\cite{mills2016distributed}
+\subsubsection{Cross-border transactions}  
+\label{xborderTransactions}
 
-\subsubsection{First Subsubsection}
+Includes both outbound and inbound transfers of property, stock, or financial and commercial obligations between related entities resident or operating in different tax jurisdictions. Until recently developers argued that certain attributes of DLT, such as the ability to share ledgers across geographic distances and time-zones, could reduce the number of intermediaries needed to effect cross-border payments. Cross-border payments may be a product of a more transparent and cost-efficient structure due to reducing the number of intermediaries. As result of the reduction, a certain regional banks may be able to directly access the network, thus resulting in the benefits mentioned.\cite{mills2016distributed}
 
-\label{technical-subsubsection1}
 
-If you really need subsubsections, enter these using the
-\textit{{\bs}subsubsection} command.
+\subsubsection{Information Sharing}  
+\label{infosharing}
+DLT has the ability to maintain tamper-resistant records and the arrangements could be designed to allow participants to have “read-only access” to certain parts of the common ledger. This even if it limits the user’s options, it still gives visibility which in turn stresses the integrity of the system, since you are being able to see the supply chain of a particular asset or its history. At the same time, however, since not all of a service provider’s transactions concerning customers might be on one or more ledgers, certain regulatory requirements could be difficult to meet by simply providing access to a ledger.\cite{mills2016distributed}
 
-\subsubsection{Second Subsubsection}
 
-\label{technical-subsubsection2}
+\section{Blockchain}
+\label{blockchain}
 
-And yet more subsubsections if need be.
+Blockchain is a new technology that represents several ideas that are now able to work together. In its core, this high tech is decentralized database. Moreover, due to the asymmetric (public - private key ) cryptography, every peer has an unique identity. Whenever a peer adds data into the blockchain, everybody in the network can see his or her public address as an initiator of this transaction. Since everyone participates in this database, no duplication of data is made, hence no redundancy. 
+ 
+	Blockchain is a linked list of blocks and a block is a group of ordered transactions. It is a distributed database on which once a data has been put, that data cannot be changed. Another unique feature is that there are specific rules, which can put data into the block. These rules, protocol, are made so that there could be no conflicts with data that is already in the database. The data is locked on to an owner. Finally, the nodes agree upon the state of the blockchain.\cite{whatIsBlockchain} It is important that in different blockchains the consensus can be different as well. Thus, two blockchains can have different unique features.
+	
+	An important notion is that a blockchain network can be \textit{permissioned} or \textit{permissionless}.
 
-\subsection{Second Subsection}
+\subsubsection{Permissioned blockchain}
+This type of network means that only the ones with permission can enter the network. The consensus can be more or less a variation of “Proof-of-authority”, where selected nodes endorse and agree between each other of the state of the blockchain. In this case, the trade off is that the system is not as decentralized, however the transactions are much faster and cost-effective.
 
-\label{technical-subsection2}
+\subsubsection{Permissionless blockchain}
+Everyone can join in the network. Perfect examples of such systems are Bitcoin and Ethereum. Typically the consensus they execute at the moment is called “Proof-of-Work”. This mechanism allows every node to participate in a fair contest to ‘mine’ the next block. The winner gets either Bitcoin or Ether respective to the network. This type of consensus and availability to enter the network is giving the blockchain its most famous feature - being decentralized.
 
-And, as required, more subsections.
+	\textit{Cryptocurrency} is a digital asset, medium of exchange in the network. It is created and stored electronically in the blockchain by using encryption techniques to control the creation of monetary units and to verify the transfer of funds. The most important features that cryptocurrency possess are: it has no intrinsic value - you cannot redeem it for a raw material; it has no physical form; its supply is not determined by anyone but the creators of the respective blockchain. \cite{whatIsCryptocurrency}
+An example of a working blockchain system with a cryptocurrency can be seen on figure \ref{blockchainAbstract}. 
 
-\section{Second Section}
+A peer makes a transaction. This transaction is then taken upon consideration whether it is valid or not. The decision is made by all nodes or just the ones that have been given permission to validate transactions. Upon reaching the conclusion that a transaction is valid,  then it is wrapped up with many more, or in some cases alone, in order to create a block. Two things happen from the last event. First, a transaction is being completed. Second, in permissionless blockchains, the one to win the competition, to ‘mine’ the newly created block receives a reward. 
 
-\label{technical-section2}
-
-Figures are created with the \textit{figure} environment, while tables are
-created with the \textit{table} environment. They are identified by the
-\textit{{\bs}label} command, and are referenced by the \textit{{\bs}ref}
-command. Graphics are inserted with the \textit{{\bs}graphic} command. Captions
-are entered using the \textit{{\bs}caption} command. As an example of a figure,
-consider figure~\ref{figure}.
-
-The native format for \LaTeX\ graphics is EPS (Encapsulated PostScript).
-Graphical editors are usually capable of producing EPS. When outputting to PDF
-(Portable Document Format), the native graphics format is also PDF. Conversion
-of EPS to PDF is supported by a number of TeX\ toolsets.
-
-\begin{figure}
-
-  \graphic{figure}
-
-  \caption{Highly Technical Diagram}
-
-  \label{figure}
-
+\begin{figure}[h]
+\centering
+  \includegraphics[width=16cm]{infographics0517-01-1.png}
+  \caption{An abstract of a blockchain system \cite{whatIsBlockgeeks}}
+  \label{blockchainAbstract}
 \end{figure}
 
+
+\section{Hyperledger Fabric}
+\label{hplFabric}
+
+\section{Hyperledger Composer}
+\label{hplComposer}
+
+\section{Docker}
+\label{docker}
+
+\section{Visual Studio Code}
+\label{vsCode}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Use Case  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Use case}
+\label{usecase}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  User Manual  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{User Manual}
+\label{usermanual}
+
+\section{Step one}
+\label{stepOne}
+	 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Conclusion %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -372,18 +384,5 @@ of what went well, and what might be improved.
 
 \appendix
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  User Guide %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\chapter{User Guide}			% Insert your appendix titles
-
-\label{guide}
-
-The appendixes should contain reference material or detailed material that would
-detract from the flow in the body of the dissertation. Appendixes might include
-a user guide, a list of abbreviations, detailed program descriptions, etc.
-Appendixes are introduced with the \textit{{\bs}appendix} command. Appendix
-headings otherwise use \textit{{\bs}chapter}, \textit{{\bs}section}, etc.\ as
-usual.
 
 \end{document}

@@ -107,7 +107,7 @@ function createDiploma(createDiploma){
         if(grad.uniDiploma.uni.universityID === grad.uni.universityID){
             return getAssetRegistry('org.ssidentity.UniversityDiploma')
             .then(function(graduated){
-                grad.uniDiploma.status = 'Graduated'
+                grad.uniDiploma.status = 'Graduated';
                 grad.uniDiploma.finalGrade = 76;
                 return graduated.update(grad.uniDiploma);
             })
@@ -119,8 +119,15 @@ function createDiploma(createDiploma){
      }
  }
  
- /**
+  /**
  * emit event with all entries of the select diploma query
- * @param {org.ssidentity.queryDiplomas} qdip 
+ * @param {org.ssidentity.personWantsDiploma} qdip 
  * @transaction
  */
+
+function personWantsDiploma(qdip) {
+    var creatingOrderEvent = getFactory();
+    var notificationB = creatingOrderEvent.newEvent('org.ssidentity', 'personWantsDiplomaEvent');
+    notificationB.owner = qdip.owner;
+    emit(notificationB);
+ }

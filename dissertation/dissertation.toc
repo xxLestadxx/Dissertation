@@ -14,13 +14,20 @@
 \contentsline {subsection}{\numberline {2.1.4}BitNation}{6}
 \contentsline {subsection}{\numberline {2.1.5}E-Residency}{6}
 \contentsline {chapter}{\numberline {3}Technical Chapters}{7}
-\contentsline {section}{\numberline {3.1}First Section}{7}
-\contentsline {subsection}{\numberline {3.1.1}First Subsection}{7}
-\contentsline {subsubsection}{First Subsubsection}{7}
-\contentsline {subsubsection}{Second Subsubsection}{7}
-\contentsline {subsection}{\numberline {3.1.2}Second Subsection}{7}
-\contentsline {section}{\numberline {3.2}Second Section}{8}
-\contentsline {chapter}{\numberline {4}Conclusion}{9}
-\contentsline {section}{\numberline {4.1}Evaluation}{9}
-\contentsline {section}{\numberline {4.2}Future Work}{9}
-\contentsline {chapter}{\numberline {A}User Guide}{11}
+\contentsline {section}{\numberline {3.1}Distributed Ledger Technologies}{7}
+\contentsline {subsubsection}{Cosensus}{8}
+\contentsline {subsubsection}{Cross-border transactions}{8}
+\contentsline {subsubsection}{Information Sharing}{8}
+\contentsline {section}{\numberline {3.2}Blockchain}{8}
+\contentsline {subsubsection}{Permissioned blockchain}{9}
+\contentsline {subsubsection}{Permissionless blockchain}{9}
+\contentsline {section}{\numberline {3.3}Hyperledger Fabric}{9}
+\contentsline {section}{\numberline {3.4}Hyperledger Composer}{9}
+\contentsline {section}{\numberline {3.5}Docker}{9}
+\contentsline {section}{\numberline {3.6}Visual Studio Code}{9}
+\contentsline {chapter}{\numberline {4}Use case}{11}
+\contentsline {chapter}{\numberline {5}User Manual}{12}
+\contentsline {section}{\numberline {5.1}Step one}{12}
+\contentsline {chapter}{\numberline {6}Conclusion}{13}
+\contentsline {section}{\numberline {6.1}Evaluation}{13}
+\contentsline {section}{\numberline {6.2}Future Work}{13}
