@@ -2,7 +2,7 @@
 
 composer network install -a ./ring.bna -c PeerAdmin@hlfv1
 
-composer network start -c PeerAdmin@hlfv1 -n ring -V 0.0.2-deploy.8  -A admin -S adminpw
+composer network start -c PeerAdmin@hlfv1 -n ring -V 0.0.2-deploy.10  -A admin -S adminpw
 
 composer card delete -c admin@ring
 
@@ -24,6 +24,30 @@ composer card delete -c TB@ring
 
 #composer card import -f TB@ring.card
 
+#1. Set up the REST server to multi user mode    true | false
+export COMPOSER_MULTIUSER=true
+
+# PLEASE CHANGE THIS TO point to your DB instance
+# ================================================
+# HOST = DB Server host,   PORT = Server port#
+# database = Name of the database
+# Credentials =>    user/password 
+# connector   =>    We are using mongodb, it can be 
+#                   any nosql database
+
+export COMPOSER_DATASOURCES='{
+    "db": {
+        "name": "db",
+        
+        "url": "mongodb://test:test@cluster0-shard-00-00-x0b55.mongodb.net:27017,cluster0-shard-00-01-x0b55.mongodb.net:27017,cluster0-shard-00-02-x0b55.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true",
+        "port": 27017,
+       
+        "database": "restauth",
+
+        "connector": "mongodb"  
+    }
+}'
+
 	
 # Setup the Environment variables for the REST Server
 
@@ -40,30 +64,7 @@ export COMPOSER_AUTHENTICATION=true
 # Mongo DB loopback connector. This property is used
 # by REST server for connecting with the MongoDB 
 # instance in the cloud | local
-
-#1. Set up the REST server to multi user mode    true | false
-export COMPOSER_MULTIUSER=true
-
-# PLEASE CHANGE THIS TO point to your DB instance
-# ================================================
-# HOST = DB Server host,   PORT = Server port#
-# database = Name of the database
-# Credentials =>    user/password 
-# connector   =>    We are using mongodb, it can be 
-#                   any nosql database
-
-export COMPOSER_DATASOURCES='{
-    "db": {
-        "name": "db",
-        
-        "url": "mongodb://test: test @cluster0-shard-00-00-imfeb.mongodb.net:27017,cluster0-shard-00-01-imfeb.mongodb.net:27017,cluster0-shard-00-02-imfeb.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true",
-        "port": 27017,
-       
-        "database": "restauth",
-
-        "connector": "mongodb"  
-    }
-}'
+export COMPOSER_WEBSOCKETS=true
 
 #4. Set up the Passport strategy provider
 export COMPOSER_PROVIDERS='{
