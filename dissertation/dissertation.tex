@@ -298,6 +298,8 @@ DLT has the ability to maintain tamper-resistant records and the arrangements co
 \label{blockchain}
 
 Blockchain is a new technology that represents several ideas that are now able to work together. In its core, this high tech is decentralized database. Moreover, due to the asymmetric (public - private key ) cryptography, every peer has an unique identity. Whenever a peer adds data into the blockchain, everybody in the network can see his or her public address as an initiator of this transaction. Since everyone participates in this database, no duplication of data is made, hence no redundancy. 
+
+In the blockchain each block’s header includes a hash of the block’s transactions, as well as a copy of the hash of the prior block’s header, hence blockchain. In this way, all transactions are sequenced and cryptographically linked together. This mechanism keeps the ledger data very secure. Even if one node hosting the ledger has been tampered with, it would not be able to convince all the other nodes that it has the ‘correct’ data, because the ledger is distributed through a network of independent nodes. [Fabric ledger doc] 
  
 	Blockchain is a linked list of blocks and a block is a group of ordered transactions. It is a distributed database on which once a data has been put, that data cannot be changed. Another unique feature is that there are specific rules, which can put data into the block. These rules, protocol, are made so that there could be no conflicts with data that is already in the database. The data is locked on to an owner. Finally, the nodes agree upon the state of the blockchain.\cite{whatIsBlockchain} It is important that in different blockchains the consensus can be different as well. Thus, two blockchains can have different unique features.
 	
@@ -343,7 +345,7 @@ The feature which makes Fabric the perfect choice is that it can create differen
 	Consists of two distinct, though related, parts - \textbf{world state} and  a \textbf{blockchain}.
 	
 	\subsubsection{World state}
-	The world state is a database that holds the \textbf{current values} of the assets in the ledger as ledger states. The ledger states are usually expressed as key-value pairs, though there is some flexability in this regard. The world state changes frequently because of the CRUD operations applied on the network. 
+	The world state is a database that holds the \textbf{current values} of the assets in the ledger as ledger states. The ledger states are usually expressed as key-value pairs, though there is some flexibility in this regard. The world state changes frequently because of the CRUD operations applied on the network. 
 	
 	The world state is created with the premise of faster transactions. Instead of traversing the entire blockchain to calculate the current value of the asset, a program can just take it from the world state. 
 

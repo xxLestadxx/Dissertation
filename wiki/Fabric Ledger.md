@@ -16,7 +16,7 @@ Obviously only validated transactions will be able to change the world state.
 _The visual vocabulary expressed in facts is as follows: There is a ledger state with key=CAR1 and value=Audi. There is a ledger state with key=CAR2 and a more complex value {model:BMW, color=red, owner=Jane}. Both states are at version 0._
 
 
- The version number of a state is incremented every time the state changes. It's a good way to check whether the state of the asset has been updated in order to make sure it matches with the version when the transaction was created. This check ensures that the world state changing __from the same expected value to the same expected value__ as when the transaction was created.
+ The version number of a state is incremented every time the state changes. It's a good way to check whether the state of the asset has been updated in order to make sure it matches with the version when the transaction was created. The version is checked whenever the state is updated to make sure the current states matches the version at the time of endorsement. This ensures that the world state is changing as expected; that there has not been a concurrent update.
 
 When a ledger first is created the world state is empty. Since the transactions are recorded in the blockchain and any valid transaction  can change the world state, this means that the world state can be re-generated from the blockchain at any time. This can be very convenient - for example, the world state is automatically generated when a peer is created. Moreover, if a peer fails abnormally, the world state can be regenerated on peer restart, before transactions are accepted. 
 
