@@ -3,37 +3,50 @@
 \contentsline {chapter}{Acknowledgements}{iii}
 \contentsline {chapter}{\numberline {1}Introduction}{1}
 \contentsline {section}{\numberline {1.1}Background and Context}{1}
-\contentsline {section}{\numberline {1.2}Scope and Objectives}{2}
-\contentsline {section}{\numberline {1.3}Achievements}{3}
-\contentsline {section}{\numberline {1.4}Overview of Dissertation}{3}
-\contentsline {chapter}{\numberline {2}State-of-The-Art}{4}
-\contentsline {section}{\numberline {2.1}Successful projects made with Hyperledger Fabric}{4}
-\contentsline {subsection}{\numberline {2.1.1}Altoros}{4}
-\contentsline {subsection}{\numberline {2.1.2}Verify.Me}{4}
-\contentsline {subsection}{\numberline {2.1.3}TradeLens}{5}
-\contentsline {subsection}{\numberline {2.1.4}BitNation}{6}
-\contentsline {subsection}{\numberline {2.1.5}E-Residency}{6}
-\contentsline {chapter}{\numberline {3}Technical Chapters}{7}
-\contentsline {section}{\numberline {3.1}Distributed Ledger Technologies}{7}
-\contentsline {subsubsection}{Cosensus}{8}
-\contentsline {subsubsection}{Cross-border transactions}{8}
-\contentsline {subsubsection}{Information Sharing}{8}
-\contentsline {section}{\numberline {3.2}Blockchain}{8}
-\contentsline {subsubsection}{Permissioned blockchain}{9}
-\contentsline {subsubsection}{Permissionless blockchain}{9}
-\contentsline {subsubsection}{Cryptocurrency}{9}
-\contentsline {section}{\numberline {3.3}Hyperledger Fabric}{9}
-\contentsline {subsubsection}{Hyperledger}{9}
-\contentsline {subsection}{\numberline {3.3.1}Fabric overview}{9}
-\contentsline {subsection}{\numberline {3.3.2}Fabric's Ledger}{10}
-\contentsline {subsubsection}{World state}{11}
-\contentsline {subsection}{\numberline {3.3.3}Fabric Consensus}{11}
-\contentsline {section}{\numberline {3.4}Hyperledger Composer}{11}
-\contentsline {section}{\numberline {3.5}Docker}{11}
-\contentsline {section}{\numberline {3.6}Visual Studio Code}{11}
-\contentsline {chapter}{\numberline {4}Use case}{12}
-\contentsline {chapter}{\numberline {5}User Manual}{13}
-\contentsline {section}{\numberline {5.1}Step one}{13}
-\contentsline {chapter}{\numberline {6}Conclusion}{14}
-\contentsline {section}{\numberline {6.1}Evaluation}{14}
-\contentsline {section}{\numberline {6.2}Future Work}{14}
+\contentsline {subsection}{\numberline {1.1.1}Distributed Ledger Technologies}{2}
+\contentsline {subsubsection}{Cosensus}{2}
+\contentsline {subsubsection}{Cross-border transactions}{2}
+\contentsline {subsubsection}{Information Sharing}{3}
+\contentsline {subsection}{\numberline {1.1.2}Blockchain}{3}
+\contentsline {subsubsection}{Permissioned blockchain}{3}
+\contentsline {subsubsection}{Permissionless blockchain}{3}
+\contentsline {subsubsection}{Cryptocurrency}{4}
+\contentsline {section}{\numberline {1.2}Scope and Objectives}{4}
+\contentsline {section}{\numberline {1.3}Achievements}{5}
+\contentsline {section}{\numberline {1.4}Overview of Dissertation}{5}
+\contentsline {chapter}{\numberline {2}State-of-The-Art}{6}
+\contentsline {section}{\numberline {2.1}Successful projects made with Hyperledger Fabric}{6}
+\contentsline {subsection}{\numberline {2.1.1}Altoros}{6}
+\contentsline {subsection}{\numberline {2.1.2}Verify.Me}{6}
+\contentsline {subsection}{\numberline {2.1.3}TradeLens}{7}
+\contentsline {subsection}{\numberline {2.1.4}BitNation}{8}
+\contentsline {subsection}{\numberline {2.1.5}E-Residency}{8}
+\contentsline {chapter}{\numberline {3}Technology required}{9}
+\contentsline {section}{\numberline {3.1}Docker}{9}
+\contentsline {section}{\numberline {3.2}Visual Studio Code}{9}
+\contentsline {chapter}{\numberline {4}Hyperledger Fabric}{10}
+\contentsline {subsubsection}{Permissioned blockchain}{10}
+\contentsline {subsubsection}{Hyperledger}{10}
+\contentsline {section}{\numberline {4.1}Fabric overview}{10}
+\contentsline {section}{\numberline {4.2}Fabric's Nodes}{11}
+\contentsline {subsubsection}{Committing peer node}{11}
+\contentsline {subsubsection}{Endorsing peer}{11}
+\contentsline {subsubsection}{Orderer node}{12}
+\contentsline {subsubsection}{Anchor peer}{12}
+\contentsline {section}{\numberline {4.3}Fabric's Ledger}{12}
+\contentsline {subsection}{\numberline {4.3.1}World state}{12}
+\contentsline {subsection}{\numberline {4.3.2}Blockchain}{12}
+\contentsline {subsubsection}{Blocks and their structure}{13}
+\contentsline {subsection}{\numberline {4.3.3}Channel}{14}
+\contentsline {section}{\numberline {4.4}Fabric Consensus}{15}
+\contentsline {subsection}{\numberline {4.4.1}Endorsement}{15}
+\contentsline {subsection}{\numberline {4.4.2}Ordering}{15}
+\contentsline {subsection}{\numberline {4.4.3}Validation}{16}
+\contentsline {section}{\numberline {4.5}Fabric's configuration}{16}
+\contentsline {section}{\numberline {4.6}Hyperledger Composer}{16}
+\contentsline {chapter}{\numberline {5}Use case}{17}
+\contentsline {chapter}{\numberline {6}User Manual}{18}
+\contentsline {section}{\numberline {6.1}Step one}{18}
+\contentsline {chapter}{\numberline {7}Conclusion}{19}
+\contentsline {section}{\numberline {7.1}Evaluation}{19}
+\contentsline {section}{\numberline {7.2}Future Work}{19}

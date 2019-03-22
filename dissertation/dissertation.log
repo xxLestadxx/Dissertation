@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  17 MAR 2019 21:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  21 MAR 2019 23:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -80,7 +80,11 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 (/usr/share/texlive/texmf-dist/tex/latex/chngcntr/chngcntr.sty
 Package: chngcntr 2009/09/02 v1.0a change counter resetting
 )
-(./dissertation.aux)
+(./dissertation.aux
+
+LaTeX Warning: Label `fabricLedger' multiply defined.
+
+)
 \openout1 = `dissertation.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
@@ -98,7 +102,8 @@ LaTeX Font Info:    ... okay on input line 25.
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 25.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
-) (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+)
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count89
 \scratchdimen=\dimen105
@@ -237,7 +242,78 @@ Missing character: There is no ô in font ptmr7t!
 [1
 
 
-] [2] [3]
+]
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ì in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ì in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+ [2]
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ò in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ò in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+ [3]
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ò in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+ <infographics0517-01-1.png, id=38, 1606.0pt x 843.15pt>
+File: infographics0517-01-1.png Graphic file (type png)
+
+<use infographics0517-01-1.png>
+Package pdftex.def Info: infographics0517-01-1.png used on input line 192.
+(pdftex.def)             Requested size: 455.24408pt x 239.00084pt.
+
+Overfull \hbox (12.59033pt too wide) in paragraph at lines 192--193
+ [][] 
+ []
+
+[4 <./infographics0517-01-1.png>] [5]
 Chapter 2.
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
@@ -248,14 +324,14 @@ Missing character: There is no ô in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
-[4
+[6
 
 ]
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 
-Overfull \hbox (4.39081pt too wide) in paragraph at lines 219--222
+Overfull \hbox (4.39081pt too wide) in paragraph at lines 274--277
 []\OT1/ptm/m/n/10.95 The SIM card is used as an an-chor of trust. Since the sys
 -tem is pri-vate and per-mis-sioned blockchain,
  []
@@ -263,62 +339,65 @@ Overfull \hbox (4.39081pt too wide) in paragraph at lines 219--222
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
-[5] [6]
+[7] [8]
 Chapter 3.
+[9
+
+]
+Chapter 4.
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ì in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ì in font ptmr7t!
-[7
+Missing character: There is no ù in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+[10
 
 ]
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ú in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ù in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ú in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ù in font ptmr7t!
- [8]
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ú in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ù in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ò in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+ [11]
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ò in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ô in font ptmr7t!
- <infographics0517-01-1.png, id=54, 1606.0pt x 843.15pt>
-File: infographics0517-01-1.png Graphic file (type png)
+ [12] <ledgerdiagram1.png, id=69, 683.55376pt x 307.1475pt>
+File: ledgerdiagram1.png Graphic file (type png)
 
-<use infographics0517-01-1.png>
-Package pdftex.def Info: infographics0517-01-1.png used on input line 321.
-(pdftex.def)             Requested size: 455.24408pt x 239.00084pt.
+<use ledgerdiagram1.png>
+Package pdftex.def Info: ledgerdiagram1.png used on input line 391.
+(pdftex.def)             Requested size: 455.24408pt x 204.56453pt.
 
-Overfull \hbox (12.59033pt too wide) in paragraph at lines 321--322
+Overfull \hbox (12.59033pt too wide) in paragraph at lines 391--392
+ [][] 
+ []
+
+<ledgerdiagram2.png, id=71, 822.07124pt x 366.36874pt>
+File: ledgerdiagram2.png Graphic file (type png)
+
+<use ledgerdiagram2.png>
+Package pdftex.def Info: ledgerdiagram2.png used on input line 404.
+(pdftex.def)             Requested size: 455.24408pt x 202.88423pt.
+
+Overfull \hbox (12.59033pt too wide) in paragraph at lines 404--405
  [][] 
  []
 
@@ -328,24 +407,32 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
-[9]
-
-LaTeX Warning: Citation `li2018fppb' on page 10 undefined on input line 338.
-
+[13 <./ledgerdiagram1.png>]
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
-[10 <./infographics0517-01-1.png>] [11]
-Chapter 4.
-[12
-
-]
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+ [14 <./ledgerdiagram2.png>]
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+ [15]
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+ [16]
 Chapter 5.
-[13
+[17
 
 ]
 Chapter 6.
-(./dissertation.bbl [14
+[18
+
+]
+Chapter 7.
+(./dissertation.bbl [19
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 18--22
@@ -360,59 +447,62 @@ https : / / www . altoros . com / portfolio /
  []
 
 
-Underfull \hbox (badness 1199) in paragraph at lines 42--46
+Underfull \hbox (badness 1199) in paragraph at lines 48--52
 []\OT1/ptm/m/n/10.95 Christina Ma-jaski.  Dis-tributed Ledgers Def-i-ni-tion.  
 [On-line]. Avail-able: $\OT1/ptm/m/it/10.95 https : / / www .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 48--53
+Underfull \hbox (badness 10000) in paragraph at lines 54--59
 []\OT1/ptm/m/n/10.95 COTI Staff.  Ledgers over the years - from an-cient Egypt 
 to blockchain,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 48--53
+Underfull \hbox (badness 10000) in paragraph at lines 54--59
 \OT1/ptm/m/n/10.95 DAG and be-yond.  [On-line]. Avail-able: $\OT1/ptm/m/it/10.9
 5 https : / / medium . com / @COTInetwork /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--59
+Underfull \hbox (badness 10000) in paragraph at lines 67--71
 []\OT1/ptm/m/n/10.95 IBM staff.  Maersk and IBM In-tro-duce Trade-Lens Blockcha
 in Ship-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--59
+Underfull \hbox (badness 10000) in paragraph at lines 67--71
 \OT1/ptm/m/n/10.95 ping So-lu-tion.  [On-line]. Avail-able: $\OT1/ptm/m/it/10.9
 5 https : / / newsroom . ibm . com /
  []
 
-[15
+[20
 
-]) [16] (./dissertation.aux)
+]) [21] (./dissertation.aux)
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 1797 strings out of 494910
- 25878 string characters out of 6179835
- 80826 words of memory out of 5000000
- 5043 multiletter control sequences out of 15000+600000
+ 1812 strings out of 494910
+ 26156 string characters out of 6179835
+ 81910 words of memory out of 5000000
+ 5056 multiletter control sequences out of 15000+600000
  27846 words of font info for 53 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 41i,7n,25p,755b,282s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,7n,25p,829b,282s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/u
 tmri8a.pfb>
-Output written on dissertation.pdf (23 pages, 188134 bytes).
+Output written on dissertation.pdf (28 pages, 285323 bytes).
 PDF statistics:
- 97 PDF objects out of 1000 (max. 8388607)
- 65 compressed objects within 1 object stream
+ 118 PDF objects out of 1000 (max. 8388607)
+ 77 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

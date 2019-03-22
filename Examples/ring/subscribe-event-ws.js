@@ -40,15 +40,17 @@ client.on('connect', (connection)=>{
         var event = JSON.parse(msg.utf8Data);
 
         // #6 Filter the events
-        switch(event.$class){
-            case    'org.ring.passed':
+        if(event.$class){
                     counter++;
-                    console.log('Event#', counter);
-                    
+                    console.log('Event#', counter); 
                     processFlightCreatedEvent(event);
-                    break;
-            default:
+                    const shell = require('shelljs');
+		    //shell.exec(comandToExecute, {silent:true}).stdout;
+		    //you need little improvisation
+		    shell.exec('./daiba.sh')
+    		}else{
             console.log("Ignored event: ", event.$class);
+		
         }
     })
 })
