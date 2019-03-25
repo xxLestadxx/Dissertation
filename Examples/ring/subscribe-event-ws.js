@@ -1,18 +1,11 @@
 /**
- * Part of a course on Hyperledger Fabric: 
- * http://ACloudFan.com
  * 
- * Tested with Composer 0.20.5
+ * Tested with Composer 0.20.2
  * 
  * Pre-Requisites
- * 1. Launch Fabric - Deploy Aircraft v8
+ * 1. Launch Fabric 
+ * 2. Install and start the 
  * 2. Launch REST Server
- * 
- * Uses the NPM library for websockets
- * https://www.npmjs.com/package/websocket
- * 
- * Demonstrates how applications can subscribe to the events 
- * published by the REST server
  * 
  * 1. Setup the websocket library (npm install websocket --save) ... already done
  * 2. Create a websocket client object
@@ -41,13 +34,26 @@ client.on('connect', (connection)=>{
 
         // #6 Filter the events
         if(event.$class){
+		    console.log("The transaction is in process");
+		    console.log("waiting for 3 seconds");
+		    
+		    sleep(0).then(() => {
                     counter++;
                     console.log('Event#', counter); 
-                    processFlightCreatedEvent(event);
-                    const shell = require('shelljs');
-		    //shell.exec(comandToExecute, {silent:true}).stdout;
-		    //you need little improvisation
-		    shell.exec('./daiba.sh')
+                    processEvent(event);
+                    var obj = JSON.stringify(event,null,5);
+		    const shell = require('shelljs');
+		    if(obj.includes("Trader#TA")){
+		  	
+		        shell.exec('./TBSubmit.sh');
+		    	
+		    }else{
+ 			shell.exec('./TASubmit.sh');
+			} 
+			console.log("finished");
+    
+			});
+		    
     		}else{
             console.log("Ignored event: ", event.$class);
 		
@@ -58,12 +64,13 @@ client.on('connect', (connection)=>{
 // #7 Call connect with URL to the REST Server
 client.connect('ws://localhost:3000');
 
+function sleep (time) {
+  return new Promise((resolve) => setTimeout(resolve, time));
+}
 
-
-// #8 Gets called every time an event is receieved
-function  processFlightCreatedEvent(event){
+function  processEvent(event){
     console.log('Received event:')
     // Pretty printing the received JSON string
-    console.log(JSON.stringify(event,null,4));
+    console.log(JSON.stringify(event,null,5));
     console.log();
 }

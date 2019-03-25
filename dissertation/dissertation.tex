@@ -29,6 +29,15 @@
 \pagenumbering{roman}
 
 
+
+\begin{center}
+\vspace*{\stretch{1}}
+\Huge "If you are not making someone else's life better, then you are wasting your time" -Will Smith
+\vspace*{\stretch{1}}
+\end{center}
+
+\clearpage    
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Abstract %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \intro{Abstract}
@@ -194,8 +203,20 @@ A peer makes a transaction. This transaction is then taken upon consideration wh
   \label{blockchainAbstract}
 \end{figure}
 
+\subsection{Cryptography}
 
+\subsection{Further readings}
+The following books and documentation will improve your understanding of blockchain, hyperledger fabric and hyperledger composer.
 
+\begin{itemize}
+	\item "Enterprise blockchain development with hyperledger Fabric and Composer" by Ernesto Lee and Sudip Ghosh
+	\item "Distributed systems: principles and paradigms" by Andrew S. Tanenbaum, Maarten van Steen
+	\item "Blockchain for dummies" by Manav Gupta 
+	\item IBM Red Books series - "Developing a Blockchain Business Network with Hyperledger Composer using the IBM Blockchain Platform Starter Plan" 
+	\item "Mastering Ethereum: Building Smart Contracts and DApps Book" by Andreas Antonopoulos and Gavin Wood Ph.D.
+	\item Fabric's documentation - https://hyperledger-fabric.readthedocs.io/en/latest/
+	\item Composer's documentation - https://hyperledger.github.io/composer/latest/introduction/introduction.html
+\end{itemize}
 \section{Scope and Objectives}
 
 \label{introduction-objectives}
@@ -228,6 +249,7 @@ The objectives of the project include the following :
 \item Complete final report .
 
 \end{itemize}
+
 
 
 \section{Achievements}
@@ -309,6 +331,8 @@ Cons:
 \subsection{E-Residency}
 \label{eResidency}
 
+\subsection{AIA Group}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Technical Chapters %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Technology required}            % Insert your chapter titles
@@ -327,6 +351,18 @@ The key software and technology used for the creation and development of this pr
 
 \section{Docker}
 \label{docker}
+Docker and Docker Composer are essential for the developing of this project. This technology is being used to run Hyperledger Fabric. Different parts, modules, of the system are mounted on Docker containers. All of those containers know about each other and intercommunicate. This system is also known as Fabric.
+
+	Docker containers are similar to a virtual machines. Alike resource isolation and allocation benefits, however, containers are more portable and efficient since they virtualize the OS instead of hardware.\cite{dockerContainer} Figure \ref{dockerEnvironment} shows an abstraction of where Docker containers take place in the software architecture when running.
+
+\begin{figure}[h]
+\centering
+  \includegraphics[width = 16cm]{container-what-is-container.png}
+  \caption{ Containerized applications \cite{dockerContainer}}
+  \label{dockerEnvironment}
+\end{figure}
+
+\section{NPM}
 
 \section{Visual Studio Code}
 \label{vsCode}
@@ -353,8 +389,8 @@ The feature which makes Fabric the perfect choice is that it can create differen
 	This Hyperledger project is a preferred platform mainly because of its adaptability to different use cases. One interesting feature, and main reason for the self-sovereign use case, is that Fabric supports zero-knowledge proof (ZKP). What this means is that it allows a peer to assure itself in front of a verifier without having to show any private data. This gives authority to ZKP to offer anonymous authentication for clients in their transactions. \cite{li2018fppb}
 	
 	The act of communication between different peers from different organizations (or groups) is through channels. These channels can be public or confidential. The communication inside works based on the chaincode, the smart contract. All of the logistics and functionality of a new blockchain application is based on it’s smart contracts. That is why they are extremely important and main object of interest in this undergraduate project.
-\section{Fabric's Nodes}
-\label{fnodes}
+\section{Essential Fabric elements}
+\label{felements}
 Hyperledger Fabric is set by organizations that want to setup a consortium. Every organization is constructed by several type of peer nodes (or just peers). All that these peers require is appropriate configuration and cryptographic materials like certificate authority (CA) and endorsement policy.
 \subsubsection{Committing peer node}
 The normal peer node or just peer, is a vital part of the Fabric’s network. This node is holding instances of the ledger, thus they commit the new blocks when received. Usually in production, multiple peer nodes are created. This impose redundancy, but it also create a no-single point of failure for the system. 
@@ -367,6 +403,10 @@ It is pivotal for the consensus mechanism and transaction flow. It is responsibl
 	The orderer node neither executes the chaincode nor holds a copy of the blockchain. However, the ordering service (multiple nodes) are implementing specific ordering algorithms to decide what to do with the responses given from the endorsing peers. More about them in the consensus section.
 \subsubsection{Anchor peer}
 The anchor peer is the connection of the organization with the network. If there is no anchor peer in the organization, then this organization cannot connect to any other organization. What’s more important, it is the link between the orderer node and the ledger inside the organisations. If there is no mechanism to send or receive transactions then the whole organisation will become obsolete. Thus having setup several anchor peers, just in case of some unfaithful crash, is the safe bet.  
+
+\subsubsection{MSP}
+
+\subsubsection{CA}
 
 \section{Fabric's Ledger}
 \label{fabricLedger}
@@ -475,14 +515,125 @@ Validation - takes a block of ordered transactions and validates the correctness
 	The moment a committer node receives the new block, it starts checking every transaction and the transaction result from the endorsing peers. This check is against the endorsement policy. Here is the moment where if two transactions are trying to change the one asset, the second fails. However, instead of returning the whole block, the faulty transaction is just being labeled as \textit{invalid}. The committer updates the ledger. Lastly, asynchronously returns to the user/app that the transaction is successful or not. 
 
 \section{Fabric's configuration}
+When setting up Fabric, there are two very important files. It is out of the scope of this project to show how one can generate custom network. However, it is critical that the reader is introduced to those two configuration files and see the important bits and pieces. 
 
-\section{Hyperledger Composer}
+	The two files are crypto-config.yaml and configtx.yaml (If you follow the user manual and download the git repository, then the files should be located at ~/fabric-samples/first-network/). 
+	
+	Yaml is a human-friendly data serialization standard for all programming languages. In Hyperledger Fabric it is being used for all configuration files. 
+
+\subsection{Crypto-config}
+
+The crypto-config.yaml holds the information about the configuration of the orderer nodes and the organizations. It does not matter where the physical machines are located, as long as they “know” which organization they belong to in the network and have the respective certificate to operate with.
+
+\begin{figure}[h]
+\centering
+  \includegraphics[width = 16cm]{cryptoconfig1.png}
+  \caption{ }
+  \label{dockerEnvironment}
+\end{figure}
+
+The first configuration is about the orderer nodes. The name specifies the name of cluster of orderer nodes. Different clusters can be of use for different channels. Depends on the use case. In this file, there is one cluster.
+
+The domain is where this entity will run. This is what other nodes will try to find in order to connect to the orderer. It is not necessary to be a top-level domain, like a web page. Depending on the use case, the network could have a local private domain space that could be used in the context of the network.
+
+Certificates are bind to specific domains. So if an anchor node does not have the correct certificate, it would not be able to connect to this orderer node. Security measure that prevents outsiders to invoke information from this orderer.
+
+The hostname specifies the name and creates a node. In the picture above, there is only one node, called orderer. Left with one node for the orderer, is dangerous, as it is a single point of failure. For testing purposes it is okay, however in real-life system, there should be a lot more. The name by which other nodes are going to find this one is by the schema, first the hostname then the domain - orderer.example.com
+
+\begin{figure}[h]
+\centering
+  \includegraphics[width = 16cm]{cryptoconfig2.png}
+  \caption{ }
+  \label{dockerEnvironment}
+\end{figure}
+
+The next part is about the peer organization. The name and domain serve the same function. 
+
+\begin{figure}[h]
+\centering
+  \includegraphics[width = 16cm]{cryptoconfig3.png}
+  \caption{ }
+  \label{dockerEnvironment}
+\end{figure}
+
+The template is about the different nodes in the particular organization. The count variable sets with how many nodes will the organisation start. In this case there will be two peers from this organization. Later on, peer nodes can be introduced or deleted, depending on the requirements and what would be the most beneficial occasion. Important note is that every peer is having its own certificate. The name of the node will be peer0.org1.example.com. 
+
+The users section is about how many users, other than the admin, should the network start with. If the system is about a lot of people, then this variable would not matter. The Certificate Authority can dynamically introduce new users and nodes to the system. 
+
+\subsection{Configtx}
+
+Configtx.yaml holds information about the organisations and the orderer in a bit more detail in regards to input and output. It is the configuration about the genesis block on a channel. 
+
+\begin{figure}[h]
+\centering
+  \includegraphics[width = 16cm]{configtx1.png}
+  \caption{ }
+  \label{configtx1}
+\end{figure}
+
+In figure \ref{configtx1} you will see Name, ID and MSP. The three variables are regarding the cryptography and accessibility. The ID is defined by the membership service provider. It is associated with all the crypto-materials - certificates by admin, ca and tls. The MSP ID is verification tool in the backend to verify the user’s certificates.
+  
+Specific section about the Anchor Peer - selecting which node is going to be the anchor peer in an organization. These nodes will be able to see each other by host name and communicate via port. This is how a connection between two or more organizations is configured. 
+
+\begin{figure}[h]
+\centering
+  \includegraphics[width = 16cm]{configtx2.png}
+  \caption{ }
+  \label{dockerEnvironment}
+\end{figure}
+
+Specific setting for the orderer. The orderer service is specified under the variable OrdererType, which is SOLO, not good for production, but good for testing. Under the addresses are specified all nodes from the cluster, which are going to batch the transactions into block. In this default configuration that is only one node.
+ 
+Next in line are the configurations about the block size and finalization. BatchTimeout is the variable holding how many seconds should the ordering service wait before it batches all available transactions into a block. The only case where transactions are going to be batched earlier is if the max number of transactions for a block has been reached.
+
+	BatchSize has three variables MaxMessageCount, which is defines the top limit of transactions can a block have. AbsoluteMaxBytes and PrefferedMaxBytes are defining the size of the block.
+	
+	Since endorsing peers are simulating the transaction proposals on the current state of the ledger, the finalizing of transactions is utmost importance. As I already mentioned, valid transactions may be rejected because the ledger is not updated frequently enough. In the perfect case, the system would be able to take enough transactions for small amount of time, so that the blockchain would always be updated with the latest actions and state changes. 
+	
+	BatchTimeout and BatchSize are extremely important. If not set correctly they can break the system. On the other side, if they are set with most care about the system and how many transactions there would be, it could make the system faster and invalid-transactions resistant. It is case specific what would be the best strategy for their configuration. The architect should always have in mind the blocks to be generated fast enough and to be the correct size. If the blocks are not going to the transactions number limit, then they would be just wasting the resources allocated.  
+
+
+\begin{figure}[h]
+\centering
+  \includegraphics[width = 16cm]{configtx3.png}
+  \caption{}
+  \label{dockerEnvironment}
+\end{figure}
+
+In the profiles section are the final configurations for the genesis block of the channel and the participants of this network. 
+
+Configurations about the genesis block are set before the channel. The settings are defining the ordering system, the participants in the blockchain. Setting which organization are going to enter the consortium, later to be given in the channel configuration. Consortium in this context is which organization will be in a channel that is being served by the orderer. 
+
+Lastly is the channel definition, where the architect would specify which consortium(s) is going to be used, and which organizations are going to be initially in the particular network.
+
+ 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Hyperledger Composer %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Hyperledger Composer}
 \label{hplComposer}
+
+\section{Overview}
+
+\section{Business Network Cards}
+
+\section{Composer Historian}
+
+\section{Composer programming}
+
+\subsection{Model file}
+\subsection{Logic file}
+\subsubsection{Transactions}
+\subsubsection{Events}
+\subsection{Access control language file}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Use Case  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Use case}
 \label{usecase}
 
+\section{Design}
+\section{Implementation}
+\section{REST Interactions}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  User Manual  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{User Manual}
@@ -514,6 +665,11 @@ have tackled the project in a professional manner.
 \section{Future Work}
 
 \label{conclusion-future}
+
+Elaboration on "IBM left Composer, because it deviated from Fabric structure".
+
+Future plans - the same system but constructed solely on Fabric.
+
 
 Explain any limitations in your results and how things might be improved.
 Discuss how your work might be developed further. Reflect on your results in

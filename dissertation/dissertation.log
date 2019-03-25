@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  21 MAR 2019 23:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  25 MAR 2019 07:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -83,6 +83,21 @@ Package: chngcntr 2009/09/02 v1.0a change counter resetting
 (./dissertation.aux
 
 LaTeX Warning: Label `fabricLedger' multiply defined.
+
+
+LaTeX Warning: Label `dockerEnvironment' multiply defined.
+
+
+LaTeX Warning: Label `dockerEnvironment' multiply defined.
+
+
+LaTeX Warning: Label `dockerEnvironment' multiply defined.
+
+
+LaTeX Warning: Label `dockerEnvironment' multiply defined.
+
+
+LaTeX Warning: Label `dockerEnvironment' multiply defined.
 
 )
 \openout1 = `dissertation.aux'.
@@ -174,65 +189,71 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 
 [0
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [1]
 Abstract.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20.74> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 34.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 43.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 42.
-[1
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 51.
+[2
+
 
 ]
 Attestation.
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 69.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 78.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 69.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 78.
 
 
-LaTeX Warning: Reference `technical-section2' on page ii undefined on input lin
-e 69.
+LaTeX Warning: Reference `technical-section2' on page iii undefined on input li
+ne 78.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 71.
+(Font)              <10.95> on input line 80.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 71.
+(Font)              <8> on input line 80.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 71.
+(Font)              <6> on input line 80.
 
-LaTeX Warning: Reference `technical-section1' on page ii undefined on input lin
-e 74.
-
-
-LaTeX Warning: Reference `technical-subsection1' on page ii undefined on input 
-line 79.
+LaTeX Warning: Reference `technical-section1' on page iii undefined on input li
+ne 83.
 
 
-LaTeX Warning: Reference `technical-subsubsection2' on page ii undefined on inp
-ut line 83.
+LaTeX Warning: Reference `technical-subsection1' on page iii undefined on input
+ line 88.
 
-[2
 
-]
-Acknowledgements.
+LaTeX Warning: Reference `technical-subsubsection2' on page iii undefined on in
+put line 92.
+
 [3
 
 ]
+Acknowledgements.
+[4
+
+]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 108.
- (./dissertation.toc [4
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 117.
+ (./dissertation.toc [5
 
 ])
 \tf@toc=\write3
 \openout3 = `dissertation.toc'.
 
- [5] (./dissertation.lof)
+ [6] (./dissertation.lof
+
+LaTeX Warning: Citation `dockerContainer' on page vii undefined on input line 5
+.
+
+)
 \tf@lof=\write4
 \openout4 = `dissertation.lof'.
 
- [6
+ [7
 
 ]
 Chapter 1.
@@ -302,18 +323,24 @@ Missing character: There is no ò in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
- <infographics0517-01-1.png, id=38, 1606.0pt x 843.15pt>
+ <infographics0517-01-1.png, id=41, 1606.0pt x 843.15pt>
 File: infographics0517-01-1.png Graphic file (type png)
 
 <use infographics0517-01-1.png>
-Package pdftex.def Info: infographics0517-01-1.png used on input line 192.
+Package pdftex.def Info: infographics0517-01-1.png used on input line 201.
 (pdftex.def)             Requested size: 455.24408pt x 239.00084pt.
 
-Overfull \hbox (12.59033pt too wide) in paragraph at lines 192--193
+Overfull \hbox (12.59033pt too wide) in paragraph at lines 201--202
  [][] 
  []
 
-[4 <./infographics0517-01-1.png>] [5]
+[4 <./infographics0517-01-1.png>]
+Overfull \hbox (43.37823pt too wide) in paragraph at lines 218--219
+[]\OT1/ptm/m/n/10.95 Composer's doc-u-men-ta-tion - https://hyperledger.github.
+io/composer/latest/introduction/introduction.html 
+ []
+
+[5] [6]
 Chapter 2.
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
@@ -324,14 +351,14 @@ Missing character: There is no ô in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
-[6
+[7
 
 ]
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 
-Overfull \hbox (4.39081pt too wide) in paragraph at lines 274--277
+Overfull \hbox (4.39081pt too wide) in paragraph at lines 296--299
 []\OT1/ptm/m/n/10.95 The SIM card is used as an an-chor of trust. Since the sys
 -tem is pri-vate and per-mis-sioned blockchain,
  []
@@ -339,11 +366,34 @@ Overfull \hbox (4.39081pt too wide) in paragraph at lines 274--277
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
-[7] [8]
+[8] [9]
 Chapter 3.
-[9
 
-]
+LaTeX Warning: Citation `dockerContainer' on page 10 undefined on input line 35
+6.
+
+<container-what-is-container.png, id=62, 1204.5pt x 1042.89626pt>
+File: container-what-is-container.png Graphic file (type png)
+
+<use container-what-is-container.png>
+Package pdftex.def Info: container-what-is-container.png used on input line 360
+.
+(pdftex.def)             Requested size: 455.24408pt x 394.17232pt.
+
+Overfull \hbox (12.59033pt too wide) in paragraph at lines 360--361
+ [][] 
+ []
+
+
+LaTeX Warning: Citation `dockerContainer' on page 10 undefined on input line 36
+1.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[10
+
+] [11 <./container-what-is-container.png>]
 Chapter 4.
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
@@ -363,7 +413,7 @@ Missing character: There is no ô in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
-[10
+[12
 
 ]
 Missing character: There is no ‚ in font ptmr7t!
@@ -375,29 +425,99 @@ Missing character: There is no ô in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
- [11]
+ [13]
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
- [12] <ledgerdiagram1.png, id=69, 683.55376pt x 307.1475pt>
+ [14] <ledgerdiagram1.png, id=81, 683.55376pt x 307.1475pt>
 File: ledgerdiagram1.png Graphic file (type png)
 
 <use ledgerdiagram1.png>
-Package pdftex.def Info: ledgerdiagram1.png used on input line 391.
+Package pdftex.def Info: ledgerdiagram1.png used on input line 431.
 (pdftex.def)             Requested size: 455.24408pt x 204.56453pt.
 
-Overfull \hbox (12.59033pt too wide) in paragraph at lines 391--392
+Overfull \hbox (12.59033pt too wide) in paragraph at lines 431--432
  [][] 
  []
 
-<ledgerdiagram2.png, id=71, 822.07124pt x 366.36874pt>
+<ledgerdiagram2.png, id=82, 822.07124pt x 366.36874pt>
 File: ledgerdiagram2.png Graphic file (type png)
 
 <use ledgerdiagram2.png>
-Package pdftex.def Info: ledgerdiagram2.png used on input line 404.
+Package pdftex.def Info: ledgerdiagram2.png used on input line 444.
 (pdftex.def)             Requested size: 455.24408pt x 202.88423pt.
 
-Overfull \hbox (12.59033pt too wide) in paragraph at lines 404--405
+Overfull \hbox (12.59033pt too wide) in paragraph at lines 444--445
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[15 <./ledgerdiagram1.png>]
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+ [16 <./ledgerdiagram2.png>]
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+ [17]
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+ [18]
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+
+<cryptoconfig1.png, id=98, 734.745pt x 260.975pt>
+File: cryptoconfig1.png Graphic file (type png)
+ <use cryptoconfig1.png>
+Package pdftex.def Info: cryptoconfig1.png used on input line 530.
+(pdftex.def)             Requested size: 455.24408pt x 161.70328pt.
+
+Overfull \hbox (12.59033pt too wide) in paragraph at lines 530--531
+ [][] 
+ []
+
+<cryptoconfig2.png, id=99, 727.71875pt x 129.48375pt>
+File: cryptoconfig2.png Graphic file (type png)
+ <use cryptoconfig2.png>
+Package pdftex.def Info: cryptoconfig2.png used on input line 545.
+(pdftex.def)             Requested size: 455.24408pt x 81.00418pt.
+
+Overfull \hbox (12.59033pt too wide) in paragraph at lines 545--546
+ [][] 
+ []
+
+[19 <./cryptoconfig1.png>] <cryptoconfig3.png, id=103, 712.6625pt x 204.765pt>
+File: cryptoconfig3.png Graphic file (type png)
+
+<use cryptoconfig3.png>
+Package pdftex.def Info: cryptoconfig3.png used on input line 554.
+(pdftex.def)             Requested size: 455.24408pt x 130.8023pt.
+
+Overfull \hbox (12.59033pt too wide) in paragraph at lines 554--555
+ [][] 
+ []
+
+<configtx1.png, id=104, 750.805pt x 579.16376pt>
+File: configtx1.png Graphic file (type png)
+ <use configtx1.png>
+Package pdftex.def Info: configtx1.png used on input line 569.
+(pdftex.def)             Requested size: 455.24408pt x 351.17725pt.
+
+Overfull \hbox (12.59033pt too wide) in paragraph at lines 569--570
  [][] 
  []
 
@@ -407,32 +527,49 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
-[13 <./ledgerdiagram1.png>]
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ô in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ô in font ptmr7t!
- [14 <./ledgerdiagram2.png>]
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ô in font ptmr7t!
- [15]
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ô in font ptmr7t!
- [16]
+<configtx2.png, id=105, 819.06pt x 499.8675pt>
+File: configtx2.png Graphic file (type png)
+ <use configtx2.png>
+Package pdftex.def Info: configtx2.png used on input line 580.
+(pdftex.def)             Requested size: 455.24408pt x 277.84161pt.
+
+Overfull \hbox (12.59033pt too wide) in paragraph at lines 580--581
+ [][] 
+ []
+
+[20 <./cryptoconfig2.png> <./cryptoconfig3.png>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[21 <./configtx1.png>] <configtx3.png, id=112, 727.71875pt x 454.69875pt>
+File: configtx3.png Graphic file (type png)
+
+<use configtx3.png>
+Package pdftex.def Info: configtx3.png used on input line 598.
+(pdftex.def)             Requested size: 455.24408pt x 284.4566pt.
+
+Overfull \hbox (12.59033pt too wide) in paragraph at lines 598--599
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[22 <./configtx2.png>] [23 <./configtx3.png>]
 Chapter 5.
-[17
+[24
 
 ]
 Chapter 6.
-[18
+[25
 
 ]
 Chapter 7.
-(./dissertation.bbl [19
+[26
+
+]
+Chapter 8.
+(./dissertation.bbl [27
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 18--22
@@ -476,9 +613,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 67--71
 5 https : / / newsroom . ibm . com /
  []
 
-[20
+[28
 
-]) [21] (./dissertation.aux)
+]) [29] (./dissertation.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -487,11 +624,11 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 1812 strings out of 494910
- 26156 string characters out of 6179835
- 81910 words of memory out of 5000000
- 5056 multiletter control sequences out of 15000+600000
- 27846 words of font info for 53 fonts, out of 8000000 for 9000
+ 1851 strings out of 494910
+ 26950 string characters out of 6179835
+ 81930 words of memory out of 5000000
+ 5087 multiletter control sequences out of 15000+600000
+ 28924 words of font info for 54 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  41i,7n,25p,829b,282s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
@@ -499,10 +636,10 @@ e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/u
 tmri8a.pfb>
-Output written on dissertation.pdf (28 pages, 285323 bytes).
+Output written on dissertation.pdf (37 pages, 571119 bytes).
 PDF statistics:
- 118 PDF objects out of 1000 (max. 8388607)
- 77 compressed objects within 1 object stream
+ 157 PDF objects out of 1000 (max. 8388607)
+ 99 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

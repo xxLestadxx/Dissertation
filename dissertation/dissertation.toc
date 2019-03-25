@@ -1,6 +1,6 @@
-\contentsline {chapter}{Abstract}{i}
-\contentsline {chapter}{Attestation}{ii}
-\contentsline {chapter}{Acknowledgements}{iii}
+\contentsline {chapter}{Abstract}{ii}
+\contentsline {chapter}{Attestation}{iii}
+\contentsline {chapter}{Acknowledgements}{iv}
 \contentsline {chapter}{\numberline {1}Introduction}{1}
 \contentsline {section}{\numberline {1.1}Background and Context}{1}
 \contentsline {subsection}{\numberline {1.1.1}Distributed Ledger Technologies}{2}
@@ -11,42 +11,62 @@
 \contentsline {subsubsection}{Permissioned blockchain}{3}
 \contentsline {subsubsection}{Permissionless blockchain}{3}
 \contentsline {subsubsection}{Cryptocurrency}{4}
-\contentsline {section}{\numberline {1.2}Scope and Objectives}{4}
-\contentsline {section}{\numberline {1.3}Achievements}{5}
-\contentsline {section}{\numberline {1.4}Overview of Dissertation}{5}
-\contentsline {chapter}{\numberline {2}State-of-The-Art}{6}
-\contentsline {section}{\numberline {2.1}Successful projects made with Hyperledger Fabric}{6}
-\contentsline {subsection}{\numberline {2.1.1}Altoros}{6}
-\contentsline {subsection}{\numberline {2.1.2}Verify.Me}{6}
-\contentsline {subsection}{\numberline {2.1.3}TradeLens}{7}
-\contentsline {subsection}{\numberline {2.1.4}BitNation}{8}
-\contentsline {subsection}{\numberline {2.1.5}E-Residency}{8}
-\contentsline {chapter}{\numberline {3}Technology required}{9}
-\contentsline {section}{\numberline {3.1}Docker}{9}
-\contentsline {section}{\numberline {3.2}Visual Studio Code}{9}
-\contentsline {chapter}{\numberline {4}Hyperledger Fabric}{10}
-\contentsline {subsubsection}{Permissioned blockchain}{10}
-\contentsline {subsubsection}{Hyperledger}{10}
-\contentsline {section}{\numberline {4.1}Fabric overview}{10}
-\contentsline {section}{\numberline {4.2}Fabric's Nodes}{11}
-\contentsline {subsubsection}{Committing peer node}{11}
-\contentsline {subsubsection}{Endorsing peer}{11}
-\contentsline {subsubsection}{Orderer node}{12}
-\contentsline {subsubsection}{Anchor peer}{12}
-\contentsline {section}{\numberline {4.3}Fabric's Ledger}{12}
-\contentsline {subsection}{\numberline {4.3.1}World state}{12}
-\contentsline {subsection}{\numberline {4.3.2}Blockchain}{12}
-\contentsline {subsubsection}{Blocks and their structure}{13}
-\contentsline {subsection}{\numberline {4.3.3}Channel}{14}
-\contentsline {section}{\numberline {4.4}Fabric Consensus}{15}
-\contentsline {subsection}{\numberline {4.4.1}Endorsement}{15}
-\contentsline {subsection}{\numberline {4.4.2}Ordering}{15}
-\contentsline {subsection}{\numberline {4.4.3}Validation}{16}
-\contentsline {section}{\numberline {4.5}Fabric's configuration}{16}
-\contentsline {section}{\numberline {4.6}Hyperledger Composer}{16}
-\contentsline {chapter}{\numberline {5}Use case}{17}
-\contentsline {chapter}{\numberline {6}User Manual}{18}
-\contentsline {section}{\numberline {6.1}Step one}{18}
-\contentsline {chapter}{\numberline {7}Conclusion}{19}
-\contentsline {section}{\numberline {7.1}Evaluation}{19}
-\contentsline {section}{\numberline {7.2}Future Work}{19}
+\contentsline {subsection}{\numberline {1.1.3}Cryptography}{4}
+\contentsline {subsection}{\numberline {1.1.4}Further readings}{4}
+\contentsline {section}{\numberline {1.2}Scope and Objectives}{5}
+\contentsline {section}{\numberline {1.3}Achievements}{6}
+\contentsline {section}{\numberline {1.4}Overview of Dissertation}{6}
+\contentsline {chapter}{\numberline {2}State-of-The-Art}{7}
+\contentsline {section}{\numberline {2.1}Successful projects made with Hyperledger Fabric}{7}
+\contentsline {subsection}{\numberline {2.1.1}Altoros}{7}
+\contentsline {subsection}{\numberline {2.1.2}Verify.Me}{7}
+\contentsline {subsection}{\numberline {2.1.3}TradeLens}{8}
+\contentsline {subsection}{\numberline {2.1.4}BitNation}{9}
+\contentsline {subsection}{\numberline {2.1.5}E-Residency}{9}
+\contentsline {subsection}{\numberline {2.1.6}AIA Group}{9}
+\contentsline {chapter}{\numberline {3}Technology required}{10}
+\contentsline {section}{\numberline {3.1}Docker}{10}
+\contentsline {section}{\numberline {3.2}NPM}{10}
+\contentsline {section}{\numberline {3.3}Visual Studio Code}{10}
+\contentsline {chapter}{\numberline {4}Hyperledger Fabric}{12}
+\contentsline {subsubsection}{Permissioned blockchain}{12}
+\contentsline {subsubsection}{Hyperledger}{12}
+\contentsline {section}{\numberline {4.1}Fabric overview}{12}
+\contentsline {section}{\numberline {4.2}Essential Fabric elements}{13}
+\contentsline {subsubsection}{Committing peer node}{13}
+\contentsline {subsubsection}{Endorsing peer}{13}
+\contentsline {subsubsection}{Orderer node}{14}
+\contentsline {subsubsection}{Anchor peer}{14}
+\contentsline {subsubsection}{MSP}{14}
+\contentsline {subsubsection}{CA}{14}
+\contentsline {section}{\numberline {4.3}Fabric's Ledger}{14}
+\contentsline {subsection}{\numberline {4.3.1}World state}{14}
+\contentsline {subsection}{\numberline {4.3.2}Blockchain}{15}
+\contentsline {subsubsection}{Blocks and their structure}{15}
+\contentsline {subsection}{\numberline {4.3.3}Channel}{16}
+\contentsline {section}{\numberline {4.4}Fabric Consensus}{17}
+\contentsline {subsection}{\numberline {4.4.1}Endorsement}{17}
+\contentsline {subsection}{\numberline {4.4.2}Ordering}{17}
+\contentsline {subsection}{\numberline {4.4.3}Validation}{18}
+\contentsline {section}{\numberline {4.5}Fabric's configuration}{19}
+\contentsline {subsection}{\numberline {4.5.1}Crypto-config}{19}
+\contentsline {subsection}{\numberline {4.5.2}Configtx}{20}
+\contentsline {chapter}{\numberline {5}Hyperledger Composer}{24}
+\contentsline {section}{\numberline {5.1}Overview}{24}
+\contentsline {section}{\numberline {5.2}Business Network Cards}{24}
+\contentsline {section}{\numberline {5.3}Composer Historian}{24}
+\contentsline {section}{\numberline {5.4}Composer programming}{24}
+\contentsline {subsection}{\numberline {5.4.1}Model file}{24}
+\contentsline {subsection}{\numberline {5.4.2}Logic file}{24}
+\contentsline {subsubsection}{Transactions}{24}
+\contentsline {subsubsection}{Events}{24}
+\contentsline {subsection}{\numberline {5.4.3}Access control language file}{24}
+\contentsline {chapter}{\numberline {6}Use case}{25}
+\contentsline {section}{\numberline {6.1}Design}{25}
+\contentsline {section}{\numberline {6.2}Implementation}{25}
+\contentsline {section}{\numberline {6.3}REST Interactions}{25}
+\contentsline {chapter}{\numberline {7}User Manual}{26}
+\contentsline {section}{\numberline {7.1}Step one}{26}
+\contentsline {chapter}{\numberline {8}Conclusion}{27}
+\contentsline {section}{\numberline {8.1}Evaluation}{27}
+\contentsline {section}{\numberline {8.2}Future Work}{27}
