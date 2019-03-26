@@ -370,6 +370,8 @@ Docker and Docker Composer are essential for the developing of this project. Thi
 \chapter{Hyperledger Fabric}
 \label{hplFabric}
 
+\section{picture of the overview of the structure}
+
 \subsubsection{Permissioned blockchain}
 A blockchain where the peers need to meet certain requirements to enter the network where he or she can perform certain actions is called permissioned. These systems are more attractive for the business and enterprise because they are faster and more cost-effective. Another feature that is appealing for those clients is the role system. That way actors, that all of the companies trust, can be the endorsers, the ones to validate the transactions. The feature could also be used to classify different players into respective roles. Which can give a particular system a better clarification and simplicity around executing different tasks. 
 
@@ -529,7 +531,7 @@ The crypto-config.yaml holds the information about the configuration of the orde
 \centering
   \includegraphics[width = 16cm]{cryptoconfig1.png}
   \caption{ }
-  \label{dockerEnvironment}
+  \label{cryptoconfig1}
 \end{figure}
 
 The first configuration is about the orderer nodes. The name specifies the name of cluster of orderer nodes. Different clusters can be of use for different channels. Depends on the use case. In this file, there is one cluster.
@@ -544,7 +546,7 @@ The hostname specifies the name and creates a node. In the picture above, there 
 \centering
   \includegraphics[width = 16cm]{cryptoconfig2.png}
   \caption{ }
-  \label{dockerEnvironment}
+  \label{cryptoconfig2}
 \end{figure}
 
 The next part is about the peer organization. The name and domain serve the same function. 
@@ -553,7 +555,7 @@ The next part is about the peer organization. The name and domain serve the same
 \centering
   \includegraphics[width = 16cm]{cryptoconfig3.png}
   \caption{ }
-  \label{dockerEnvironment}
+  \label{cryptoconfig3}
 \end{figure}
 
 The template is about the different nodes in the particular organization. The count variable sets with how many nodes will the organisation start. In this case there will be two peers from this organization. Later on, peer nodes can be introduced or deleted, depending on the requirements and what would be the most beneficial occasion. Important note is that every peer is having its own certificate. The name of the node will be peer0.org1.example.com. 
@@ -579,7 +581,7 @@ Specific section about the Anchor Peer - selecting which node is going to be the
 \centering
   \includegraphics[width = 16cm]{configtx2.png}
   \caption{ }
-  \label{dockerEnvironment}
+  \label{configtx2}
 \end{figure}
 
 Specific setting for the orderer. The orderer service is specified under the variable OrdererType, which is SOLO, not good for production, but good for testing. Under the addresses are specified all nodes from the cluster, which are going to batch the transactions into block. In this default configuration that is only one node.
@@ -597,7 +599,7 @@ Next in line are the configurations about the block size and finalization. Batch
 \centering
   \includegraphics[width = 16cm]{configtx3.png}
   \caption{}
-  \label{dockerEnvironment}
+  \label{configtx3}
 \end{figure}
 
 In the profiles section are the final configurations for the genesis block of the channel and the participants of this network. 
@@ -613,6 +615,8 @@ Lastly is the channel definition, where the architect would specify which consor
 \label{hplComposer}
 
 \section{Overview}
+
+\subsection{Composer CLI}
 
 \section{Business Network Cards}
 

@@ -19,7 +19,7 @@ participant Person identified by personID {
 
 participant HighSchool identified by highSchoolID {
   o String highSchoolID
-  o String highschoolName 
+  o String highschoolName
   o String email
   o String phone
   o Integer rating
@@ -47,6 +47,7 @@ asset Diploma identified by diplomaID {
   o Double mathGrade  range = [2.0, 6.0]
   o Double englishGrade range = [2.0,6.0]
   o Double csGrade range = [2.0,6.0]
+  o DiplomaStatus status
   --> HighSchool hs 
   --> Person owner
 }
@@ -96,22 +97,12 @@ transaction createDrivingLicence {
 
 transaction enrollInUniversity {
   o String uniDiplomaID
-  o Double mathGrade  range = [2.0, 6.0]
-  o Double englishGrade range = [2.0,6.0] 
-  o Double csGrade range = [2.0,6.0]
+  o Double mathGrade
+  o Double englishGrade
+  o Double csGrade
   --> Person owner
   --> Diploma diploma
   --> University uni
-}
-
-transaction graduateUni {
-  --> University uni
-  --> UniversityDiploma uniDiploma
-  --> Person owner
-}
-
-event personWantsDiplomaEvent{
-  --> Person owner
 }
 
 transaction personWantsDiploma {
@@ -121,5 +112,20 @@ transaction personWantsDiploma {
 transaction confirmDiploma{
  --> Person owner 
  --> Diploma diploma
+ --> HighSchool hs 
+}
+
+transaction graduateUni{
+ --> Person owner 
+ --> UniversityDiploma uniDiploma
+ --> University uni 
+}
+
+event personWantsDiplomaEvent{
+  --> Person owner
+}
+
+event diplomaConfirmed{
+ --> Person owner 
  --> HighSchool hs 
 }

@@ -1,11 +1,3 @@
-rule SSIdentityNetworkAdminPermissionSystem {
-  description: "can READ the system registries"
-  participant: "ANY"
-  operation: READ
-  resource: "org.hyperledger.composer.system.**"
-  action: ALLOW  
-}
-
 rule NetworkAdminUser {
     description: "Grant business network administrators full access to user resources"
     participant: "org.hyperledger.composer.system.NetworkAdmin"
@@ -22,10 +14,17 @@ rule NetworkAdminSystem {
     action: ALLOW
 }
 
+rule SSIdentityNetworkAdminPermissionSystem {
+  description: "can READ the system registries"
+  participant: "ANY"
+  operation: ALL
+  resource: "org.hyperledger.composer.system.**"
+  action: ALLOW  
+}
 rule HighSchoolCanOnlySeeItself {
   description: "Trader can see and update their own record only"
   participant(t): "org.ssidentity.HighSchool"
-  operation: READ, UPDATE
+  operation: READ, CREATE, UPDATE
   resource(v): "org.ssidentity.HighSchool"
   condition: (v.getIdentifier() == t.getIdentifier())
   action: ALLOW
@@ -34,7 +33,7 @@ rule HighSchoolCanOnlySeeItself {
 rule UniversityCanOnlySeeItself {
   description: "Trader can see and update their own record only"
   participant(t): "org.ssidentity.University"
-  operation: READ, UPDATE
+  operation: READ, CREATE, UPDATE
   resource(v): "org.ssidentity.University"
   condition: (v.getIdentifier() == t.getIdentifier())
   action: ALLOW
@@ -43,7 +42,7 @@ rule UniversityCanOnlySeeItself {
 rule PersonCanOnlySeeItself {
   description: "Trader can see and update their own record only"
   participant(t): "org.ssidentity.Person"
-  operation: READ, UPDATE
+  operation: READ, CREATE, UPDATE
   resource(v): "org.ssidentity.Person"
   condition: (v.getIdentifier() == t.getIdentifier())
   action: ALLOW
@@ -52,7 +51,7 @@ rule PersonCanOnlySeeItself {
 rule DrivingSchoolCanOnlySeeItself {
   description: "Trader can see and update their own record only"
   participant(t): "org.ssidentity.DrivingSchool"
-  operation: READ, UPDATE
+  operation: READ, CREATE, UPDATE
   resource(v): "org.ssidentity.DrivingSchool"
   condition: (v.getIdentifier() == t.getIdentifier())
   action: ALLOW
@@ -61,7 +60,7 @@ rule DrivingSchoolCanOnlySeeItself {
 rule PersonToSeeTheirDiploma {
   description: "Trader can see/work with their own Commodities"
   participant(t): "org.ssidentity.Person"
-  operation: READ
+  operation: ALL
   resource(c): "org.ssidentity.Diploma"
   condition: (c.owner.getIdentifier() == t.getIdentifier())
   action: ALLOW
@@ -88,7 +87,15 @@ rule PersonToSeeTheirDrivingLicence {
 rule HighSchoolToSeeTheirDiplomas {
   description: "Trader can see/work with their own Commodities"
   participant(t): "org.ssidentity.HighSchool"
-  operation: READ
+  operation: READ, CREATE, UPDATE
+  resource(c): "org.ssidentity.Diploma"
+  condition: (c.hs.getIdentifier() == t.getIdentifier())
+  action: ALLOW
+}
+rule PersonToSeeTheirDiplomas {
+  description: "Trader can see/work with their own Commodities"
+  participant(t): "org.ssidentity.Person"
+  operation: READ, CREATE, UPDATE
   resource(c): "org.ssidentity.Diploma"
   condition: (c.hs.getIdentifier() == t.getIdentifier())
   action: ALLOW
@@ -112,13 +119,22 @@ rule DrivingSchoolToSeeTheirLicences {
   action: ALLOW
 }
 
-rule HighSchoolToCreateDiploma {
+rule PersonToCreateDiploma {
   description: "This rule allows only the highschool to be able to execute createDiploma transaction"
-  participant: "org.ssidentity.HighSchool"
-  operation: CREATE
+  participant: "org.ssidentity.Person"
+  operation: ALL
   resource: "org.ssidentity.createDiploma"
   action: ALLOW
 }
+
+rule HighSchoolToConfirmDiploma {
+  description: "This rule allows only the highschool to be able to execute createDiploma transaction"
+  participant: "org.ssidentity.HighSchool"
+  operation: ALL
+  resource: "org.ssidentity.confirmDiploma"
+  action: ALLOW
+}
+
 
 rule DrivingSchoolToCreateDrivingLicence {
   description: "This rule allows only the highschool to be able to execute createDiploma transaction"
@@ -143,7 +159,7 @@ rule UniversityToCreateUpdateDiplomaGraduate {
   resource: "org.ssidentity.enrollInUniversity"
   action: ALLOW
 }
-
+/*
 rule PersonSeeOwnHistoryOnly {
   description: "A Person should be able to see the history of their own transactions only"
   participant(t): "org.ssidentity.Person"
@@ -179,3 +195,4 @@ rule UniversitySeeOwnHistoryOnly {
   condition: (v.participantInvoking.getIdentifier() != t.getIdentifier())
   action: DENY
 }
+*/

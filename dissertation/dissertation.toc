@@ -29,30 +29,32 @@
 \contentsline {section}{\numberline {3.2}NPM}{10}
 \contentsline {section}{\numberline {3.3}Visual Studio Code}{10}
 \contentsline {chapter}{\numberline {4}Hyperledger Fabric}{12}
+\contentsline {section}{\numberline {4.1}picture of the overview of the structure}{12}
 \contentsline {subsubsection}{Permissioned blockchain}{12}
 \contentsline {subsubsection}{Hyperledger}{12}
-\contentsline {section}{\numberline {4.1}Fabric overview}{12}
-\contentsline {section}{\numberline {4.2}Essential Fabric elements}{13}
+\contentsline {section}{\numberline {4.2}Fabric overview}{13}
+\contentsline {section}{\numberline {4.3}Essential Fabric elements}{13}
 \contentsline {subsubsection}{Committing peer node}{13}
 \contentsline {subsubsection}{Endorsing peer}{13}
 \contentsline {subsubsection}{Orderer node}{14}
 \contentsline {subsubsection}{Anchor peer}{14}
 \contentsline {subsubsection}{MSP}{14}
 \contentsline {subsubsection}{CA}{14}
-\contentsline {section}{\numberline {4.3}Fabric's Ledger}{14}
-\contentsline {subsection}{\numberline {4.3.1}World state}{14}
-\contentsline {subsection}{\numberline {4.3.2}Blockchain}{15}
+\contentsline {section}{\numberline {4.4}Fabric's Ledger}{14}
+\contentsline {subsection}{\numberline {4.4.1}World state}{14}
+\contentsline {subsection}{\numberline {4.4.2}Blockchain}{15}
 \contentsline {subsubsection}{Blocks and their structure}{15}
-\contentsline {subsection}{\numberline {4.3.3}Channel}{16}
-\contentsline {section}{\numberline {4.4}Fabric Consensus}{17}
-\contentsline {subsection}{\numberline {4.4.1}Endorsement}{17}
-\contentsline {subsection}{\numberline {4.4.2}Ordering}{17}
-\contentsline {subsection}{\numberline {4.4.3}Validation}{18}
-\contentsline {section}{\numberline {4.5}Fabric's configuration}{19}
-\contentsline {subsection}{\numberline {4.5.1}Crypto-config}{19}
-\contentsline {subsection}{\numberline {4.5.2}Configtx}{20}
+\contentsline {subsection}{\numberline {4.4.3}Channel}{16}
+\contentsline {section}{\numberline {4.5}Fabric Consensus}{17}
+\contentsline {subsection}{\numberline {4.5.1}Endorsement}{17}
+\contentsline {subsection}{\numberline {4.5.2}Ordering}{17}
+\contentsline {subsection}{\numberline {4.5.3}Validation}{18}
+\contentsline {section}{\numberline {4.6}Fabric's configuration}{19}
+\contentsline {subsection}{\numberline {4.6.1}Crypto-config}{19}
+\contentsline {subsection}{\numberline {4.6.2}Configtx}{20}
 \contentsline {chapter}{\numberline {5}Hyperledger Composer}{24}
 \contentsline {section}{\numberline {5.1}Overview}{24}
+\contentsline {subsection}{\numberline {5.1.1}Composer CLI}{24}
 \contentsline {section}{\numberline {5.2}Business Network Cards}{24}
 \contentsline {section}{\numberline {5.3}Composer Historian}{24}
 \contentsline {section}{\numberline {5.4}Composer programming}{24}

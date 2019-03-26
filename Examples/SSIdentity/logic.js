@@ -2,11 +2,14 @@
  * Script logic file for the Selfsovereign identity use case
  * It has 4 participants - person, high school, university, driving school
  * The use case will show how the person can only provide the needed data without exposing needlessly more 
+ * Based on Bulgarian system. 
  */
 
 
 /**
  * Diploma creation, that is the certificate from the highschool
+ * The creator is the Person participant (student), later, the asset has to be 
+ * updated to status Confirmed by the respective highschool
  * @param {org.ssidentity.createDiploma} createDiploma To create the diploma
  * @transaction
  */
@@ -19,6 +22,7 @@ function createDiploma(createDiploma){
         diplomaObject.mathGrade = createDiploma.mathGrade;
         diplomaObject.englishGrade = createDiploma.englishGrade;
         diplomaObject.csGrade = createDiploma.csGrade;
+        diplomaObject.status = 'Pending';
         diplomaObject.hs = createDiploma.hs;
         diplomaObject.owner = createDiploma.owner;
         return diploma.add(diplomaObject);
@@ -96,6 +100,44 @@ function createDiploma(createDiploma){
      
  }
 
+ 
+ /**
+ * emit event with all entries of the select diploma query
+ * @param {org.ssidentity.personWantsDiploma} qdip 
+ * @transaction
+ */
+
+ function personWantsDiploma(qdip) {
+    var creatingOrderEvent = getFactory();
+    var notificationB = creatingOrderEvent.newEvent('org.ssidentity', 'personWantsDiplomaEvent');
+    notificationB.owner = qdip.owner;
+    emit(notificationB);
+ }
+
+/**
+ * To graduate uni
+ * @param {org.ssidentity.confirmDiploma} cd 
+ * @transaction
+ */
+
+ function confirmDip(cd){
+ if(cd.diploma.owner.personID === cd.owner.personID){
+    return getAssetRegistry('org.ssidentity.Diploma')
+             .then(function(confirm){
+      			var creatingOrderEvent = getFactory();
+    			var notificationB = creatingOrderEvent.newEvent('org.ssidentity', 'diplomaConfirmed');
+    			notificationB.owner = cd.owner;
+      			notificationB.hs = cd.hs;
+    			emit(notificationB);
+             }).catch(function(error){
+                    throw new Error (error);
+                });
+   
+     }else{
+         throw new Error ('This is not the person that graduated');
+     }
+ }
+
  /**
  * To graduate uni
  * @param {org.ssidentity.graduateUni} grad 
@@ -119,15 +161,3 @@ function createDiploma(createDiploma){
      }
  }
  
-  /**
- * emit event with all entries of the select diploma query
- * @param {org.ssidentity.personWantsDiploma} qdip 
- * @transaction
- */
-
-function personWantsDiploma(qdip) {
-    var creatingOrderEvent = getFactory();
-    var notificationB = creatingOrderEvent.newEvent('org.ssidentity', 'personWantsDiplomaEvent');
-    notificationB.owner = qdip.owner;
-    emit(notificationB);
- }

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  25 MAR 2019 07:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  25 MAR 2019 15:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -83,21 +83,6 @@ Package: chngcntr 2009/09/02 v1.0a change counter resetting
 (./dissertation.aux
 
 LaTeX Warning: Label `fabricLedger' multiply defined.
-
-
-LaTeX Warning: Label `dockerEnvironment' multiply defined.
-
-
-LaTeX Warning: Label `dockerEnvironment' multiply defined.
-
-
-LaTeX Warning: Label `dockerEnvironment' multiply defined.
-
-
-LaTeX Warning: Label `dockerEnvironment' multiply defined.
-
-
-LaTeX Warning: Label `dockerEnvironment' multiply defined.
 
 )
 \openout1 = `dissertation.aux'.
@@ -244,12 +229,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
 \tf@toc=\write3
 \openout3 = `dissertation.toc'.
 
- [6] (./dissertation.lof
-
-LaTeX Warning: Citation `dockerContainer' on page vii undefined on input line 5
-.
-
-)
+ [6] (./dissertation.lof)
 \tf@lof=\write4
 \openout4 = `dissertation.lof'.
 
@@ -368,10 +348,6 @@ Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 [8] [9]
 Chapter 3.
-
-LaTeX Warning: Citation `dockerContainer' on page 10 undefined on input line 35
-6.
-
 <container-what-is-container.png, id=62, 1204.5pt x 1042.89626pt>
 File: container-what-is-container.png Graphic file (type png)
 
@@ -383,10 +359,6 @@ Package pdftex.def Info: container-what-is-container.png used on input line 360
 Overfull \hbox (12.59033pt too wide) in paragraph at lines 360--361
  [][] 
  []
-
-
-LaTeX Warning: Citation `dockerContainer' on page 10 undefined on input line 36
-1.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -433,10 +405,10 @@ Missing character: There is no ô in font ptmr7t!
 File: ledgerdiagram1.png Graphic file (type png)
 
 <use ledgerdiagram1.png>
-Package pdftex.def Info: ledgerdiagram1.png used on input line 431.
+Package pdftex.def Info: ledgerdiagram1.png used on input line 432.
 (pdftex.def)             Requested size: 455.24408pt x 204.56453pt.
 
-Overfull \hbox (12.59033pt too wide) in paragraph at lines 431--432
+Overfull \hbox (12.59033pt too wide) in paragraph at lines 432--433
  [][] 
  []
 
@@ -444,10 +416,10 @@ Overfull \hbox (12.59033pt too wide) in paragraph at lines 431--432
 File: ledgerdiagram2.png Graphic file (type png)
 
 <use ledgerdiagram2.png>
-Package pdftex.def Info: ledgerdiagram2.png used on input line 444.
+Package pdftex.def Info: ledgerdiagram2.png used on input line 445.
 (pdftex.def)             Requested size: 455.24408pt x 202.88423pt.
 
-Overfull \hbox (12.59033pt too wide) in paragraph at lines 444--445
+Overfull \hbox (12.59033pt too wide) in paragraph at lines 445--446
  [][] 
  []
 
@@ -483,41 +455,41 @@ Missing character: There is no ù in font ptmr7t!
 <cryptoconfig1.png, id=98, 734.745pt x 260.975pt>
 File: cryptoconfig1.png Graphic file (type png)
  <use cryptoconfig1.png>
-Package pdftex.def Info: cryptoconfig1.png used on input line 530.
+Package pdftex.def Info: cryptoconfig1.png used on input line 531.
 (pdftex.def)             Requested size: 455.24408pt x 161.70328pt.
 
-Overfull \hbox (12.59033pt too wide) in paragraph at lines 530--531
+Overfull \hbox (12.59033pt too wide) in paragraph at lines 531--532
  [][] 
  []
 
-<cryptoconfig2.png, id=99, 727.71875pt x 129.48375pt>
+[19 <./cryptoconfig1.png>]
+<cryptoconfig2.png, id=102, 727.71875pt x 129.48375pt>
 File: cryptoconfig2.png Graphic file (type png)
  <use cryptoconfig2.png>
-Package pdftex.def Info: cryptoconfig2.png used on input line 545.
+Package pdftex.def Info: cryptoconfig2.png used on input line 546.
 (pdftex.def)             Requested size: 455.24408pt x 81.00418pt.
 
-Overfull \hbox (12.59033pt too wide) in paragraph at lines 545--546
+Overfull \hbox (12.59033pt too wide) in paragraph at lines 546--547
  [][] 
  []
 
-[19 <./cryptoconfig1.png>] <cryptoconfig3.png, id=103, 712.6625pt x 204.765pt>
+<cryptoconfig3.png, id=103, 712.6625pt x 204.765pt>
 File: cryptoconfig3.png Graphic file (type png)
-
-<use cryptoconfig3.png>
-Package pdftex.def Info: cryptoconfig3.png used on input line 554.
+ <use cryptoconfig3.png>
+Package pdftex.def Info: cryptoconfig3.png used on input line 555.
 (pdftex.def)             Requested size: 455.24408pt x 130.8023pt.
 
-Overfull \hbox (12.59033pt too wide) in paragraph at lines 554--555
+Overfull \hbox (12.59033pt too wide) in paragraph at lines 555--556
  [][] 
  []
 
 <configtx1.png, id=104, 750.805pt x 579.16376pt>
 File: configtx1.png Graphic file (type png)
  <use configtx1.png>
-Package pdftex.def Info: configtx1.png used on input line 569.
+Package pdftex.def Info: configtx1.png used on input line 570.
 (pdftex.def)             Requested size: 455.24408pt x 351.17725pt.
 
-Overfull \hbox (12.59033pt too wide) in paragraph at lines 569--570
+Overfull \hbox (12.59033pt too wide) in paragraph at lines 570--571
  [][] 
  []
 
@@ -527,17 +499,17 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
-<configtx2.png, id=105, 819.06pt x 499.8675pt>
+[20 <./cryptoconfig2.png> <./cryptoconfig3.png>]
+<configtx2.png, id=108, 819.06pt x 499.8675pt>
 File: configtx2.png Graphic file (type png)
  <use configtx2.png>
-Package pdftex.def Info: configtx2.png used on input line 580.
+Package pdftex.def Info: configtx2.png used on input line 581.
 (pdftex.def)             Requested size: 455.24408pt x 277.84161pt.
 
-Overfull \hbox (12.59033pt too wide) in paragraph at lines 580--581
+Overfull \hbox (12.59033pt too wide) in paragraph at lines 581--582
  [][] 
  []
 
-[20 <./cryptoconfig2.png> <./cryptoconfig3.png>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -545,10 +517,10 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: configtx3.png Graphic file (type png)
 
 <use configtx3.png>
-Package pdftex.def Info: configtx3.png used on input line 598.
+Package pdftex.def Info: configtx3.png used on input line 599.
 (pdftex.def)             Requested size: 455.24408pt x 284.4566pt.
 
-Overfull \hbox (12.59033pt too wide) in paragraph at lines 598--599
+Overfull \hbox (12.59033pt too wide) in paragraph at lines 599--600
  [][] 
  []
 
@@ -602,13 +574,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 54--59
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--71
+Underfull \hbox (badness 10000) in paragraph at lines 73--77
 []\OT1/ptm/m/n/10.95 IBM staff.  Maersk and IBM In-tro-duce Trade-Lens Blockcha
 in Ship-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--71
+Underfull \hbox (badness 10000) in paragraph at lines 73--77
 \OT1/ptm/m/n/10.95 ping So-lu-tion.  [On-line]. Avail-able: $\OT1/ptm/m/it/10.9
 5 https : / / newsroom . ibm . com /
  []
@@ -624,10 +596,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 1851 strings out of 494910
- 26950 string characters out of 6179835
- 81930 words of memory out of 5000000
- 5087 multiletter control sequences out of 15000+600000
+ 1856 strings out of 494910
+ 27017 string characters out of 6179835
+ 81979 words of memory out of 5000000
+ 5092 multiletter control sequences out of 15000+600000
  28924 words of font info for 54 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  41i,7n,25p,829b,282s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -636,7 +608,7 @@ e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/u
 tmri8a.pfb>
-Output written on dissertation.pdf (37 pages, 571119 bytes).
+Output written on dissertation.pdf (37 pages, 571247 bytes).
 PDF statistics:
  157 PDF objects out of 1000 (max. 8388607)
  99 compressed objects within 1 object stream
