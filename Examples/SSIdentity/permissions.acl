@@ -136,9 +136,9 @@ rule HighSchoolToConfirmDiploma {
 }
 
 
-rule DrivingSchoolToCreateDrivingLicence {
+rule PersonToCreateDrivingLicence {
   description: "This rule allows only the highschool to be able to execute createDiploma transaction"
-  participant: "org.ssidentity.DrivingSchool"
+  participant: "org.ssidentity.Person"
   operation: CREATE
   resource: "org.ssidentity.createDrivingLicence"
   action: ALLOW

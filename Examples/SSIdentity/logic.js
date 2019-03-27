@@ -16,16 +16,23 @@
 function createDiploma(createDiploma){
     var diplomaID = createDiploma.diplomaID;
        return getAssetRegistry('org.ssidentity.Diploma')
-        .then(function(diploma){
+        .then(function(dipl){
         var diplomaFactory = getFactory();	 
         var diplomaObject = diplomaFactory.newResource('org.ssidentity','Diploma', diplomaID);       	  
         diplomaObject.mathGrade = createDiploma.mathGrade;
         diplomaObject.englishGrade = createDiploma.englishGrade;
         diplomaObject.csGrade = createDiploma.csGrade;
-        diplomaObject.status = 'Pending';
+        diplomaObject.diplomaStatus = 'Pending';
         diplomaObject.hs = createDiploma.hs;
         diplomaObject.owner = createDiploma.owner;
-        return diploma.add(diplomaObject);
+        return dipl.add(diplomaObject);
+        }).then(function(){
+        var creatingOrderEvent = getFactory();
+        var notificationB = creatingOrderEvent.newEvent('org.ssidentity', 'waitingDiplomaConfirmation');
+        notificationB.owner = createDiploma.owner;
+        notificationB.hs = createDiploma.hs;
+        notificationB.diploma = createDiploma.diplomaID;
+        emit(notificationB);  
     })
     .catch(function(error){
         throw new Error (error);
@@ -38,24 +45,38 @@ function createDiploma(createDiploma){
  * @transaction
  */
 
- function createDrivingLicence(createDL){
+function createDrivingLicence(createDL){
     var dlID = createDL.drivingLicenceID;
     var owner = createDL.owner;
     var diploma = createDL.diploma;
+    var drivingSchool = createDL.ds;
     if(owner.personID === diploma.owner.personID){
          if(owner.age >= 18){
-             
-         return getAssetRegistry('org.ssidentity.DrivingLicence')
-         .then(function(dl){
-           var factory = getFactory();
-           var dlObject = factory.newResource('org.ssidentity','DrivingLicence', dlID);
-           dlObject.owner = owner;
-           dlObject.diplomaStatus = 'Confirmed';  
-           return dl.add(dlObject);
-         })
-         .catch(function(error){
-             throw new Error (error);
-         });
+             if(diploma.diplomaStatus === 'Confirmed'){       
+                    return getAssetRegistry('org.ssidentity.DrivingLicence')
+                    .then(function(dl){
+                    var factory = getFactory();
+                    var dlObject = factory.newResource('org.ssidentity','DrivingLicence', dlID);
+                    dlObject.owner = owner;
+                    dlObject.ds = drivingSchool;
+                    dlObject.diplomaStatus = 'Confirmed';
+                    dlObject.dsStatus = 'Pending';
+                    return dl.add(dlObject);
+                    })
+                    .then(function(){
+                    var creatingOrderEvent = getFactory();
+                    var notificationB = creatingOrderEvent.newEvent('org.ssidentity', 'waitingDrivingLicenceConfirmation');
+                    notificationB.owner = createDL.owner;
+                    notificationB.ds = drivingSchool;
+                    notificationB.drivingLicence = dlID;
+                    emit(notificationB);  
+                    })
+                    .catch(function(error){
+                        throw new Error (error);
+                    });
+                }else{
+                    throw new Error('User does not have confirmed diploma');
+                }
         }else{
             throw new Error('You are underage');
         }
@@ -63,6 +84,7 @@ function createDiploma(createDiploma){
         throw new Error ('You are not the person owning this diploma');
     }
 }
+
 
 /**
  * Diploma creation, that is the certificate from the highschool
@@ -82,7 +104,7 @@ function createDiploma(createDiploma){
                 .then(function(uniDip){
                   var factory = getFactory();
                   var uniDipObject = factory.newResource('org.ssidentity','UniversityDiploma', uniDiplomaID);
-                  uniDipObject.status = 'Enrolled';
+                  uniDipObject.uniStatus = 'Enrolled';
                   uniDipObject.owner = enrollUni.owner;
                   uniDipObject.uni = enrollUni.uni; 
                   return uniDip.add(uniDipObject);
@@ -90,7 +112,6 @@ function createDiploma(createDiploma){
                 .catch(function(error){
                     throw new Error (error);
                 });
-
             }else{
                 throw new Error ('Your grades are not good enough. Try again next year')
             }
@@ -100,19 +121,6 @@ function createDiploma(createDiploma){
      
  }
 
- 
- /**
- * emit event with all entries of the select diploma query
- * @param {org.ssidentity.personWantsDiploma} qdip 
- * @transaction
- */
-
- function personWantsDiploma(qdip) {
-    var creatingOrderEvent = getFactory();
-    var notificationB = creatingOrderEvent.newEvent('org.ssidentity', 'personWantsDiplomaEvent');
-    notificationB.owner = qdip.owner;
-    emit(notificationB);
- }
 
 /**
  * To graduate uni
@@ -124,18 +132,14 @@ function createDiploma(createDiploma){
  if(cd.diploma.owner.personID === cd.owner.personID){
     return getAssetRegistry('org.ssidentity.Diploma')
              .then(function(confirm){
-      			var creatingOrderEvent = getFactory();
-    			var notificationB = creatingOrderEvent.newEvent('org.ssidentity', 'diplomaConfirmed');
-    			notificationB.owner = cd.owner;
-      			notificationB.hs = cd.hs;
-    			emit(notificationB);
-             }).catch(function(error){
+                cd.diploma.diplomaStatus = 'Confirmed';
+                return confirm.update(cd.diploma);
+                }).catch(function(error){
                     throw new Error (error);
                 });
-   
-     }else{
-         throw new Error ('This is not the person that graduated');
-     }
+    }else{
+        throw new Error ('This is not the person that graduated');
+    }
  }
 
  /**
@@ -149,10 +153,12 @@ function createDiploma(createDiploma){
         if(grad.uniDiploma.uni.universityID === grad.uni.universityID){
             return getAssetRegistry('org.ssidentity.UniversityDiploma')
             .then(function(graduated){
-                grad.uniDiploma.status = 'Graduated';
+                grad.uniDiploma.uniStatus = 'Graduated';
                 grad.uniDiploma.finalGrade = 76;
                 return graduated.update(grad.uniDiploma);
-            })
+            }).catch(function(error){
+                throw new Error (error);
+            });
         }else{
             throw new Error ('You have not graduated from this university');
         }
@@ -161,3 +167,22 @@ function createDiploma(createDiploma){
      }
  }
  
+ /**
+ * To graduate uni
+ * @param {org.ssidentity.confirmDrivingLicence} cdl 
+ * @transaction
+ */
+
+function confirmDrivingLicence(cdl){
+    if(cdl.dl.owner.personID === cdl.owner.personID){
+       return getAssetRegistry('org.ssidentity.DrivingLicence')
+                .then(function(confirm){
+                   cdl.dsStatus = 'Confirmed';
+                   return confirm.update(cdl.dl);
+                }).catch(function(error){
+                       throw new Error (error);
+                   });
+        }else{
+            throw new Error ('This is not the person that graduated');
+        }
+    }

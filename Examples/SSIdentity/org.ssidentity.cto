@@ -47,13 +47,14 @@ asset Diploma identified by diplomaID {
   o Double mathGrade  range = [2.0, 6.0]
   o Double englishGrade range = [2.0,6.0]
   o Double csGrade range = [2.0,6.0]
-  o DiplomaStatus status
+  o DiplomaStatus diplomaStatus
   --> HighSchool hs 
   --> Person owner
 }
 
 asset DrivingLicence identified by drivingLicenceID {
   o String drivingLicenceID
+  o drivingLicenceStatus dsStatus
   --> Person owner
   --> DrivingSchool ds
   o DiplomaStatus diplomaStatus
@@ -62,7 +63,7 @@ asset DrivingLicence identified by drivingLicenceID {
 asset UniversityDiploma identified by uniDiplomaID {
   o String uniDiplomaID
   o Integer finalGrade range = [0, 100] optional
-  o enrollStatus status
+  o enrollStatus uniStatus
   --> Person owner
   --> University uni
 }
@@ -71,9 +72,17 @@ enum enrollStatus {
   o Enrolled
   o Graduated
   o Left
+  o Pending
+  o Declined
 }
 
 enum DiplomaStatus{
+  o Pending
+  o Confirmed
+  o Declined
+}
+
+enum drivingLicenceStatus {
   o Pending
   o Confirmed
   o Declined
@@ -115,17 +124,26 @@ transaction confirmDiploma{
  --> HighSchool hs 
 }
 
+transaction confirmDrivingLicence {
+  --> Person owner
+  --> DrivingSchool ds
+  --> DrivingLicence dl
+}
+
 transaction graduateUni{
  --> Person owner 
  --> UniversityDiploma uniDiploma
  --> University uni 
 }
 
-event personWantsDiplomaEvent{
-  --> Person owner
+event waitingDiplomaConfirmation{
+ --> Person owner 
+ o String diploma
+ --> HighSchool hs 
 }
 
-event diplomaConfirmed{
- --> Person owner 
- --> HighSchool hs 
+event waitingDrivingLicenceConfirmation {
+  --> Person owner
+  --> DrivingSchool ds
+  o String drivingLicence
 }
