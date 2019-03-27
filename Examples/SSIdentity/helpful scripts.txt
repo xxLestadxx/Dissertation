@@ -3,17 +3,15 @@ composer participant add -d '{"$class":"org.ssidentity.Person","personID":"Daka"
 
 composer identity issue -u Daka -a org.ssidentity.Person#Daka -c admin@ssidentity -x
 
-composer participant add -d '{"$class":"org.ssidentity.HighSchool","highSchoolID":"MG","highschoolName":"MG Beron","email": "mgberon@stirling.co","phone":"324323245","rating":100}' -c admin@ssidentity
+composer participant add -d '{"$class":"org.ssidentity.HighSchool","highSchoolID":"WallaceHigh","highschoolName":"Wallace High","email": "WallaceHigh@stirling.co","phone":"324323245","rating":100}' -c admin@ssidentity
 
-composer identity issue -u MG -a org.ssidentity.HighSchool#MG -c admin@ssidentity -x
+composer identity issue -u WH -a org.ssidentity.HighSchool#WH -c admin@ssidentity -x
 
 composer participant add -d '{"$class":"org.ssidentity.DrivingSchool","drivingSchoolID":"DS1","drivingSchoolName":"DriveWithUs","rating":100}' -c admin@ssidentity
 
 composer identity issue -u DS1 -a org.ssidentity.DrivingSchool#DS1 -c admin@ssidentity -x
 
-
 composer participant add -d '{"$class":"org.ssidentity.University","universityID":"Stirling","universityName":"University of Stirling","email":"stir.co","phone":"23215324","rating":100}' -c admin@ssidentity 
-
 
 composer identity issue -u Stirling -a org.ssidentity.University#Stirling -c admin@ssidentity -x
 
