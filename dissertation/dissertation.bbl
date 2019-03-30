@@ -63,6 +63,15 @@ C.~Cachin.
 \newblock [Online]. Available:
   \url{https://www.docker.com/resources/what-container}.
 
+\bibitem{cryptolecture}
+{Dr Deepayan Bhowmik}.
+\newblock {CSCU9YS: Cryptography-I}.
+\newblock Lecture from University of Stirling 2018.
+
+\bibitem{bccsp}
+V.~V. P. A. S. T.~V. Elli~Androulaki, Angelo De~Caro.
+\newblock Blockchain crypto service provider.
+
 \bibitem{fabledger}
 {Hyperledger Fabric staff}.
 \newblock {Ledger}.
@@ -101,6 +110,12 @@ D.~C. Mills, K.~Wang, B.~Malone, A.~Ravi, J.~Marquardt, A.~I. Badev,
 \newblock {How blockchain is changing digital identity}.
 \newblock [Online]. Available:
   \url{https://www.youtube.com/watch?v=EQ5PGPIjrtI}.
+
+\bibitem{symasym}
+{SSL2Buy staff}.
+\newblock {Symmetric vs. Asymmetric Encryption – What are differences?}
+\newblock [Online]. Available:
+  \url{https://www.ssl2buy.com/wiki/symmetric-vs-asymmetric-encryption-what-are-differences}.
 
 \bibitem{verifyMe}
 {Verify.Me staff}.

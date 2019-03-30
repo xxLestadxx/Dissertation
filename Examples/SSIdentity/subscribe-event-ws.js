@@ -10,6 +10,9 @@
  * 1. Setup the websocket library (npm install websocket --save) ... already done
  * 2. Create a websocket client object
  * 
+ *  saved command just in case -n never = namespace never used -w true = websockets used 
+ *  composer-rest-server -c admin@mynetwork -n never -w true -p 3001
+ * 
  */
 var counter=0;
 
@@ -54,13 +57,13 @@ client.on('connect', (connection)=>{
             processEvent(event);
             var obj = JSON.stringify(event,null,5);
             holder = event.holder;
-            sleep(100).then(() => {
+            sleep(20).then(() => {
                
                 const shell = require('shelljs');                
-                if(obj.includes("\"holder\": \"resource:org.ring.Trader#TA\"")){
+                if(event.$class === 'org.ssidentity.waitingDiplomaConfirmation'){
                     var fs = require("fs");
 
-                    var data = "#!/bin/bash \n composer transaction submit --card TB@ring -d \'{\"$class\":\"org.ring.passTheToken\",\"holder\":\""+event.holder+"\",\"token\":\""+event.token+"\"}\' ";
+                    var data = "#!/bin/bash \n composer transaction submit --card WH@ssidentity -d \'{\"$class\":\"org.ssidentity.confirmDiploma\",\"owner\":\""+event.owner+"\",\"diploma\":\"resource:org.ssidentity.Diploma#"+event.diploma+"\",\"hs\":\""+event.hs+"\"}\' ";
 
                     fs.writeFile("TBSubmit.sh", data, function(err, data) {
                     if (err) console.log(err);
@@ -103,7 +106,7 @@ client.on('connect', (connection)=>{
 })
 
 // #7 Call connect with URL to the REST Server
-client.connect('ws://localhost:3000');
+client.connect('ws://localhost:3001');
 
 function sleep (time) {
   return new Promise((resolve) => setTimeout(resolve, time));

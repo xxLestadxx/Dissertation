@@ -59,6 +59,12 @@ be structured as follows:
 
   \item[Achievements:]
   what you managed to achieve, and how far it meets your objectives.
+  This project was undertaken to research blockchain - more specifically one such for business use cases. This new technology is capable of securing information, while also certify for its integrity inside the network. 
+	Because of the security and integrity of this technology provides. A certain research about identity has started going around. The idea for what exactly is person’s identity and can it be made more explicit and secure. 
+	The scope of this project was to research the blockchain framework Hyperledger Fabric and an attempt of self-sovereign identity prototype. 
+	The field of blockchain is still in its infancy and is developing with a rapid growth. At the start of this project, Fabric was version 1.2 and the project kept its development consistent with it. However at the time of handing in, Fabric is already at version 1.4. 
+	The business logic for a Fabric blockchain app, at the time of writing can be done in two ways. The first is by using only Fabric and write low-level golang (recommended) code or use Hyperledger Composer, to develop and install the system on top of the Fabric nodes. 
+
 
 \end{description}
 
@@ -133,7 +139,7 @@ I would like to thank the library for having the nice, quiet, fourth floor, and 
 
 \label{introduction}
 
-Recently a new technology emerged into the world that is called blockchain. The idea is that it is a distributed decentralized database of blocks of transactions. The reason why I find it so interesting is that it has the potential to change many aspects of life, by changing the way of accessibility and security of a data. Hyperledger Fabric is a blockchain framework designed especially to make the system easily adoptable for different business use cases. The main two objectives of this project are: to research how the smart contracts in Hyperledger Fabric works; to make a prototype of self-sovereign system with the gathered knowledge. 
+Recently a new technology emerged into the world that is called blockchain. The idea is that it is a distributed decentralized database of blocks of transactions. The reason why it is very interesting is that it has the potential to change many aspects of life, by changing the way of accessibility and security of a data. Hyperledger Fabric is a blockchain framework designed especially to make the system easily adoptable for different business use cases. The main two objectives of this project are: to research how the smart contracts in Hyperledger Fabric works; to make a prototype of self-sovereign system with the gathered knowledge. 
 
 \section{Background and Context}
 
@@ -149,61 +155,6 @@ Furthermore whenever a person is signing in to receive some kind of certificate,
 
 	I believe all of these problems are just a subproblems of a bigger challenges - what is an identity today and how to be able to give private access to our data. The solution could provide us awareness for a better control of our own data, as well as to be able to share only what’s exactly needed to provide to those companies and institutions.
 
-\subsection{Distributed Ledger Technologies}
-
-\label{dlt}
-
-Ledgers have been in use of the humanity since ancient days. Their medium has been clay, wooden tally sticks, stone, papyrus and paper. They served its purpose as a one-side record-keeping tool. But this also brings concerns around who is going to validate this one-side register. Later in 15th century, the Italian mathematician Luca Pacioli became the first person, recorded, to publish a paper on the double-entry bookkeeping \cite{ledgers}.However, even when all of the parties have their own records of a particular deal, someone, or even a group of the participants, may cheat and keep a different record, from the original. Thus taking advantage over the people who are trying to trade fairly and honorably.
-
-However, even when all of the parties have their own records of a particular deal, someone, or even a group of the participants, may cheat and keep a different record, from the original. Thus taking advantage over the people who are trying to trade fairly and honorably.
-
-A distributed ledger technology is a concurrent system, referring to a database that is consistently shared and synchronized across multiple machines/nodes in a network. It allows transactions to be monitored by multiple actors, thereby making a cyberattack more difficult. The participants at each of those machines can access the recordings shared and can keep an identical copy of it. Since it is a distributed ledger, any changes made on it are then reflected and the change is done to all the nodes holding a copy of it \cite{dltref} . However, in order to know which entry should be spread, and which is/are the correct ledger/s the system has to have a consensus among all the peers and reach a final solution.
-\subsubsection{Cosensus}  
-\label{consensus}
-
-In general, a consensus algorithm is a process in computer science used to achieve agreement on a single data value among distributed processes or systems. Consensus algorithms are designed to achieve reliability in a network involving multiple unreliable nodes. Solving that issue – known as the consensus problem – is important in distributed computing and multi-agent systems.\cite{mills2016distributed}
-\subsubsection{Cross-border transactions}  
-\label{xborderTransactions}
-
-Includes both outbound and inbound transfers of property, stock, or financial and commercial obligations between related entities resident or operating in different tax jurisdictions. Until recently developers argued that certain attributes of DLT, such as the ability to share ledgers across geographic distances and time-zones, could reduce the number of intermediaries needed to effect cross-border payments. Cross-border payments may be a product of a more transparent and cost-efficient structure due to reducing the number of intermediaries. As result of the reduction, a certain regional banks may be able to directly access the network, thus resulting in the benefits mentioned.\cite{mills2016distributed}
-
-
-\subsubsection{Information Sharing}  
-\label{infosharing}
-DLT has the ability to maintain tamper-resistant records and the arrangements could be designed to allow participants to have “read-only access” to certain parts of the common ledger. This even if it limits the user’s options, it still gives visibility which in turn stresses the integrity of the system, since you are being able to see the supply chain of a particular asset or its history. At the same time, however, since not all of a service provider’s transactions concerning customers might be on one or more ledgers, certain regulatory requirements could be difficult to meet by simply providing access to a ledger.\cite{mills2016distributed}
-
-\subsection{Blockchain}
-\label{blockchain}
-
-Blockchain is a new technology that represents several ideas that are now able to work together. In its core, this high tech is decentralized database. Moreover, due to the asymmetric (public - private key ) cryptography, every peer has an unique identity. Whenever a peer adds data into the blockchain, everybody in the network can see his or her public address as an initiator of this transaction. Since everyone participates in this database, no duplication of data is made, hence no redundancy. 
-
-In the blockchain each block’s header includes a hash of the block’s transactions, as well as a copy of the hash of the prior block’s header, hence blockchain. In this way, all transactions are sequenced and cryptographically linked together. This mechanism keeps the ledger data very secure. Even if one node hosting the ledger has been tampered with, it would not be able to convince all the other nodes that it has the ‘correct’ data, because the ledger is distributed through a network of independent nodes. [Fabric ledger doc] 
- 
-	Blockchain is a linked list of blocks and a block is a group of ordered transactions. It is a distributed database on which once a data has been put, that data cannot be changed. Another unique feature is that there are specific rules, which can put data into the block. These rules, protocol, are made so that there could be no conflicts with data that is already in the database. The data is locked on to an owner. Finally, the nodes agree upon the state of the blockchain.\cite{whatIsBlockchain} It is important that in different blockchains the consensus can be different as well. Thus, two blockchains can have different unique features.
-	
-	An important notion is that a blockchain network can be \textit{permissioned} or \textit{permissionless}.
-
-\subsubsection{Permissioned blockchain}
-This type of network means that only the ones with permission can enter the network. The consensus can be more or less a variation of “Proof-of-authority”, where selected nodes endorse and agree between each other of the state of the blockchain. In this case, the trade off is that the system is not as decentralized, however the transactions are much faster and cost-effective.
-
-\subsubsection{Permissionless blockchain}
-Everyone can join in the network. Perfect examples of such systems are Bitcoin and Ethereum. Typically the consensus they execute at the moment is called “Proof-of-Work”. This mechanism allows every node to participate in a fair contest to ‘mine’ the next block. The winner gets either Bitcoin or Ether respective to the network. This type of consensus and availability to enter the network is giving the blockchain its most famous feature - being decentralized.
-
-\subsubsection{Cryptocurrency}
-Cryptocurrency is a digital asset, medium of exchange in the network. It is created and stored electronically in the blockchain by using encryption techniques to control the creation of monetary units and to verify the transfer of funds. The most important features that cryptocurrency possess are: it has no intrinsic value - you cannot redeem it for a raw material; it has no physical form; its supply is not determined by anyone but the creators of the respective blockchain. \cite{whatIsCryptocurrency}
-An example of a working blockchain system with a cryptocurrency can be seen on figure \ref{blockchainAbstract}. 
-
-
-A peer makes a transaction. This transaction is then taken upon consideration whether it is valid or not. The decision is made by all nodes or just the ones that have been given permission to validate transactions. Upon reaching the conclusion that a transaction is valid,  then it is wrapped up with many more, or in some cases alone, in order to create a block. Two things happen from the last event. First, a transaction is being completed. Second, in permissionless blockchains, the one to win the competition, to ‘mine’ the newly created block receives a reward. 
-
-\begin{figure}[h]
-\centering
-  \includegraphics[width=16cm]{infographics0517-01-1.png}
-  \caption{An abstract of a blockchain system \cite{whatIsBlockgeeks}}
-  \label{blockchainAbstract}
-\end{figure}
-
-\subsection{Cryptography}
 
 \subsection{Further readings}
 The following books and documentation will improve your understanding of blockchain, hyperledger fabric and hyperledger composer.
@@ -268,6 +219,76 @@ Briefly overview the contents of what follows in the dissertation.
 \chapter{State-of-The-Art}
 
 \label{state}
+\section{Technical Background}
+\subsection{Distributed Ledger Technologies}
+
+\label{dlt}
+
+Ledgers have been in use of the humanity since ancient days. Their medium has been clay, wooden tally sticks, stone, papyrus and paper. They served its purpose as a one-side record-keeping tool. But this also brings concerns around who is going to validate this one-side register. Later in 15th century, the Italian mathematician Luca Pacioli became the first person, recorded, to publish a paper on the double-entry bookkeeping \cite{ledgers}.However, even when all of the parties have their own records of a particular deal, someone, or even a group of the participants, may cheat and keep a different record, from the original. Thus taking advantage over the people who are trying to trade fairly and honorably.
+
+However, even when all of the parties have their own records of a particular deal, someone, or even a group of the participants, may cheat and keep a different record, from the original. Thus taking advantage over the people who are trying to trade fairly and honorably.
+
+A distributed ledger technology is a concurrent system, referring to a database that is consistently shared and synchronized across multiple machines/nodes in a network. It allows transactions to be monitored by multiple actors, thereby making a cyberattack more difficult. The participants at each of those machines can access the recordings shared and can keep an identical copy of it. Since it is a distributed ledger, any changes made on it are then reflected and the change is done to all the nodes holding a copy of it \cite{dltref} . However, in order to know which entry should be spread, and which is/are the correct ledger/s the system has to have a consensus among all the peers and reach a final solution.
+\subsubsection{Cosensus}  
+\label{consensus}
+
+In general, a consensus algorithm is a process in computer science used to achieve agreement on a single data value among distributed processes or systems. Consensus algorithms are designed to achieve reliability in a network involving multiple unreliable nodes. Solving that issue – known as the consensus problem – is important in distributed computing and multi-agent systems.\cite{mills2016distributed}
+
+\subsubsection{Information Sharing}  
+\label{infosharing}
+DLT has the ability to maintain tamper-resistant records and the arrangements could be designed to allow participants to have “read-only access” to certain parts of the common ledger. This even if it limits the user’s options, it still gives visibility which in turn stresses the integrity of the system, since you are being able to see the supply chain of a particular asset or its history. At the same time, however, since not all of a service provider’s transactions concerning customers might be on one or more ledgers, certain regulatory requirements could be difficult to meet by simply providing access to a ledger.\cite{mills2016distributed}
+
+\subsection{Blockchain}
+\label{blockchain}
+
+Blockchain is a new technology that represents several ideas that are now able to work together. In its core, this high tech is decentralized database. Moreover, due to the asymmetric (public - private key ) cryptography, every peer has an unique identity. Whenever a peer adds data into the blockchain, everybody in the network can see his or her public address as an initiator of this transaction. Since everyone participates in this database, no duplication of data is made, hence no redundancy. 
+
+In the blockchain each block’s header includes a hash of the block’s transactions, as well as a copy of the hash of the prior block’s header, hence blockchain. In this way, all transactions are sequenced and cryptographically linked together. This mechanism keeps the ledger data very secure. Even if one node hosting the ledger has been tampered with, it would not be able to convince all the other nodes that it has the ‘correct’ data, because the ledger is distributed through a network of independent nodes. [Fabric ledger doc] 
+ 
+	Blockchain is a linked list of blocks and a block is a group of ordered transactions. It is a distributed database on which once a data has been put, that data cannot be changed. Another unique feature is that there are specific rules, which can put data into the block. These rules, protocol, are made so that there could be no conflicts with data that is already in the database. The data is locked on to an owner. Finally, the nodes agree upon the state of the blockchain.\cite{whatIsBlockchain} It is important that in different blockchains the consensus can be different as well. Thus, two blockchains can have different unique features.
+	
+	An important notion is that a blockchain network can be \textit{permissioned} or \textit{permissionless}.
+
+\subsubsection{Permissioned blockchain}
+This type of network means that only the ones with permission can enter the network. The consensus can be more or less a variation of “Proof-of-authority”, where selected nodes endorse and agree between each other of the state of the blockchain. In this case, the trade off is that the system is not as decentralized, however the transactions are much faster and cost-effective.
+
+\subsubsection{Permissionless blockchain}
+Everyone can join in the network. Perfect examples of such systems are Bitcoin and Ethereum. Typically the consensus they execute at the moment is called “Proof-of-Work”. This mechanism allows every node to participate in a fair contest to ‘mine’ the next block. The winner gets either Bitcoin or Ether respective to the network. This type of consensus and availability to enter the network is giving the blockchain its most famous feature - being decentralized.
+
+\subsubsection{Cryptocurrency}
+Cryptocurrency is a digital asset, medium of exchange in the network. It is created and stored electronically in the blockchain by using encryption techniques to control the creation of monetary units and to verify the transfer of funds. The most important features that cryptocurrency possess are: it has no intrinsic value - you cannot redeem it for a raw material; it has no physical form; its supply is not determined by anyone but the creators of the respective blockchain. \cite{whatIsCryptocurrency}
+An example of a working blockchain system with a cryptocurrency can be seen on figure \ref{blockchainAbstract}. 
+
+
+A peer makes a transaction. This transaction is then taken upon consideration whether it is valid or not. The decision is made by all nodes or just the ones that have been given permission to validate transactions. Upon reaching the conclusion that a transaction is valid,  then it is wrapped up with many more, or in some cases alone, in order to create a block. Two things happen from the last event. First, a transaction is being completed. Second, in permissionless blockchains, the one to win the competition, to ‘mine’ the newly created block receives a reward. 
+
+\begin{figure}[h]
+\centering
+  \includegraphics[width=16cm]{infographics0517-01-1.png}
+  \caption{An abstract of a blockchain system \cite{whatIsBlockgeeks}}
+  \label{blockchainAbstract}
+\end{figure}
+
+\subsection{Cryptography}
+Cryptography is the study and practice of protecting information by encoding messages or data with the use of transformation techniques. When the message is received by the correct party, they have the necessary means to decode and consume the message. 
+	Encryption method is the algorithm to be used to convert plain message into a meaningful random characters. The method would use some sort of a key to do the encryption. In order for the receiver to make sense of this rambling they would need the correct key to decrypt the message.\cite{cryptolecture} Cryptography is widely used to protect information and communications. Three of the objectives that this field concerns itself with are: 
+\begin{itemize}
+
+\item Confidentiality - the information is kept secret or presented in a confusing manner from anyone whom it was unintended; 
+\item Integrity - the information cannot be tampered with without the change being detected;
+\item Authentication - the sender and the receiver can confirm each other’s identity, thus they can establish the origin of the information. This is easily done with asymmetric cryptography, and harder with symmetric. Because symmetric cryptography is easier to break and interfere with the communication. 
+\end{itemize}
+
+When the same key is used for encryption and decryption, it’s called symmetric cryptography. When there are two different keys needed, one for encryption and the other for decryption - that is asymmetric cryptography. The Asymmetric encryption is more secure, but the tradeoff is that it is relatively slower as well. \cite{symasym}
+
+\subsubsection{Cryptography in Fabric}
+
+	Fabric uses BCCSP, the Blockchain Cryptographic Service Provider. It is a creation of IBM and it offers implementation of cryptographic standards and algorithms. Written in golang, mainly to be used on Hyperledger Fabric. 
+
+	BCCSP is designed to be pluggable component into the fabric network. It can mount different public key cryptographic standards, depending on the client’s requirements. Supports both symmetric and asymmetric encryption. 
+Fabric needs both simple encryption/decryption and signed. One the key for the preferred algorithm is retrieved BCCSP exposes encryption and decryption methods to be called. The sign is obtained by the key as well, thereafter sign and verify methods are exposed to be used. \cite{bccsp}
+
+
 \section{Successful projects made with Hyperledger Fabric}
 \label{successfulFabric}
 
@@ -279,8 +300,8 @@ Altoros is a software company that delivers different solutions. One of the prob
 	
 	One of the challenges they had was that the REST API was still in development. Fortunately, this is not the case anymore. Another challenge is that Fabric does not support cross-channel transactions. \cite{altorosDemo}
 	
-	The benefits of choosing Fabric are: 
-	\begin{itemize}
+The benefits of choosing Fabric are: 
+\begin{itemize}
 	
 \item Faster transactions compared to the traditional solution, where a lot of data exchanging has to be done through a middleman. Thus, not only making it faster but also cheaper. 
 \item Minimizing fraud in a secure trusted network. The permissioned feature does not allow for anyone that does not meet the requirements to monitor what’s happening into the world ledger. What’s more because of the non cross-channel transactions, a peer could observe only the channels he is using. And even when he or she is inspecting another peer’s transaction, because of the encryption, he or she would not get any valuable information. 
@@ -366,6 +387,19 @@ Docker and Docker Composer are essential for the developing of this project. Thi
 
 \section{Visual Studio Code}
 \label{vsCode}
+
+Visual Studio Code for short VS Code, is an open source powerful, yet lightweight, text editor. It is available for Windows, Linux and macOS. The text editor comes with built-in support for TypeScript ( Angular), JavaScript and Node.js. One of the many features is that it has a built in terminal in the GUI, making simple command calls easier than ever.
+
+Released only 4 years ago, it is doing such a great job that in a Stack Overflow survey, the editor has been chosen as most popular in 2018.\cite{stackoverflow}
+
+What’s more important is that there are a lot of great extensions for this source code editor. The ones immensely important for this project are Docker, Hyperledger Composer and Beautify. 
+
+The docker extension is providing enormous help. Not only one can see the all images, and containers that are created or running on the machine, but also one can manage, control and inspect the images or containers. To be able to monitor the state of all Fabric nodes, which are mounted on the docker containers, saves a lot of time. The build in terminal is used when invoking or inspecting what happens in a specific container. The contrary to this method, is having to manually search and type commands through the terminal in order to find and inspect the specific container. 
+
+Hyperledger Composer extension is validating the structure of the business model files, discussed in section \ref{composerProgramming} . The validating goes through the .cto, model, file. The model file contains the structure of the business model. So from time to time, there could be errors, just because you are modifying one of the other files, without having the model file open. As a rule of thumb, while working on your network, it’s best if you have open all files of that system at once.
+  
+Having this extension is giving you the freedom to write your code in a good environment, where you can see what’s happening, in comparison to playground, online tool to run business networks discussed later in section \ref{composerOverview}. Once the code is written, testing it in the composer playground is very good idea. 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Fabric  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Hyperledger Fabric}
 \label{hplFabric}
@@ -615,6 +649,7 @@ Lastly is the channel definition, where the architect would specify which consor
 \label{hplComposer}
 
 \section{Overview}
+\label{composerOverview}
 
 \subsection{Composer CLI}
 
@@ -623,7 +658,7 @@ Lastly is the channel definition, where the architect would specify which consor
 \section{Composer Historian}
 
 \section{Composer programming}
-
+\label{composerProgramming}
 \subsection{Model file}
 \subsection{Logic file}
 \subsubsection{Transactions}
@@ -672,7 +707,7 @@ have tackled the project in a professional manner.
 
 Elaboration on "IBM left Composer, because it deviated from Fabric structure".
 
-Future plans - the same system but constructed solely on Fabric.
+Future plans - the same system but constructed solely on Fabric.	
 
 
 Explain any limitations in your results and how things might be improved.

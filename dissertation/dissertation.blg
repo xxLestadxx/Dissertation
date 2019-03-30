@@ -3,46 +3,56 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: dissertation.aux
 The style file: abbrv.bst
 Database file #1: ref.bib
+Too many commas in name 1 of "Elli Androulaki, Angelo De Caro, Volodymyr (V.) Paprotski, Alessandro Sorniotti, Tamas Visegrady" for entry bccsp
+while executing---line 1049 of file abbrv.bst
+Too many commas in name 1 of "Elli Androulaki, Angelo De Caro, Volodymyr (V.) Paprotski, Alessandro Sorniotti, Tamas Visegrady" for entry bccsp
+while executing---line 1049 of file abbrv.bst
+Too many commas in name 1 of "Elli Androulaki, Angelo De Caro, Volodymyr (V.) Paprotski, Alessandro Sorniotti, Tamas Visegrady" for entry bccsp
+while executing---line 1090 of file abbrv.bst
+Too many commas in name 1 of "Elli Androulaki, Angelo De Caro, Volodymyr (V.) Paprotski, Alessandro Sorniotti, Tamas Visegrady" for entry bccsp
+while executing---line 1090 of file abbrv.bst
+Warning--empty journal in bccsp
+Warning--empty year in bccsp
 Warning--empty journal in mills2016distributed
-You've used 17 entries,
+You've used 20 entries,
             2118 wiz_defined-function locations,
-            579 strings with 7102 characters,
-and the built_in function-call counts, 4441 in all, are:
-= -- 408
-> -- 197
+            590 strings with 7533 characters,
+and the built_in function-call counts, 5044 in all, are:
+= -- 461
+> -- 218
 < -- 3
-+ -- 82
-- -- 64
-* -- 194
-:= -- 731
-add.period$ -- 53
-call.type$ -- 17
-change.case$ -- 82
++ -- 91
+- -- 70
+* -- 215
+:= -- 833
+add.period$ -- 61
+call.type$ -- 20
+change.case$ -- 94
 chr.to.int$ -- 0
-cite$ -- 18
-duplicate$ -- 164
-empty$ -- 409
-format.name$ -- 64
-if$ -- 954
+cite$ -- 23
+duplicate$ -- 188
+empty$ -- 470
+format.name$ -- 70
+if$ -- 1080
 int.to.chr$ -- 0
-int.to.str$ -- 17
-missing$ -- 5
-newline$ -- 88
-num.names$ -- 34
-pop$ -- 175
+int.to.str$ -- 20
+missing$ -- 6
+newline$ -- 102
+num.names$ -- 40
+pop$ -- 205
 preamble$ -- 1
-purify$ -- 65
+purify$ -- 74
 quote$ -- 0
-skip$ -- 132
+skip$ -- 150
 stack$ -- 0
-substring$ -- 150
-swap$ -- 38
+substring$ -- 165
+swap$ -- 40
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 68
-warning$ -- 1
-while$ -- 40
-width$ -- 19
-write$ -- 165
-(There was 1 warning)
+type$ -- 80
+warning$ -- 3
+while$ -- 46
+width$ -- 22
+write$ -- 190
+(There were 4 error messages)

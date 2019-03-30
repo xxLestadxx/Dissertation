@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  25 MAR 2019 15:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  30 MAR 2019 00:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -180,39 +180,42 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20.74> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 43.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 51.
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
 [2
 
 
 ]
 Attestation.
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 78.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 84.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 78.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 84.
 
 
 LaTeX Warning: Reference `technical-section2' on page iii undefined on input li
-ne 78.
+ne 84.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 80.
+(Font)              <10.95> on input line 86.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 80.
+(Font)              <8> on input line 86.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 80.
+(Font)              <6> on input line 86.
 
 LaTeX Warning: Reference `technical-section1' on page iii undefined on input li
-ne 83.
+ne 89.
 
 
 LaTeX Warning: Reference `technical-subsection1' on page iii undefined on input
- line 88.
+ line 94.
 
 
 LaTeX Warning: Reference `technical-subsubsection2' on page iii undefined on in
-put line 92.
+put line 98.
 
 [3
 
@@ -222,7 +225,7 @@ Acknowledgements.
 
 ]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 117.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 123.
  (./dissertation.toc [5
 
 ])
@@ -244,128 +247,153 @@ Missing character: There is no ô in font ptmr7t!
 
 
 ]
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ì in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ì in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ú in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ù in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ô in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ô in font ptmr7t!
- [2]
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ô in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ô in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ô in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ò in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ô in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ú in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ù in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ú in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ù in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ò in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ô in font ptmr7t!
- [3]
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ò in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ô in font ptmr7t!
- <infographics0517-01-1.png, id=41, 1606.0pt x 843.15pt>
-File: infographics0517-01-1.png Graphic file (type png)
-
-<use infographics0517-01-1.png>
-Package pdftex.def Info: infographics0517-01-1.png used on input line 201.
-(pdftex.def)             Requested size: 455.24408pt x 239.00084pt.
-
-Overfull \hbox (12.59033pt too wide) in paragraph at lines 201--202
- [][] 
- []
-
-[4 <./infographics0517-01-1.png>]
-Overfull \hbox (43.37823pt too wide) in paragraph at lines 218--219
+Overfull \hbox (43.37823pt too wide) in paragraph at lines 169--170
 []\OT1/ptm/m/n/10.95 Composer's doc-u-men-ta-tion - https://hyperledger.github.
 io/composer/latest/introduction/introduction.html 
  []
 
-[5] [6]
+[2] [3]
 Chapter 2.
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ô in font ptmr7t!
+Missing character: There is no ì in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ì in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
-[7
+[4
 
 ]
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ò in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ò in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+ [5]
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ò in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+ <infographics0517-01-1.png, id=48, 1606.0pt x 843.15pt>
+File: infographics0517-01-1.png Graphic file (type png)
 
-Overfull \hbox (4.39081pt too wide) in paragraph at lines 296--299
+<use infographics0517-01-1.png>
+Package pdftex.def Info: infographics0517-01-1.png used on input line 267.
+(pdftex.def)             Requested size: 455.24408pt x 239.00084pt.
+
+Overfull \hbox (12.59033pt too wide) in paragraph at lines 267--268
+ [][] 
+ []
+
+[6 <./infographics0517-01-1.png>]
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+ [7]
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+
+Overfull \hbox (4.39081pt too wide) in paragraph at lines 317--320
 []\OT1/ptm/m/n/10.95 The SIM card is used as an an-chor of trust. Since the sys
 -tem is pri-vate and per-mis-sioned blockchain,
  []
 
+[8]
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
-[8] [9]
+ [9]
 Chapter 3.
 <container-what-is-container.png, id=62, 1204.5pt x 1042.89626pt>
 File: container-what-is-container.png Graphic file (type png)
 
 <use container-what-is-container.png>
-Package pdftex.def Info: container-what-is-container.png used on input line 360
+Package pdftex.def Info: container-what-is-container.png used on input line 381
 .
 (pdftex.def)             Requested size: 455.24408pt x 394.17232pt.
 
-Overfull \hbox (12.59033pt too wide) in paragraph at lines 360--361
+Overfull \hbox (12.59033pt too wide) in paragraph at lines 381--382
  [][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+
+LaTeX Warning: Citation `stackoverflow' on page 10 undefined on input line 393.
+
+
 [10
 
-] [11 <./container-what-is-container.png>]
+]
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+ [11 <./container-what-is-container.png>]
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+ [12]
 Chapter 4.
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
@@ -385,7 +413,7 @@ Missing character: There is no ô in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
-[12
+[13
 
 ]
 Missing character: There is no ‚ in font ptmr7t!
@@ -397,54 +425,54 @@ Missing character: There is no ô in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
- [13]
+ [14]
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
- [14] <ledgerdiagram1.png, id=81, 683.55376pt x 307.1475pt>
+ [15] <ledgerdiagram1.png, id=84, 683.55376pt x 307.1475pt>
 File: ledgerdiagram1.png Graphic file (type png)
 
 <use ledgerdiagram1.png>
-Package pdftex.def Info: ledgerdiagram1.png used on input line 432.
+Package pdftex.def Info: ledgerdiagram1.png used on input line 467.
 (pdftex.def)             Requested size: 455.24408pt x 204.56453pt.
 
-Overfull \hbox (12.59033pt too wide) in paragraph at lines 432--433
+Overfull \hbox (12.59033pt too wide) in paragraph at lines 467--468
  [][] 
  []
 
-<ledgerdiagram2.png, id=82, 822.07124pt x 366.36874pt>
+<ledgerdiagram2.png, id=85, 822.07124pt x 366.36874pt>
 File: ledgerdiagram2.png Graphic file (type png)
 
 <use ledgerdiagram2.png>
-Package pdftex.def Info: ledgerdiagram2.png used on input line 445.
+Package pdftex.def Info: ledgerdiagram2.png used on input line 480.
 (pdftex.def)             Requested size: 455.24408pt x 202.88423pt.
 
-Overfull \hbox (12.59033pt too wide) in paragraph at lines 445--446
+Overfull \hbox (12.59033pt too wide) in paragraph at lines 480--481
  [][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[15 <./ledgerdiagram1.png>]
+[16 <./ledgerdiagram1.png>]
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
- [16 <./ledgerdiagram2.png>]
+ [17 <./ledgerdiagram2.png>]
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ô in font ptmr7t!
- [17]
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
  [18]
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+ [19]
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ú in font ptmr7t!
@@ -452,44 +480,44 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
 
-<cryptoconfig1.png, id=98, 734.745pt x 260.975pt>
+<cryptoconfig1.png, id=101, 734.745pt x 260.975pt>
 File: cryptoconfig1.png Graphic file (type png)
  <use cryptoconfig1.png>
-Package pdftex.def Info: cryptoconfig1.png used on input line 531.
+Package pdftex.def Info: cryptoconfig1.png used on input line 566.
 (pdftex.def)             Requested size: 455.24408pt x 161.70328pt.
 
-Overfull \hbox (12.59033pt too wide) in paragraph at lines 531--532
+Overfull \hbox (12.59033pt too wide) in paragraph at lines 566--567
  [][] 
  []
 
-[19 <./cryptoconfig1.png>]
-<cryptoconfig2.png, id=102, 727.71875pt x 129.48375pt>
+[20 <./cryptoconfig1.png>]
+<cryptoconfig2.png, id=105, 727.71875pt x 129.48375pt>
 File: cryptoconfig2.png Graphic file (type png)
  <use cryptoconfig2.png>
-Package pdftex.def Info: cryptoconfig2.png used on input line 546.
+Package pdftex.def Info: cryptoconfig2.png used on input line 581.
 (pdftex.def)             Requested size: 455.24408pt x 81.00418pt.
 
-Overfull \hbox (12.59033pt too wide) in paragraph at lines 546--547
+Overfull \hbox (12.59033pt too wide) in paragraph at lines 581--582
  [][] 
  []
 
-<cryptoconfig3.png, id=103, 712.6625pt x 204.765pt>
+<cryptoconfig3.png, id=106, 712.6625pt x 204.765pt>
 File: cryptoconfig3.png Graphic file (type png)
  <use cryptoconfig3.png>
-Package pdftex.def Info: cryptoconfig3.png used on input line 555.
+Package pdftex.def Info: cryptoconfig3.png used on input line 590.
 (pdftex.def)             Requested size: 455.24408pt x 130.8023pt.
 
-Overfull \hbox (12.59033pt too wide) in paragraph at lines 555--556
+Overfull \hbox (12.59033pt too wide) in paragraph at lines 590--591
  [][] 
  []
 
-<configtx1.png, id=104, 750.805pt x 579.16376pt>
+<configtx1.png, id=107, 750.805pt x 579.16376pt>
 File: configtx1.png Graphic file (type png)
  <use configtx1.png>
-Package pdftex.def Info: configtx1.png used on input line 570.
+Package pdftex.def Info: configtx1.png used on input line 605.
 (pdftex.def)             Requested size: 455.24408pt x 351.17725pt.
 
-Overfull \hbox (12.59033pt too wide) in paragraph at lines 570--571
+Overfull \hbox (12.59033pt too wide) in paragraph at lines 605--606
  [][] 
  []
 
@@ -499,49 +527,49 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
-[20 <./cryptoconfig2.png> <./cryptoconfig3.png>]
-<configtx2.png, id=108, 819.06pt x 499.8675pt>
+[21 <./cryptoconfig2.png> <./cryptoconfig3.png>]
+<configtx2.png, id=111, 819.06pt x 499.8675pt>
 File: configtx2.png Graphic file (type png)
  <use configtx2.png>
-Package pdftex.def Info: configtx2.png used on input line 581.
+Package pdftex.def Info: configtx2.png used on input line 616.
 (pdftex.def)             Requested size: 455.24408pt x 277.84161pt.
 
-Overfull \hbox (12.59033pt too wide) in paragraph at lines 581--582
+Overfull \hbox (12.59033pt too wide) in paragraph at lines 616--617
  [][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[21 <./configtx1.png>] <configtx3.png, id=112, 727.71875pt x 454.69875pt>
+[22 <./configtx1.png>] <configtx3.png, id=115, 727.71875pt x 454.69875pt>
 File: configtx3.png Graphic file (type png)
 
 <use configtx3.png>
-Package pdftex.def Info: configtx3.png used on input line 599.
+Package pdftex.def Info: configtx3.png used on input line 634.
 (pdftex.def)             Requested size: 455.24408pt x 284.4566pt.
 
-Overfull \hbox (12.59033pt too wide) in paragraph at lines 599--600
+Overfull \hbox (12.59033pt too wide) in paragraph at lines 634--635
  [][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[22 <./configtx2.png>] [23 <./configtx3.png>]
+[23 <./configtx2.png>] [24 <./configtx3.png>]
 Chapter 5.
-[24
-
-]
-Chapter 6.
 [25
 
 ]
-Chapter 7.
+Chapter 6.
 [26
 
 ]
+Chapter 7.
+[27
+
+]
 Chapter 8.
-(./dissertation.bbl [27
+(./dissertation.bbl [28
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 18--22
@@ -574,20 +602,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 54--59
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 73--77
+Underfull \hbox (badness 10000) in paragraph at lines 82--86
 []\OT1/ptm/m/n/10.95 IBM staff.  Maersk and IBM In-tro-duce Trade-Lens Blockcha
 in Ship-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 73--77
+Underfull \hbox (badness 10000) in paragraph at lines 82--86
 \OT1/ptm/m/n/10.95 ping So-lu-tion.  [On-line]. Avail-able: $\OT1/ptm/m/it/10.9
 5 https : / / newsroom . ibm . com /
  []
 
-[28
+[29
 
-]) [29] (./dissertation.aux)
+]
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ì in font ptmr7t!
+
+Underfull \hbox (badness 10000) in paragraph at lines 115--119
+[]\OT1/ptm/m/n/10.95 SSL2Buy staff.  Sym-met-ric vs. Asym-met-ric En-cryp-tion 
+ What are
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 115--119
+\OT1/ptm/m/n/10.95 dif-fer-ences?  [On-line]. Avail-able: $\OT1/ptm/m/it/10.95 
+https : / / www . ssl2buy . com / wiki /
+ []
+
+) [30] (./dissertation.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -596,10 +640,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 1856 strings out of 494910
- 27017 string characters out of 6179835
- 81979 words of memory out of 5000000
- 5092 multiletter control sequences out of 15000+600000
+ 1861 strings out of 494910
+ 27081 string characters out of 6179835
+ 82001 words of memory out of 5000000
+ 5097 multiletter control sequences out of 15000+600000
  28924 words of font info for 54 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  41i,7n,25p,829b,282s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -608,10 +652,10 @@ e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/u
 tmri8a.pfb>
-Output written on dissertation.pdf (37 pages, 571247 bytes).
+Output written on dissertation.pdf (38 pages, 575718 bytes).
 PDF statistics:
- 157 PDF objects out of 1000 (max. 8388607)
- 99 compressed objects within 1 object stream
+ 161 PDF objects out of 1000 (max. 8388607)
+ 101 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
