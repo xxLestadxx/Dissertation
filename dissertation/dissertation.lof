@@ -4,14 +4,16 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2}{\ignorespaces Containerized applications \cite {dockerContainer}}}{11}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3}{\ignorespaces An abstract of the Fabric Ledger \cite {fabledger}}}{16}
-\contentsline {figure}{\numberline {4}{\ignorespaces An graphical representation of the block \cite {fabledger}}}{17}
-\contentsline {figure}{\numberline {5}{\ignorespaces }}{20}
-\contentsline {figure}{\numberline {6}{\ignorespaces }}{21}
-\contentsline {figure}{\numberline {7}{\ignorespaces }}{21}
+\contentsline {figure}{\numberline {3}{\ignorespaces High-level overview of Fabric system}}{14}
+\contentsline {figure}{\numberline {4}{\ignorespaces An abstract of the Fabric Ledger \cite {fabledger}}}{17}
+\contentsline {figure}{\numberline {5}{\ignorespaces An graphical representation of the block \cite {fabledger}}}{18}
+\contentsline {figure}{\numberline {6}{\ignorespaces An graphical representation of the transaction flow \cite {transactionFlow} }}{21}
+\contentsline {figure}{\numberline {7}{\ignorespaces }}{22}
 \contentsline {figure}{\numberline {8}{\ignorespaces }}{22}
-\contentsline {figure}{\numberline {9}{\ignorespaces }}{23}
-\contentsline {figure}{\numberline {10}{\ignorespaces }}{24}
+\contentsline {figure}{\numberline {9}{\ignorespaces }}{22}
+\contentsline {figure}{\numberline {10}{\ignorespaces }}{23}
+\contentsline {figure}{\numberline {11}{\ignorespaces }}{24}
+\contentsline {figure}{\numberline {12}{\ignorespaces }}{25}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

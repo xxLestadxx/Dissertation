@@ -20,7 +20,7 @@
 \renewcommand{\baselinestretch}{1.1}
 \date{April 2019}			
 
-\degree{B. Sc. in Computer Science}
+\degree{BSc with Honours in Computer Science}
 
 \begin{document}
 
@@ -42,31 +42,19 @@
 
 \intro{Abstract}
 
-Summarise the dissertation within one page. Introductory headings like this are
-entered using the {\it intro} paragraph style. It is suggested that the abstract
-be structured as follows:
+  This project was undertaken to research blockchain technology and its implications in enterprise fields. The new technology is capable of securing information, while also certify for its integrity inside the network. Hyperledger Fabric is specifically made to answer the requirements enforced by the business.  
+\\  
 
-\begin{description}
+  An opportunity arised for certain research due to the security and integrity provided by blockchain. The idea for what exactly is person’s identity and can it be made more explicit and secure. What's more, can an identity be assigned quickly and used worldwide.
+\\
 
-  \item[Problem:]
-  what you tackled, and why this needed a solution
+	The scope of this project was to research the blockchain framework Hyperledger Fabric and the smart contract, called chaincode in this permissioned network. With the knowledge gathered an attempt of self-sovereign identity prototype is made.
+\\
+ 
+	The field of blockchain is still in its infancy and is developing with a rapid growth. At the start of this project, Fabric was at version 1.2 and the project kept its development consistent with it. However at the time of handing in of the dissertation, Fabric is already at version 1.4. 
+\\
 
-  \item[Objectives:]
-  what you set out to achieve, and how this addressed the problem
-
-  \item[Methodology:]
-  how you went about solving the problem
-
-  \item[Achievements:]
-  what you managed to achieve, and how far it meets your objectives.
-  This project was undertaken to research blockchain - more specifically one such for business use cases. This new technology is capable of securing information, while also certify for its integrity inside the network. 
-	Because of the security and integrity of this technology provides. A certain research about identity has started going around. The idea for what exactly is person’s identity and can it be made more explicit and secure. 
-	The scope of this project was to research the blockchain framework Hyperledger Fabric and an attempt of self-sovereign identity prototype. 
-	The field of blockchain is still in its infancy and is developing with a rapid growth. At the start of this project, Fabric was version 1.2 and the project kept its development consistent with it. However at the time of handing in, Fabric is already at version 1.4. 
-	The business logic for a Fabric blockchain app, at the time of writing can be done in two ways. The first is by using only Fabric and write low-level golang (recommended) code or use Hyperledger Composer, to develop and install the system on top of the Fabric nodes. 
-
-
-\end{description}
+	Smart contracts are representing the business logic in a blockchain network. In Hyperledger Fabric they are called chaincode, because it operates on the whole channel rather than being invoked for specific operation. It can be written in two ways, at the time of writing this dissertation. The first is using only Fabric and writing low-level code (golang recommended). The second, which is used in this thesis, is through Hyperledger Composer. Composer is an open development toolset and framework to make developing blockchain applications easier. It creates assets, participants and transactions through high-level code, that is compressed into a single file and installed on top of Fabric blockchain network. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Attestation %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -111,12 +99,15 @@ circumstances):
 \intro{Acknowledgements}
 
 First and foremost I would like to thank to Dr. Andrea Bracciali for introducing me to blockchain. What's more I am grateful for his patience, guidance and support, without which I would not have been able to grow into what I am today. Thank you.
+\\
 
 I am grateful to my parents for giving me the opportunity to study in University of Stirling. 
+\\
 
 I am grateful to my classmates for helping me out, when I could not understand something, and just for being around, it was fun. 
+\\
 
-I would like to thank the library for having the nice, quiet, fourth floor, and for always buying the books I requested. 
+I would like to thank the library for having the nice quiet, fourth floor, and for always buying the books I requested. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Contents %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -139,7 +130,11 @@ I would like to thank the library for having the nice, quiet, fourth floor, and 
 
 \label{introduction}
 
-Recently a new technology emerged into the world that is called blockchain. The idea is that it is a distributed decentralized database of blocks of transactions. The reason why it is very interesting is that it has the potential to change many aspects of life, by changing the way of accessibility and security of a data. Hyperledger Fabric is a blockchain framework designed especially to make the system easily adoptable for different business use cases. The main two objectives of this project are: to research how the smart contracts in Hyperledger Fabric works; to make a prototype of self-sovereign system with the gathered knowledge. 
+Recently a new technology emerged into the world that is called blockchain. The idea is that it is a distributed decentralized database of blocks constructed of transactions. The reason why it is very interesting is that it has the potential to change many aspects of life. It is an opportunity for better authenticity and security of a data. 
+
+Hyperledger Fabric is a blockchain framework designed specifically to be easily adoptable for different business use cases. 
+
+The main two objectives of this project are: to research how the smart contracts in Hyperledger Fabric work; to make a prototype of self-sovereign system with the gathered knowledge. 
 
 \section{Background and Context}
 
@@ -157,7 +152,7 @@ Furthermore whenever a person is signing in to receive some kind of certificate,
 
 
 \subsection{Further readings}
-The following books and documentation will improve your understanding of blockchain, hyperledger fabric and hyperledger composer.
+The following books and documentation will improve your understanding of blockchain, Hyperledger Fabric and Hyperledger Composer.
 
 \begin{itemize}
 	\item "Enterprise blockchain development with hyperledger Fabric and Composer" by Ernesto Lee and Sudip Ghosh
@@ -217,8 +212,10 @@ Briefly overview the contents of what follows in the dissertation.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  State-of-The-Art %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{State-of-The-Art}
-
 \label{state}
+
+This chapter is going to touch on the technical part of distributed ledger technologies, blockchain and cryptography. Thereafter a few examples will be overviewed that are constructed with Fabric blockchain. 
+ 
 \section{Technical Background}
 \subsection{Distributed Ledger Technologies}
 
@@ -289,6 +286,9 @@ When the same key is used for encryption and decryption, it’s called symmetric
 Fabric needs both simple encryption/decryption and signed. One the key for the preferred algorithm is retrieved BCCSP exposes encryption and decryption methods to be called. The sign is obtained by the key as well, thereafter sign and verify methods are exposed to be used. \cite{bccsp}
 
 
+\subsubsection{Certificates and PKI}
+	Every organization in Fabric has a membership service provider (MSP) which is pluggable interface to support variety of credentials architectures. In other words, it takes what the BCCSP provides. The MSP is responsible for the identity and the authenticity of respective organizations’ peers and users. By default, the security implementation is Fabric-CA. Public key infrastructure that writes certificates defined by x.509 standard. MSP and CA will be explained in more detail in section \ref{felements}.
+
 \section{Successful projects made with Hyperledger Fabric}
 \label{successfulFabric}
 
@@ -356,19 +356,10 @@ Cons:
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Technical Chapters %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{Technology required}            % Insert your chapter titles
-
+\chapter{Technology}            
 \label{technical}
 
-The key software and technology used for the creation and development of this project is:
-\begin{itemize}
-\item OS: Ubuntu 16.04 Xenial 64 bit
-\item Hyperledger Fabric - modular blockchain framework
-\item Hyperledger Composer - a tool to create abstract blockchain application, that can then be run on Fabric.
-\item Docker and Docker Composer
-\item Visual Studio Code
-\end{itemize}
-
+This chapter is going to cover information about three essential technologies. Docker is creating virtual environment where Fabric nodes are runnig. NPM (node package manage) is used to access Hyperledger Composer command line interface. VS Code is a text editor that supports two vital extentions, one for docker and one for Hyperledger Composer, which greatly improve the experience of the developer. 
 
 \section{Docker}
 \label{docker}
@@ -404,8 +395,6 @@ Having this extension is giving you the freedom to write your code in a good env
 \chapter{Hyperledger Fabric}
 \label{hplFabric}
 
-\section{picture of the overview of the structure}
-
 \subsubsection{Permissioned blockchain}
 A blockchain where the peers need to meet certain requirements to enter the network where he or she can perform certain actions is called permissioned. These systems are more attractive for the business and enterprise because they are faster and more cost-effective. Another feature that is appealing for those clients is the role system. That way actors, that all of the companies trust, can be the endorsers, the ones to validate the transactions. The feature could also be used to classify different players into respective roles. Which can give a particular system a better clarification and simplicity around executing different tasks. 
 
@@ -417,6 +406,14 @@ What’s more, many prefer permissioned blockchains for supply chain. Since only
 Hyperledger is a group of open source projects focused around cross-industry distributed ledger technologies. Hosted by The Linux Foundation, collaborators include industry leaders in technology, finance, banking, supply chain management, manufacturing, and IoT.
 
 
+\begin{figure}[h]
+\centering
+  \includegraphics[height=14cm,width=16cm]{Flowdiagram.png}
+  \caption{High-level overview of Fabric system}
+  \label{highleveloverview}
+\end{figure}
+
+
 \section{Fabric overview}
 	Fabric is one of those open source projects. It is a modular distributed ledger, which makes it highly customizable and adaptable to a variety of ideas and restrictions. The main scope of this undergraduate project is to test how functional and useful Fabric can be in different business and science situations. Is it making some of the use cases in those fields cheaper and more secure?
 	
@@ -425,6 +422,8 @@ The feature which makes Fabric the perfect choice is that it can create differen
 	This Hyperledger project is a preferred platform mainly because of its adaptability to different use cases. One interesting feature, and main reason for the self-sovereign use case, is that Fabric supports zero-knowledge proof (ZKP). What this means is that it allows a peer to assure itself in front of a verifier without having to show any private data. This gives authority to ZKP to offer anonymous authentication for clients in their transactions. \cite{li2018fppb}
 	
 	The act of communication between different peers from different organizations (or groups) is through channels. These channels can be public or confidential. The communication inside works based on the chaincode, the smart contract. All of the logistics and functionality of a new blockchain application is based on it’s smart contracts. That is why they are extremely important and main object of interest in this undergraduate project.
+	
+	
 \section{Essential Fabric elements}
 \label{felements}
 Hyperledger Fabric is set by organizations that want to setup a consortium. Every organization is constructed by several type of peer nodes (or just peers). All that these peers require is appropriate configuration and cryptographic materials like certificate authority (CA) and endorsement policy.
@@ -440,9 +439,14 @@ It is pivotal for the consensus mechanism and transaction flow. It is responsibl
 \subsubsection{Anchor peer}
 The anchor peer is the connection of the organization with the network. If there is no anchor peer in the organization, then this organization cannot connect to any other organization. What’s more important, it is the link between the orderer node and the ledger inside the organisations. If there is no mechanism to send or receive transactions then the whole organisation will become obsolete. Thus having setup several anchor peers, just in case of some unfaithful crash, is the safe bet.  
 
+ 
+\subsubsection{CA}
+
+Uses the BCCSP to generate cryptographic material for Peers, Orderers and Users, that certifies them and allowing access to the respective network. CA provide dynamic certificate lifecycle management capabilities such as registering, revoking and erolling users via the REST (representational state transfer) API.\cite{mencias2018optimized}
+
 \subsubsection{MSP}
 
-\subsubsection{CA}
+Responsible for all the cryptographic operations - issuing, verification, signing. Every organisation has local specification of MSP with local specification of CA.
 
 \section{Fabric's Ledger}
 \label{fabricLedger}
@@ -513,7 +517,7 @@ All peers from a channel have the same ledger. What’s more a peer can have mul
 
 \section{Fabric Consensus}
 \label{fabricConsensus}
-The consensus in fabric is broken out into three phases: Endorsement, Ordering and Validation
+The consensus in fabric is broken out into three phases: Endorsement, Ordering and Validation. At the end of the section, figure \ref{transactionFlow} is representing the whole process. 
 
 \subsection{Endorsement}
 Endorsement is driven by policy (m out of n signatures) upon which participants endorse a transaction.
@@ -550,6 +554,14 @@ Usually, since the first and the third steps are always the same, people would r
 Validation - takes a block of ordered transactions and validates the correctness of the result. 
 	The moment a committer node receives the new block, it starts checking every transaction and the transaction result from the endorsing peers. This check is against the endorsement policy. Here is the moment where if two transactions are trying to change the one asset, the second fails. However, instead of returning the whole block, the faulty transaction is just being labeled as \textit{invalid}. The committer updates the ledger. Lastly, asynchronously returns to the user/app that the transaction is successful or not. 
 
+\begin{figure}[h]
+\centering
+  \includegraphics[width=16cm]{image_preview-7.jpeg}
+  \caption{An graphical representation of the transaction flow \cite{transactionFlow} }
+  \label{transactionFlow}
+\end{figure}
+
+
 \section{Fabric's configuration}
 When setting up Fabric, there are two very important files. It is out of the scope of this project to show how one can generate custom network. However, it is critical that the reader is introduced to those two configuration files and see the important bits and pieces. 
 
@@ -567,6 +579,7 @@ The crypto-config.yaml holds the information about the configuration of the orde
   \caption{ }
   \label{cryptoconfig1}
 \end{figure}
+
 
 The first configuration is about the orderer nodes. The name specifies the name of cluster of orderer nodes. Different clusters can be of use for different channels. Depends on the use case. In this file, there is one cluster.
 
@@ -587,7 +600,7 @@ The next part is about the peer organization. The name and domain serve the same
 
 \begin{figure}[h]
 \centering
-  \includegraphics[width = 16cm]{cryptoconfig3.png}
+  \includegraphics[height = 4cm,width = 16cm]{cryptoconfig3.png}
   \caption{ }
   \label{cryptoconfig3}
 \end{figure}
@@ -642,46 +655,178 @@ Configurations about the genesis block are set before the channel. The settings 
 
 Lastly is the channel definition, where the architect would specify which consortium(s) is going to be used, and which organizations are going to be initially in the particular network.
 
- 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Hyperledger Composer %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Hyperledger Composer}
 \label{hplComposer}
 
+
 \section{Overview}
 \label{composerOverview}
+Hyperledger is an open-source application development framework. The tool aims to simplify the creation of Fabric blockchain applications. Composer lets the user to establish a system without having the knowledge of Go programming language or low-level details about blockchain. 
+
+	Composer creates blockchain business networks which are compressed into .bna files. They are composed out of three main files - model, logic, permissions - that are discussed in section \ref{composerProgramming}.
+	
+One can test out the .bna network without Fabric nodes, just to see if it is going to work at all. The online tool https://composer-playground.mybluemix.net can provide an environment for testing, fixing and fast deployment of the fixed system. Another great functionality of this online tool is that it can export the system as .bna file. Instead of going through mundane process of manually creating the connection and compression of all files into business network, one can compress them through the playground. 
+
+There are two things to keep an eye on when exporting the business network. First is that all files of the system should be present in the composer-playground. Second is, when one is installing the .bna file onto Fabric, the command needs a version of the system. It can be found on the define window on the left bar “From: previous version   To: current version “. The composer cli command requires the current version to be provided. 
+
+	Unfortunately, IBM are not going to continue further development on the project, due to the fact that Composer and Fabric drifted away from each other, and are not completely compatible anymore. \cite{letter}
 
 \subsection{Composer CLI}
 
+Composer command line interface, with primary command in the terminal composer, is used for administrative, development and operational tasks. 
+
+	This project has been tested and developed with composer cli 20.2 and composer-rest-server 20.7, since crs 20.2 breaks upon using one of the functionalities (multi-user crs). 
+
 \section{Business Network Cards}
+
+In order for a user to start using the system, they need some sort of identification. This identification can be created from the system they are going to be using, or import from another one. The importing from another can happen only if the requirements for participant match.	
+
+When someone wants to enter a blockchain network, a public and private key-pair is  generated. The user then can interact with the system with those two keys. Usually whenever someone wants to send a message to the user, he or she will take the user’s public key and encrypt the message with it and send it to the user. Then the user will decrypt it with his/her private key. On the other hand, if the user wants to create something and put it to everyone, he will encrypt that creation with his/her private key and will put it open in the network. If someone wants to see what this new message is, they have to take that user’s public key in order to decrypt the creation and see it. Among other things such as security, this method also proves authentication and integrity of the message. 
+
+In the world of Hyperledger Composer, this credentials pair is called business network card. It holds the keys, certificates and connection profile to a particular system. One user can have multiple business cards for different networks. In some for being an end user, for others - business partner. 
+
+BNC (blokchain network card) provides all of the information that is needed to connect to a BBN (blockchain business network). You can only access a BBN through a valid BNC. A card contains an Identity for a single Participant within a deployed BN.
+
+Can be stored on : File system, RAM (embedded runtime), database and cloud storage. The safest is local file system.
+
+
 
 \section{Composer Historian}
 
+Specialised registry which records successful transactions, including the participants and identities submitted them. The historian stores transactions as HistorianRecord assets, which are defined in the Hyperledger Composer system namespace.
+
+The historian registry is a Hyperledger Composer system-level entity. To refer to the historian registry as a resource for access control the historian must be referenced as: org.hyperledger.composer.system.HistorianRecord
+
+Note that: All participants must have the permission to create HistorianRecord assets. If a transaction is submitted by a participant who does not have the permission to create such, the transaction will fail.
+
 \section{Composer programming}
 \label{composerProgramming}
+
+Hyperledger Composer is using several files in order to create a compressed one that would be installed on Fabric.
+
 \subsection{Model file}
+Model files contain the structure and types of the system. The modeling language is object-oriented. It supports inheritance, concepts, enums and different types of variables. Because of the inheritance, the resource child will take all properties and fields required from the extended resource parent and will add additional from its own definition. 
+
+The most important part of a model file is the namespace - defined at the start of the document. In all references to the resources of this particular file, the namespace will be present as part of it. If the file does not contain a namespace, it will be unusable 
+
+In Composer the system can be modelled by introducing participants, assets, transactions and events. 
+\begin{itemize}
+
+\item Participants - usually can be thought of as a person or some institution.
+\item Assets - can use as model everything of value
+\item Transactions - have built in variables for transactionID and timestamp 
+\item Events - have built in variables for eventID and timestamp
+
+\end{itemize}
+
+The primitive types supported in the language are:
+\begin{itemize}
+
+\item UTF8 encoded String 
+\item 64 bit numeric value Double 
+\item 32 bit signed whole number Integer 
+\item 64 signed whole number Long
+\item an ISO-8601 compatible time instance, with optional time zone and UTZ offset DateTime 
+\item Boolean. 
+
+\end{itemize}
+Within the model one can also have arrays and relationships. Reference to an asset or participant is indicated by --> and are called relationships.
+
+\begin{figure}[h]
+\centering
+  \includegraphics[height = 2cm ,width = 8cm]{transaction.png}
+  \label{transactionRelationship}
+\end{figure}
+
+As seen on figure \ref{transactionRelationship} is an ordered set of the object’s name and the instance created. The full name of the newly created resource will be namespace.Resource\#nameOfTheObject for example org.ssidentity.Person\#examplePersonID.
+
 \subsection{Logic file}
-\subsubsection{Transactions}
-\subsubsection{Events}
+
+The Logic file is where the business logic is written. The programming language used is TypeScript Angular framework. Unusual characteristic is that you have to define the resource and parameter in the comment section before using it in a normal function. 
+
+\begin{figure}[h]
+\centering
+  \includegraphics[width = 12cm]{confirmdip.png}
+  \label{transactionlogicfile}
+\end{figure}
+
 \subsection{Access control language file}
+ACL provides declarative access control over the elements of the domain model. The rules are consecutively executed. Which means that if the first rule is to grant permission to resources to any action, no matter what rules follow, all resources will be grant full access. ACL is constructed by a single file with fixed name - permissions.acl. 
+
+The file have rules to restrict the users of action, rather than to permit such. If the file does not exist, then there is no restriction in the system for any resource or user. The rules have an action: allow or deny
+
+Rule controls permission to CRUD operation on resource(s). Unfortunately, each rule can use only one resource. Meaning that in order to give permission to one participant to function with several resources, a rule that allows CRUD operation for each specific resource have to be written.  
+
+Simple rule control access to namespace, asset or property of an asset by a participant type or participant instance.
+
+Conditional rule takes boolean JavaScript expression evaluated at runtime to ALLOW or DENY access to the resource by the participant.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Use Case  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Use case}
+\chapter{Self-sovereign identity prototype}
 \label{usecase}
 
+The main goal of this thesis was to see if Fabric blockchain is going to be up to the task of improving people’s identity. Securing the private information while proving authenticity on the limited data provided to the institutions that require it.  
+
 \section{Design}
+
+The prototype is designed to be somewhat close to the reader. Representing a system designed to replicate the real actions that would be done in Bulgaria. The entities included are five participants and three assets, has six transactions and can emit two event.. Person, high school, driving school, university and customs, being participants and diploma, university diploma, driving licence - assets. Transactions - confirmDiploma, confirmDrivingLicence, erollInUniversity, graduateUni, and events - waitingDiplomaConfirmation and waitingDrivingLicenceConfirmation. 
+
+The network administrator is going to add only those participants that are meeting the necessary requirements. The system later can be configured to accept participants that are added from another, highly trusted, participant.  
+
+\textbf{Class diagram will be included here} 
+
+Participants and assets in the system are designed as:
+
+\subsubsection{Person}
+Has an unique string, personID, that identifies it in the system. In this model the name, age, phone, email and gender are also defining qualities of the person. This participant represents the main end user. He/she can execute the transactions to create their own diploma and driving licence, that then have to be confirmed by the respective participant.   
+
+\subsubsection{High school}
+Can be referenced as the administrator of the high school. Since every student will have to know the particular high school's ID. An assumption is made that this will be easily accessible information for the students of the respective school. In the system this entity only confirms the presented document. 
+
+\subsubsection{Driving school}	
+Can be referenced as the administrator of the driving school. This entity represents those institutions or businesses where one only need to present specific information that is in the form “Yes, I have/ No, I do not have”. In Bulgaria, in order for a person to start his/her driving lessons, they have to have a certificate for completion of elementary school and to be at least eighteen year of age. 
+	
+\subsubsection{Customs}
+Can only see all participants and assets. Do not have the possibility to create, change or update any resource.  
+
+\subsubsection{University}
+Can be referenced as the administrator of the driving school. The entity represents those institutions that would require more private information. Unlike the driving school, university needs to compare the grade a person have with the one in the conditional offer given. To simulate the common practice, the conditional offers are given to people applied to enroll. So when a person request to enroll in the university, the respective institution will create a transaction. It that will enroll him/her only if that person has a grade equal or more to the one written as part of the transaction. 
+	
+	Having a transaction like that would give some hints about the person’s grades, good enough to enroll or not, but ultimately does not provide the exact information. It stays private. 
+
+\subsubsection{Diploma}
+	For better security and faster transaction flow, the person, student, is creating his/her own diploma and sends it to the high school for confirmation, instead of the other way around. High schools can only see and have permission to update the student’s diplomas, where the high school’s ID has been referenced.
+	
+	Example : if John Doe creates a diploma and references Williams High’s unique ID, then WH will be able to see John's diploma. However, if John references Wollas High, then there are three possible cases. 
+	
+	First, if there is no such school, the transaction will be rejected. 
+
+	Second, there is such school and they see that he is not a student, they will decline the confirmation.
+
+	Third, they confirm, but is the wrong student. This is a violation and Customs are going to demand explanation. The blockchain can be scanned for the necessary facts of this violation. Then the network admin can remove the asset. If the violation has been intentional, the participant high school may be banished as well.
+
+	This is possible due to the permissioned nature of the system. In case of malicious intents in the network, the administrator will remove any participant. 
+
+\subsubsection{Driving licence}
+
+	In the system, similar to the creation of diploma, the person is creating his/her driving licence and sending the digital papers to be confirmed. In contrast to the creation of diploma, in order for the person to be able to submit a driving licence transaction, there several checks that must be passed. 
+	
+	In the transaction, the user has to provide his/her own id, his/her diploma’s id and a string for id for the licence. When the transaction proposal is submitted, three checks are made, before adding the transaction to the ledger, if passed successfully. 
+
+	The first is a comparison between the provided personID and the owner of the provided diploma. Simple check to prevent people from trying to certify their documents with another person’s certificate.
+	
+	The second is a comparison between the person’s age and respective country’s law. In Bulgaria, the minimum age is eighteen. 
+	
+	The third, and most important, is a check if the diploma is with status “confirmed”. The importance comes with the fact that it is not needed for the driving school to see all of the information on the diploma or the diploma at all. Thus securing the user’s private data. The system is guaranteeing the authenticity of the authorized asset. Since all participants are screened before allowing them to enter the system. They are assumed to be trusted parties, until the customs catch a malicious one and throw that party out of the system. 
+
+
+\subsubsection{University diploma}
+
 \section{Implementation}
 \section{REST Interactions}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  User Manual  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\chapter{User Manual}
-\label{usermanual}
-
-
-\section{Step one}
-\label{stepOne}
-	 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Conclusion %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -725,6 +870,24 @@ of what went well, and what might be improved.
 % Appendixes
 
 \appendix
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  User Manual  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{User Manual}
+\label{usermanual}
+
+
+\section{Step one}
+\label{stepOne}
+	 
+The key software and technology used for the creation and development of this project is:
+\begin{itemize}
+\item OS: Ubuntu 16.04 Xenial 64 bit
+\item Hyperledger Fabric - modular blockchain framework
+\item Hyperledger Composer - a tool to create abstract blockchain application, that can then be run on Fabric.
+\item Docker and Docker Composer
+\item Visual Studio Code
+\end{itemize}
+
 
 
 \end{document}

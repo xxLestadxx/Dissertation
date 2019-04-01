@@ -17,6 +17,12 @@ participant Person identified by personID {
   o Integer age range = [0, 120]
 }
 
+participant Customs identified by customsID{
+  o String customsID
+  o String firstName
+  o String lastName
+}
+
 participant HighSchool identified by highSchoolID {
   o String highSchoolID
   o String highschoolName
@@ -114,10 +120,6 @@ transaction enrollInUniversity {
   --> University uni
 }
 
-transaction personWantsDiploma {
-  --> Person owner
-}
-
 transaction confirmDiploma{
  --> Person owner 
  --> Diploma diploma
@@ -131,9 +133,22 @@ transaction confirmDrivingLicence {
 }
 
 transaction graduateUni{
+  o Integer finalGrade
  --> Person owner 
  --> UniversityDiploma uniDiploma
  --> University uni 
+}
+
+transaction applyToUniversity{
+ --> Person owner 
+ --> Diploma diploma
+ --> University uni 
+}
+
+event applyToUniversityEvent{
+ --> Person owner 
+ o String diploma
+ --> University uni
 }
 
 event waitingDiplomaConfirmation{

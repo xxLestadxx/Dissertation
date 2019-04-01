@@ -65,10 +65,10 @@ function createDrivingLicence(createDL){
                     })
                     .then(function(){
                     var creatingOrderEvent = getFactory();
-                    var notificationB = creatingOrderEvent.newEvent('org.ssidentity', 'waitingDrivingLicenceConfirmation');
+                    var notificationB = creatingOrderEvent.newEvent('org.ssidentity','waitingDrivingLicenceConfirmation');
                     notificationB.owner = createDL.owner;
                     notificationB.ds = drivingSchool;
-                    notificationB.drivingLicence = dlID;
+                    notificationB.drivingLicence= dlID;
                     emit(notificationB);  
                     })
                     .catch(function(error){
@@ -154,7 +154,7 @@ function createDrivingLicence(createDL){
             return getAssetRegistry('org.ssidentity.UniversityDiploma')
             .then(function(graduated){
                 grad.uniDiploma.uniStatus = 'Graduated';
-                grad.uniDiploma.finalGrade = 76;
+                grad.uniDiploma.finalGrade = grad.finalGrade;
                 return graduated.update(grad.uniDiploma);
             }).catch(function(error){
                 throw new Error (error);
@@ -186,3 +186,26 @@ function confirmDrivingLicence(cdl){
             throw new Error ('This is not the person that graduated');
         }
     }
+
+ /**
+ * To apply for University 
+ * @param {org.ssidentity.applyToUniversity} atu
+ * @transaction
+ */    
+
+ function apply(atu){
+    if(atu.owner.personID === atu.diploma.owner.personID){
+            if(atu.diploma.diplomaStatus === 'Confirmed'){
+                var creatingOrderEvent = getFactory();
+                var notificationB = creatingOrderEvent.newEvent('org.ssidentity', 'applyToUniversityEvent');
+                notificationB.owner = atu.owner;
+                notificationB.diploma = atu.diploma.diplomaID;
+                notificationB.uni = atu.uni;
+                emit(notificationB);  
+            }else{
+                throw new Error ('User is not providing correct diploma');
+            }
+        }else{
+            throw new Error('User does not have confirmed diploma ');
+            }   
+ }

@@ -60,7 +60,7 @@ rule DrivingSchoolCanOnlySeeItself {
 rule PersonToSeeTheirDiploma {
   description: "Trader can see/work with their own Commodities"
   participant(t): "org.ssidentity.Person"
-  operation: ALL
+  operation: READ
   resource(c): "org.ssidentity.Diploma"
   condition: (c.owner.getIdentifier() == t.getIdentifier())
   action: ALLOW
@@ -78,7 +78,7 @@ rule PersonToSeeTheirUniversityDiploma {
 rule PersonToSeeTheirDrivingLicence {
   description: "Trader can see/work with their own Commodities"
   participant(t): "org.ssidentity.Person"
-  operation: READ
+  operation: READ, CREATE
   resource(c): "org.ssidentity.DrivingLicence"
   condition: (c.owner.getIdentifier() == t.getIdentifier())
   action: ALLOW
@@ -92,19 +92,11 @@ rule HighSchoolToSeeTheirDiplomas {
   condition: (c.hs.getIdentifier() == t.getIdentifier())
   action: ALLOW
 }
-rule PersonToSeeTheirDiplomas {
-  description: "Trader can see/work with their own Commodities"
-  participant(t): "org.ssidentity.Person"
-  operation: READ, CREATE, UPDATE
-  resource(c): "org.ssidentity.Diploma"
-  condition: (c.hs.getIdentifier() == t.getIdentifier())
-  action: ALLOW
-}
 
 rule UniversitiesToSeeTheirDiplomas {
   description: "Trader can see/work with their own Commodities"
   participant(t): "org.ssidentity.University"
-  operation: READ
+  operation: READ, CREATE, UPDATE
   resource(c): "org.ssidentity.UniversityDiploma"
   condition: (c.uni.getIdentifier() == t.getIdentifier())
   action: ALLOW
@@ -122,7 +114,7 @@ rule DrivingSchoolToSeeTheirLicences {
 rule PersonToCreateDiploma {
   description: "This rule allows only the highschool to be able to execute createDiploma transaction"
   participant: "org.ssidentity.Person"
-  operation: ALL
+  operation: CREATE, READ
   resource: "org.ssidentity.createDiploma"
   action: ALLOW
 }
@@ -130,32 +122,186 @@ rule PersonToCreateDiploma {
 rule HighSchoolToConfirmDiploma {
   description: "This rule allows only the highschool to be able to execute createDiploma transaction"
   participant: "org.ssidentity.HighSchool"
-  operation: ALL
+  operation: CREATE, UPDATE, READ
   resource: "org.ssidentity.confirmDiploma"
   action: ALLOW
 }
 
-
 rule PersonToCreateDrivingLicence {
   description: "This rule allows only the highschool to be able to execute createDiploma transaction"
   participant: "org.ssidentity.Person"
-  operation: CREATE
+  operation: CREATE, READ
   resource: "org.ssidentity.createDrivingLicence"
   action: ALLOW
 }
 
-rule UniversityToCreateUniversityDiploma {
-  description: "This rule allows only the highschool to be able to execute createDiploma transaction"
+rule UniversityToCreateAndUpdateUniversityDiploma {
+  description: "Allows the University to create and update univeristy diplomas"
   participant: "org.ssidentity.University"
-  operation: CREATE
+  operation: CREATE, UPDATE, READ
   resource: "org.ssidentity.enrollInUniversity"
   action: ALLOW
 }
 
-rule UniversityToCreateUpdateDiplomaGraduate {
-  description: "This rule allows only the highschool to be able to execute createDiploma transaction"
+rule UniversityToGraduate {
+  description: "Allows the University to execute graduateUni transaction"
   participant: "org.ssidentity.University"
-  operation: UPDATE
+  operation: CREATE, UPDATE, READ
+  resource: "org.ssidentity.graduateUni"
+  action: ALLOW
+}
+
+rule DrivingSchoolToConfirmDrivingLicence {
+  description: "This rule allows only the highschool to be able to execute createDiploma transaction"
+  participant: "org.ssidentity.DrivingSchool"
+  operation: CREATE, READ
+  resource: "org.ssidentity.confirmDrivingLicence"
+  action: ALLOW
+}
+
+rule CustomsSeeDiploma {
+  description: "Customs can see Diploma asset"
+  participant: "org.ssidentity.Customs"
+  operation: READ
+  resource: "org.ssidentity.Diploma"
+  action: ALLOW
+}
+
+rule CustomsSeePerson {
+  description: "Customs can see Person participants"
+  participant: "org.ssidentity.Customs"
+  operation: READ
+  resource: "org.ssidentity.Person"
+  action: ALLOW
+}
+
+rule CustomsSeeUniversity {
+  description: "Customs can see University participant"
+  participant: "org.ssidentity.Customs"
+  operation: READ
+  resource: "org.ssidentity.University"
+  action: ALLOW
+}
+
+rule CustomsSeeHighschool {
+  description: "Customs can see High school participant"
+  participant: "org.ssidentity.Customs"
+  operation: READ
+  resource: "org.ssidentity.HighSchool"
+  action: ALLOW
+}
+
+rule CustomsSeeCustoms {
+  description: "Customs can see other Customs participant"
+  participant: "org.ssidentity.Customs"
+  operation: READ
+  resource: "org.ssidentity.Customs"
+  action: ALLOW
+}
+
+rule CustomsSeeDrivingSchool {
+  description: "Customs can see Driving school participants"
+  participant: "org.ssidentity.Customs"
+  operation: READ
+  resource: "org.ssidentity.DrivingSchool"
+  action: ALLOW
+}
+
+rule CustomsSeeDrivingLicence {
+  description: "Customs can see Driving Licence asset"
+  participant: "org.ssidentity.Customs"
+  operation: READ
+  resource: "org.ssidentity.DrivingLicence"
+  action: ALLOW
+}
+
+rule CustomsSeeUniversityDiploma {
+  description: "Customs can see university diploma asset"
+  participant: "org.ssidentity.Customs"
+  operation: READ
+  resource: "org.ssidentity.UniversityDiploma"
+  action: ALLOW
+}
+
+rule CustomsSeeconfirmDiploma {
+  description: "Customs can see transaction confirmDiploma"
+  participant: "org.ssidentity.Customs"
+  operation: READ
+  resource: "org.ssidentity.confirmDiploma"
+  action: ALLOW
+}
+
+rule CustomsSeeconfirmDrivingLicence {
+  description: "Customs can see transaction confirmDrivingLicence"
+  participant: "org.ssidentity.Customs"
+  operation: READ
+  resource: "org.ssidentity.confirmDrivingLicence"
+  action: ALLOW
+}
+
+rule CustomsSeecreateDiploma {
+  description: "Customs can see transaction createDiploma"
+  participant: "org.ssidentity.Customs"
+  operation: READ
+  resource: "org.ssidentity.createDiploma"
+  action: ALLOW
+}
+
+rule CustomsSeecreateDrivingLincence {
+  description: "Customs can see transaction createDrivingLicence"
+  participant: "org.ssidentity.Customs"
+  operation: READ
+  resource: "org.ssidentity.createDrivingLicence"
+  action: ALLOW
+}
+
+
+rule CustomsSeeenrollInUniversity {
+  description: "Customs can see transaction enrollInUniversity"
+  participant: "org.ssidentity.Customs"
+  operation: READ
   resource: "org.ssidentity.enrollInUniversity"
   action: ALLOW
+}
+
+rule CustomsSeegraduateUni {
+  description: "Customs can see transaction graduateUni"
+  participant: "org.ssidentity.Customs"
+  operation: READ
+  resource: "org.ssidentity.graduateUni"
+  action: ALLOW
+}
+
+rule CustomsSeeApplications {
+  description: "Customs can see transaction applyToUniversity"
+  participant: "org.ssidentity.Customs"
+  operation: READ
+  resource: "org.ssidentity.applyToUniversity"
+  action: ALLOW
+}
+
+rule PersonApply {
+  description: "Person creates transaction applyToUniversity"
+  participant: "org.ssidentity.Person"
+  operation: READ, CREATE
+  resource: "org.ssidentity.applyToUniversity"
+  action: ALLOW
+}
+
+rule UniversitySeeApplications {
+  description: "University can see transaction applyToUniversity"
+  participant: "org.ssidentity.University"
+  operation: READ
+  resource: "org.ssidentity.applyToUniversity"
+  action: ALLOW
+}
+
+rule UniversityToEnrollStudets {
+    description: "University creates a conditional offer to the student, without knowing the student's results"
+    participant(m): "org.ssidentity.University"
+    operation: READ
+    resource(v): "org.ssidentity.Diploma"
+    transaction(tx): "org.ssidentity.enrollInUniversity"
+    condition: (tx.uni.getIdentifier() === m.getIdentifier())
+    action: ALLOW
 }

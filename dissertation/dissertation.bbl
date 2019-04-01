@@ -72,6 +72,12 @@ C.~Cachin.
 V.~V. P. A. S. T.~V. Elli~Androulaki, Angelo De~Caro.
 \newblock Blockchain crypto service provider.
 
+\bibitem{transactionFlow}
+{Hyperledger Fabric staff}.
+\newblock {Fabric Architecture}.
+\newblock [Online]. Available:
+  \url{https://hyperledger-fabric.readthedocs.io/en/release-1.4/arch-deep-dive.html}.
+
 \bibitem{fabledger}
 {Hyperledger Fabric staff}.
 \newblock {Ledger}.
@@ -92,6 +98,12 @@ B.~Li, Y.~Wang, P.~Shi, H.~Chen, and L.~Cheng.
   And Privacy In Computing And Communications/12th IEEE International
   Conference On Big Data Science And Engineering (TrustCom/BigDataSE)}, pages
   1368--1373. IEEE, 2018.
+
+\bibitem{mencias2018optimized}
+A.~N. Mencias, D.~Dillenberger, P.~Novotny, F.~Toth, T.~Morris, V.~Paprotski,
+  J.~Dayka, T.~Visegrady, B.~O'Farrell, J.~Lang, et~al.
+\newblock An optimized blockchain solution for the ibm z14.
+\newblock {\em IBM Journal of Research and Development}, 62(2/3):4--1, 2018.
 
 \bibitem{mills2016distributed}
 D.~C. Mills, K.~Wang, B.~Malone, A.~Ravi, J.~Marquardt, A.~I. Badev,
@@ -116,6 +128,12 @@ D.~C. Mills, K.~Wang, B.~Malone, A.~Ravi, J.~Marquardt, A.~I. Badev,
 \newblock {Symmetric vs. Asymmetric Encryption – What are differences?}
 \newblock [Online]. Available:
   \url{https://www.ssl2buy.com/wiki/symmetric-vs-asymmetric-encryption-what-are-differences}.
+
+\bibitem{stackoverflow}
+{Stack Overflow staff}.
+\newblock {Developer survey results 2018}.
+\newblock [Online]. Available:
+  \url{https://insights.stackoverflow.com/survey/2018/}.
 
 \bibitem{verifyMe}
 {Verify.Me staff}.

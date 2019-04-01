@@ -14,62 +14,68 @@
 \contentsline {subsubsection}{Information Sharing}{5}
 \contentsline {subsection}{\numberline {2.1.2}Blockchain}{5}
 \contentsline {subsubsection}{Permissioned blockchain}{5}
-\contentsline {subsubsection}{Permissionless blockchain}{5}
+\contentsline {subsubsection}{Permissionless blockchain}{6}
 \contentsline {subsubsection}{Cryptocurrency}{6}
-\contentsline {subsection}{\numberline {2.1.3}Cryptography}{6}
+\contentsline {subsection}{\numberline {2.1.3}Cryptography}{7}
 \contentsline {subsubsection}{Cryptography in Fabric}{7}
-\contentsline {section}{\numberline {2.2}Successful projects made with Hyperledger Fabric}{7}
-\contentsline {subsection}{\numberline {2.2.1}Altoros}{7}
+\contentsline {subsubsection}{Certificates and PKI}{7}
+\contentsline {section}{\numberline {2.2}Successful projects made with Hyperledger Fabric}{8}
+\contentsline {subsection}{\numberline {2.2.1}Altoros}{8}
 \contentsline {subsection}{\numberline {2.2.2}Verify.Me}{8}
 \contentsline {subsection}{\numberline {2.2.3}TradeLens}{9}
 \contentsline {subsection}{\numberline {2.2.4}BitNation}{9}
 \contentsline {subsection}{\numberline {2.2.5}E-Residency}{9}
 \contentsline {subsection}{\numberline {2.2.6}AIA Group}{9}
-\contentsline {chapter}{\numberline {3}Technology required}{10}
+\contentsline {chapter}{\numberline {3}Technology}{10}
 \contentsline {section}{\numberline {3.1}Docker}{10}
 \contentsline {section}{\numberline {3.2}NPM}{10}
 \contentsline {section}{\numberline {3.3}Visual Studio Code}{10}
 \contentsline {chapter}{\numberline {4}Hyperledger Fabric}{13}
-\contentsline {section}{\numberline {4.1}picture of the overview of the structure}{13}
 \contentsline {subsubsection}{Permissioned blockchain}{13}
 \contentsline {subsubsection}{Hyperledger}{13}
-\contentsline {section}{\numberline {4.2}Fabric overview}{14}
-\contentsline {section}{\numberline {4.3}Essential Fabric elements}{14}
-\contentsline {subsubsection}{Committing peer node}{14}
-\contentsline {subsubsection}{Endorsing peer}{14}
+\contentsline {section}{\numberline {4.1}Fabric overview}{13}
+\contentsline {section}{\numberline {4.2}Essential Fabric elements}{15}
+\contentsline {subsubsection}{Committing peer node}{15}
+\contentsline {subsubsection}{Endorsing peer}{15}
 \contentsline {subsubsection}{Orderer node}{15}
-\contentsline {subsubsection}{Anchor peer}{15}
-\contentsline {subsubsection}{MSP}{15}
-\contentsline {subsubsection}{CA}{15}
-\contentsline {section}{\numberline {4.4}Fabric's Ledger}{15}
-\contentsline {subsection}{\numberline {4.4.1}World state}{15}
-\contentsline {subsection}{\numberline {4.4.2}Blockchain}{16}
-\contentsline {subsubsection}{Blocks and their structure}{16}
-\contentsline {subsection}{\numberline {4.4.3}Channel}{17}
-\contentsline {section}{\numberline {4.5}Fabric Consensus}{18}
-\contentsline {subsection}{\numberline {4.5.1}Endorsement}{18}
-\contentsline {subsection}{\numberline {4.5.2}Ordering}{18}
-\contentsline {subsection}{\numberline {4.5.3}Validation}{19}
-\contentsline {section}{\numberline {4.6}Fabric's configuration}{20}
-\contentsline {subsection}{\numberline {4.6.1}Crypto-config}{20}
-\contentsline {subsection}{\numberline {4.6.2}Configtx}{21}
-\contentsline {chapter}{\numberline {5}Hyperledger Composer}{25}
-\contentsline {section}{\numberline {5.1}Overview}{25}
-\contentsline {subsection}{\numberline {5.1.1}Composer CLI}{25}
-\contentsline {section}{\numberline {5.2}Business Network Cards}{25}
-\contentsline {section}{\numberline {5.3}Composer Historian}{25}
-\contentsline {section}{\numberline {5.4}Composer programming}{25}
-\contentsline {subsection}{\numberline {5.4.1}Model file}{25}
-\contentsline {subsection}{\numberline {5.4.2}Logic file}{25}
-\contentsline {subsubsection}{Transactions}{25}
-\contentsline {subsubsection}{Events}{25}
-\contentsline {subsection}{\numberline {5.4.3}Access control language file}{25}
-\contentsline {chapter}{\numberline {6}Use case}{26}
-\contentsline {section}{\numberline {6.1}Design}{26}
-\contentsline {section}{\numberline {6.2}Implementation}{26}
-\contentsline {section}{\numberline {6.3}REST Interactions}{26}
-\contentsline {chapter}{\numberline {7}User Manual}{27}
-\contentsline {section}{\numberline {7.1}Step one}{27}
-\contentsline {chapter}{\numberline {8}Conclusion}{28}
-\contentsline {section}{\numberline {8.1}Evaluation}{28}
-\contentsline {section}{\numberline {8.2}Future Work}{28}
+\contentsline {subsubsection}{Anchor peer}{16}
+\contentsline {subsubsection}{CA}{16}
+\contentsline {subsubsection}{MSP}{16}
+\contentsline {section}{\numberline {4.3}Fabric's Ledger}{16}
+\contentsline {subsection}{\numberline {4.3.1}World state}{16}
+\contentsline {subsection}{\numberline {4.3.2}Blockchain}{16}
+\contentsline {subsubsection}{Blocks and their structure}{17}
+\contentsline {subsection}{\numberline {4.3.3}Channel}{18}
+\contentsline {section}{\numberline {4.4}Fabric Consensus}{19}
+\contentsline {subsection}{\numberline {4.4.1}Endorsement}{19}
+\contentsline {subsection}{\numberline {4.4.2}Ordering}{19}
+\contentsline {subsection}{\numberline {4.4.3}Validation}{20}
+\contentsline {section}{\numberline {4.5}Fabric's configuration}{20}
+\contentsline {subsection}{\numberline {4.5.1}Crypto-config}{21}
+\contentsline {subsection}{\numberline {4.5.2}Configtx}{23}
+\contentsline {chapter}{\numberline {5}Hyperledger Composer}{26}
+\contentsline {section}{\numberline {5.1}Overview}{26}
+\contentsline {subsection}{\numberline {5.1.1}Composer CLI}{26}
+\contentsline {section}{\numberline {5.2}Business Network Cards}{27}
+\contentsline {section}{\numberline {5.3}Composer Historian}{27}
+\contentsline {section}{\numberline {5.4}Composer programming}{27}
+\contentsline {subsection}{\numberline {5.4.1}Model file}{27}
+\contentsline {subsection}{\numberline {5.4.2}Logic file}{28}
+\contentsline {subsection}{\numberline {5.4.3}Access control language file}{29}
+\contentsline {chapter}{\numberline {6}Self-sovereign identity prototype}{30}
+\contentsline {section}{\numberline {6.1}Design}{30}
+\contentsline {subsubsection}{Person}{30}
+\contentsline {subsubsection}{High school}{30}
+\contentsline {subsubsection}{Driving school}{31}
+\contentsline {subsubsection}{Customs}{31}
+\contentsline {subsubsection}{University}{31}
+\contentsline {subsubsection}{Diploma}{31}
+\contentsline {subsubsection}{Driving licence}{32}
+\contentsline {subsubsection}{University diploma}{32}
+\contentsline {section}{\numberline {6.2}Implementation}{32}
+\contentsline {section}{\numberline {6.3}REST Interactions}{32}
+\contentsline {chapter}{\numberline {7}Conclusion}{33}
+\contentsline {section}{\numberline {7.1}Evaluation}{33}
+\contentsline {section}{\numberline {7.2}Future Work}{33}
+\contentsline {chapter}{\numberline {A}User Manual}{36}
+\contentsline {section}{\numberline {A.1}Step one}{36}
