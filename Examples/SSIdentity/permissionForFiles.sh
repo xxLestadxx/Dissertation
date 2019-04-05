@@ -1,4 +1,5 @@
 #!/bin/bash
 
-chmod 775 TASubmit.sh
-chmod 775 TBSubmit.sh
+chmod 775 diplomaConfirm.sh
+chmod 775 confirmDrivingLicence.sh
+chmod 775 enrollInUni.sh

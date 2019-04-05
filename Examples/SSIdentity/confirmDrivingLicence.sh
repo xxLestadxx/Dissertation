@@ -1,0 +1,2 @@
+#!/bin/bash 
+ composer transaction submit --card DS1@ssidentity -d '{"$class":"org.ssidentity.confirmDrivingLicence","owner":"resource:org.ssidentity.Person#Daka","ds":"resource:org.ssidentity.DrivingSchool#DS1","dl":"resource:org.ssidentity.DrivingLicence#stwr1din"}' 

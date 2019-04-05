@@ -1,5 +1,5 @@
 % dissertation.tex	K. J. Turner	10/09/13
-
+	
 % Dissertation outline
 
 \documentclass[a4paper,11pt]{report}
@@ -54,7 +54,7 @@
 	The field of blockchain is still in its infancy and is developing with a rapid growth. At the start of this project, Fabric was at version 1.2 and the project kept its development consistent with it. However at the time of handing in of the dissertation, Fabric is already at version 1.4. 
 \\
 
-	Smart contracts are representing the business logic in a blockchain network. In Hyperledger Fabric they are called chaincode, because it operates on the whole channel rather than being invoked for specific operation. It can be written in two ways, at the time of writing this dissertation. The first is using only Fabric and writing low-level code (golang recommended). The second, which is used in this thesis, is through Hyperledger Composer. Composer is an open development toolset and framework to make developing blockchain applications easier. It creates assets, participants and transactions through high-level code, that is compressed into a single file and installed on top of Fabric blockchain network. 
+	Smart contracts are  representing the business logic in a blockchain network. In Hyperledger Fabric they are called chaincode. It runs on top of the blockchain to implement the desired interaction with the ledger. It can be written in two ways, at the time of writing this dissertation. The first is using only Fabric and writing low-level code (golang recommended). The second, which is used in this thesis, is through Hyperledger Composer. Composer is an open development toolset and framework to make developing blockchain applications easier. It creates assets, participants and transactions through high-level code, that is compressed into a single file and installed on top of Fabric blockchain network. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Attestation %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -130,9 +130,9 @@ I would like to thank the library for having the nice quiet, fourth floor, and f
 
 \label{introduction}
 
-Recently a new technology emerged into the world that is called blockchain. The idea is that it is a distributed decentralized database of blocks constructed of transactions. The reason why it is very interesting is that it has the potential to change many aspects of life. It is an opportunity for better authenticity and security of a data. 
+Recently a new technology emerged into the world that is called blockchain. This is a distributed decentralized database of blocks constructed of transactions. The reason why it is very interesting is that it has the potential to change many aspects of life. It is an opportunity for better authenticity and security of data. 
 
-Hyperledger Fabric is a blockchain framework designed specifically to be easily adoptable for different business use cases. 
+Hyperledger Fabric is a blockchain framework designed specifically to be easily adoptable by different business use cases. 
 
 The main two objectives of this project are: to research how the smart contracts in Hyperledger Fabric work; to make a prototype of self-sovereign system with the gathered knowledge. 
 
@@ -142,38 +142,25 @@ The main two objectives of this project are: to research how the smart contracts
 
 Information has always been one of the most valuable assets a person could have. Through times information was traded in many different ways, from barter to monetization. Recently the information about an individual has become a great selling point, because it can be used in variety of fields, from science to business. However, the collection of this data is becoming a problem.
 
-	As individuals, our identities are, to some extend, not ours anymore. If we cannot certify who we are, we became no one in the eyes of business and government. Needless to say that have we lost all of the documents that certify our place in the city, company, country, Earth, we would be in a big trouble. \cite{allen2016path}
+	As individuals, our identities are, to some extent, not ours anymore. If we cannot certify who we are, we became no one in the eyes of business and government. Needless to say that had we lost all of the documents that certify our place in the company, city, country, Earth, we would be in a big trouble. \cite{allen2016path}
 	
-		Another approach to critical and private information is how it is being used live. Whenever we want to identify ourselves somewhere, the usual document for identification would be either an ID or a passport. Here is the problem concerning all information on this document. It turns out that whenever a person wants to prove his or her existence, the party that requires this identification, can take and keep a record of all sensitive data on that document. In some countries this may be illegal. This data then could be used for not a rightful purpose. \cite{alboaie2017private}
+		Another approach to critical and private information is how it is being used live. Whenever we want to identify ourselves somewhere, the usual document for identification would be either an ID or a passport. Here is the problem concerning all information on this document. It turns out that whenever a person wants to prove his or her existence, the party that requires this identification, can take and keep a record of all sensitive data on that document. In some countries this may be illegal. This data then could be used for a wicked purpose. \cite{alboaie2017private}
 		
-Furthermore whenever a person is signing in to receive some kind of certificate, whether that would be a school or an academy, he or she is leaving sensitive data with this company. In most countries, whenever a person starts living in a city, he or she has to identify himself/herself to the council. In the end, there is a lot of institutions that keep sensitive data for an individual. This is a problem, because some of those institutions or businesses have different levels of security. So, an attacker only needs to pick the easiest target, and he will get a great deal of sensitive data. 
+Furthermore whenever a person is signing in to receive some kind of certificate, whether that would be a school or an academy, they are leaving sensitive data with this company. In most countries, whenever a person starts living in a city, he or she has to identify himself/herself to the council. In the end, there are a lot of institutions that keep sensitive data for an individual. This is a problem, because institutions and businesses have different levels of security. An attacker only needs to pick the easiest target and a great deal of sensitive data will be exposed. 
 
-	I believe all of these problems are just a subproblems of a bigger challenges - what is an identity today and how to be able to give private access to our data. The solution could provide us awareness for a better control of our own data, as well as to be able to share only what’s exactly needed to provide to those companies and institutions.
+	I believe all of these problems are just  subproblems of bigger challenges - what is an identity today and how to be able to give private access to our data. The solution could provide us awareness for a better control of our own data, as well as to be able to share only what is exactly needed to provide to those companies and institutions.
 
-
-\subsection{Further readings}
-The following books and documentation will improve your understanding of blockchain, Hyperledger Fabric and Hyperledger Composer.
-
-\begin{itemize}
-	\item "Enterprise blockchain development with hyperledger Fabric and Composer" by Ernesto Lee and Sudip Ghosh
-	\item "Distributed systems: principles and paradigms" by Andrew S. Tanenbaum, Maarten van Steen
-	\item "Blockchain for dummies" by Manav Gupta 
-	\item IBM Red Books series - "Developing a Blockchain Business Network with Hyperledger Composer using the IBM Blockchain Platform Starter Plan" 
-	\item "Mastering Ethereum: Building Smart Contracts and DApps Book" by Andreas Antonopoulos and Gavin Wood Ph.D.
-	\item Fabric's documentation - https://hyperledger-fabric.readthedocs.io/en/latest/
-	\item Composer's documentation - https://hyperledger.github.io/composer/latest/introduction/introduction.html
-\end{itemize}
 \section{Scope and Objectives}
 
 \label{introduction-objectives}
 
-The scope will involve Blockchain technology and what is digital identity. This project will focus on Hyperledger Fabric. This is a permissionless blockchain modular framework, especially developed for businesses.
+The scope of this thesis will involve Blockchain technology and what is digital identity. This project focuses on Hyperledger Fabric. This is a permissioned blockchain modular framework, especially developed for businesses.
  
 Being a modular framework, a lot of the scope will involve around resolving how customizable Fabric can be. To be personalized is of an essence for the creation of a good system. The other main features to be examined are the scalability and usability of this blockchain framework.   
 
-The knowledge build up from the research will be implemented in a prototype program as a final part of the project. The prototype of the self-sovereign program will focus on the decentralized nature. This work will aim to present advantages of the decentralizing element that can save resources and protect the personal data of the end-user. Last but not least, I am going to talk about how the ledger is making the whole system trustful, thus no one of the parties needs to worry about being cheated. 
+The knowledge build up from the research will be implemented in a prototype program as a final part of the project. A model of self-sovereign program  with a focus on the security and authentication provided by the blockchain framework. This work aims to present advantages of the decentralizing element that can save resources and protect the personal data of the end-user. Last but not least, the project will focus on how the ledger is making the whole system trustful, thus none of the parties needs to worry about being cheated. 
  	
-The objectives of the project include the following :  
+The objectives of the project include:  
 \begin{itemize}
 \item Understanding how Hyperledger Fabric work;
 	\begin{itemize}
@@ -191,8 +178,7 @@ The objectives of the project include the following :
 	\item Trying out different configurations on Fabric;
 	\item Trying out different chaincode functions, to find out the best for the use case.
 	\end{itemize}
-\item Building a prototype of self-sovereign identity system ;
-\item Complete final report .
+\item Building a prototype of self-sovereign identity system.
 
 \end{itemize}
 
@@ -206,7 +192,12 @@ Summarise what you have achieved.
 
 \section{Overview of Dissertation}
 
-Briefly overview the contents of what follows in the dissertation.
+Following the introduction are six chapters explaining the choice of technology and development process. They will discuss the reasons behind selecting Fabric as technology of interest and some of its applications, stressing on the case about securing the identity of a person. In other words keeping the private data private. 
+
+The first few chapters are giving background and insight into what blockchain, Hyperledger Fabric and Composer are, while also giving some examples of working Fabric systems. Thereafter is the chapter about the process of developing a prototype of self sovereign identity. Reasons and graphical representation of the workflow will illuminate the design choices. 
+
+Lastly, the dissertation will conclude with evaluation of the work done and provide ideas for future development of the prototype.   
+  
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  State-of-The-Art %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -221,12 +212,12 @@ This chapter is going to touch on the technical part of distributed ledger techn
 
 \label{dlt}
 
-Ledgers have been in use of the humanity since ancient days. Their medium has been clay, wooden tally sticks, stone, papyrus and paper. They served its purpose as a one-side record-keeping tool. But this also brings concerns around who is going to validate this one-side register. Later in 15th century, the Italian mathematician Luca Pacioli became the first person, recorded, to publish a paper on the double-entry bookkeeping \cite{ledgers}.However, even when all of the parties have their own records of a particular deal, someone, or even a group of the participants, may cheat and keep a different record, from the original. Thus taking advantage over the people who are trying to trade fairly and honorably.
+Ledgers have been in use of the humanity since ancient days. Their medium has been clay, wooden tally sticks, stone, papyrus and paper. They served its purpose as a one-side record-keeping tool. But this also brings concerns around who is going to validate this one-side register. Later in 15th century, the Italian mathematician Luca Pacioli became the first person, recorded, to publish a paper on the double-entry bookkeeping \cite{ledgers}.
 
 However, even when all of the parties have their own records of a particular deal, someone, or even a group of the participants, may cheat and keep a different record, from the original. Thus taking advantage over the people who are trying to trade fairly and honorably.
 
-A distributed ledger technology is a concurrent system, referring to a database that is consistently shared and synchronized across multiple machines/nodes in a network. It allows transactions to be monitored by multiple actors, thereby making a cyberattack more difficult. The participants at each of those machines can access the recordings shared and can keep an identical copy of it. Since it is a distributed ledger, any changes made on it are then reflected and the change is done to all the nodes holding a copy of it \cite{dltref} . However, in order to know which entry should be spread, and which is/are the correct ledger/s the system has to have a consensus among all the peers and reach a final solution.
-\subsubsection{Cosensus}  
+A DLT is a concurrent system, referring to a database that is consistently shared and synchronized across multiple machines/nodes in a network. It allows transactions to be monitored by multiple actors, thereby making a cyberattack more difficult. The participants at each of those machines can access the recordings shared and can keep an identical copy of it. Since it is a distributed ledger, any changes made on it are then reflected and the change is done to all the nodes holding a copy of it \cite{dltref} . However, in order to know which entry should be spread, and which is/are the correct ledger/s the system has to have a consensus among all the peers and reach a final solution.
+\subsubsection{Consensus}  
 \label{consensus}
 
 In general, a consensus algorithm is a process in computer science used to achieve agreement on a single data value among distributed processes or systems. Consensus algorithms are designed to achieve reliability in a network involving multiple unreliable nodes. Solving that issue – known as the consensus problem – is important in distributed computing and multi-agent systems.\cite{mills2016distributed}
@@ -240,11 +231,11 @@ DLT has the ability to maintain tamper-resistant records and the arrangements co
 
 Blockchain is a new technology that represents several ideas that are now able to work together. In its core, this high tech is decentralized database. Moreover, due to the asymmetric (public - private key ) cryptography, every peer has an unique identity. Whenever a peer adds data into the blockchain, everybody in the network can see his or her public address as an initiator of this transaction. Since everyone participates in this database, no duplication of data is made, hence no redundancy. 
 
-In the blockchain each block’s header includes a hash of the block’s transactions, as well as a copy of the hash of the prior block’s header, hence blockchain. In this way, all transactions are sequenced and cryptographically linked together. This mechanism keeps the ledger data very secure. Even if one node hosting the ledger has been tampered with, it would not be able to convince all the other nodes that it has the ‘correct’ data, because the ledger is distributed through a network of independent nodes. [Fabric ledger doc] 
+In the blockchain each block’s header includes a hash of the block’s transactions, as well as a copy of the hash of the prior block’s header, hence blockchain. In this way, all transactions are sequenced and cryptographically linked together. This mechanism keeps the ledger data very secure. Even if one node hosting the ledger has been tampered with, it would not be able to convince all the other nodes that it has the ‘correct’ data, because the ledger is distributed through a network of independent nodes. \textbf{[Fabric ledger doc] }
  
 	Blockchain is a linked list of blocks and a block is a group of ordered transactions. It is a distributed database on which once a data has been put, that data cannot be changed. Another unique feature is that there are specific rules, which can put data into the block. These rules, protocol, are made so that there could be no conflicts with data that is already in the database. The data is locked on to an owner. Finally, the nodes agree upon the state of the blockchain.\cite{whatIsBlockchain} It is important that in different blockchains the consensus can be different as well. Thus, two blockchains can have different unique features.
 	
-	An important notion is that a blockchain network can be \textit{permissioned} or \textit{permissionless}.
+	An important note is that a blockchain network can be \textit{permissioned} or \textit{permissionless}.
 
 \subsubsection{Permissioned blockchain}
 This type of network means that only the ones with permission can enter the network. The consensus can be more or less a variation of “Proof-of-authority”, where selected nodes endorse and agree between each other of the state of the blockchain. In this case, the trade off is that the system is not as decentralized, however the transactions are much faster and cost-effective.
@@ -276,18 +267,8 @@ Cryptography is the study and practice of protecting information by encoding mes
 \item Authentication - the sender and the receiver can confirm each other’s identity, thus they can establish the origin of the information. This is easily done with asymmetric cryptography, and harder with symmetric. Because symmetric cryptography is easier to break and interfere with the communication. 
 \end{itemize}
 
-When the same key is used for encryption and decryption, it’s called symmetric cryptography. When there are two different keys needed, one for encryption and the other for decryption - that is asymmetric cryptography. The Asymmetric encryption is more secure, but the tradeoff is that it is relatively slower as well. \cite{symasym}
+When the same key is used for encryption and decryption, it’s called symmetric cryptography. When there are two different keys needed, one for encryption and the other for decryption - that is asymmetric cryptography. The Asymmetric encryption is more secure, but relatively slower. \cite{symasym}
 
-\subsubsection{Cryptography in Fabric}
-
-	Fabric uses BCCSP, the Blockchain Cryptographic Service Provider. It is a creation of IBM and it offers implementation of cryptographic standards and algorithms. Written in golang, mainly to be used on Hyperledger Fabric. 
-
-	BCCSP is designed to be pluggable component into the fabric network. It can mount different public key cryptographic standards, depending on the client’s requirements. Supports both symmetric and asymmetric encryption. 
-Fabric needs both simple encryption/decryption and signed. One the key for the preferred algorithm is retrieved BCCSP exposes encryption and decryption methods to be called. The sign is obtained by the key as well, thereafter sign and verify methods are exposed to be used. \cite{bccsp}
-
-
-\subsubsection{Certificates and PKI}
-	Every organization in Fabric has a membership service provider (MSP) which is pluggable interface to support variety of credentials architectures. In other words, it takes what the BCCSP provides. The MSP is responsible for the identity and the authenticity of respective organizations’ peers and users. By default, the security implementation is Fabric-CA. Public key infrastructure that writes certificates defined by x.509 standard. MSP and CA will be explained in more detail in section \ref{felements}.
 
 \section{Successful projects made with Hyperledger Fabric}
 \label{successfulFabric}
@@ -419,7 +400,7 @@ Hyperledger is a group of open source projects focused around cross-industry dis
 	
 The feature which makes Fabric the perfect choice is that it can create different communication channels between different peers. Some of those channels could be for contract making between a supplier and a buyer. If a supplier has a favourite customer, he or she may give an exclusive deal. However, if everyone see this exclusive deal, then the business of the supplier would break down. That’s why this exclusive deal could exist in a confidential channel, one that only the two of them can see. 
 
-	This Hyperledger project is a preferred platform mainly because of its adaptability to different use cases. One interesting feature, and main reason for the self-sovereign use case, is that Fabric supports zero-knowledge proof (ZKP). What this means is that it allows a peer to assure itself in front of a verifier without having to show any private data. This gives authority to ZKP to offer anonymous authentication for clients in their transactions. \cite{li2018fppb}
+	This Hyperledger project is a preferred platform mainly because of its adaptability to different use cases. One interesting feature, and main reason for the self-sovereign use case, is that Fabric supports zero-knowledge proof (ZKP). What this means is that it allows a peer to identify itself without having to show any private data. This gives authority to ZKP to offer anonymous authentication for clients in their transactions. \cite{li2018fppb}
 	
 	The act of communication between different peers from different organizations (or groups) is through channels. These channels can be public or confidential. The communication inside works based on the chaincode, the smart contract. All of the logistics and functionality of a new blockchain application is based on it’s smart contracts. That is why they are extremely important and main object of interest in this undergraduate project.
 	
@@ -428,7 +409,7 @@ The feature which makes Fabric the perfect choice is that it can create differen
 \label{felements}
 Hyperledger Fabric is set by organizations that want to setup a consortium. Every organization is constructed by several type of peer nodes (or just peers). All that these peers require is appropriate configuration and cryptographic materials like certificate authority (CA) and endorsement policy.
 \subsubsection{Committing peer node}
-The normal peer node or just peer, is a vital part of the Fabric’s network. This node is holding instances of the ledger, thus they commit the new blocks when received. Usually in production, multiple peer nodes are created. This impose redundancy, but it also create a no-single point of failure for the system. 
+The normal peer node or just peer, is a vital part of the Fabric’s network. This node is holding instances of the ledger, thus they commit the new blocks when received. Usually in production, multiple peer nodes are created. This imposes redundancy, but it also creates a no-single point of failure for the system. 
 \subsubsection{Endorsing peer}
 A special kind of commiting peers. They are important in the transaction flow and the consensus. When transaction is processed for verification, the endorsing peers are taking it and simulate what can happen if the transaction is added to the ledger. For that purpose, endorsing peers also have an instance of the chaincode in order to run the transaction proposal. If the simulation went well, and there were no problems with the current state of the ledger, the endorsing peer signs the transaction as validated. The endorsement is done by the committer nodes against the endorsement policy, which is specified when the chaincode is deployed. That means that while some channels will require majority of endorsing peers to run the transaction proposal, other could be happy with just a single endorsing peer.
 
@@ -447,6 +428,18 @@ Uses the BCCSP to generate cryptographic material for Peers, Orderers and Users,
 \subsubsection{MSP}
 
 Responsible for all the cryptographic operations - issuing, verification, signing. Every organisation has local specification of MSP with local specification of CA.
+
+\subsubsection{Cryptography in Fabric }
+
+	Fabric uses BCCSP, the Blockchain Cryptographic Service Provider. It is a creation of IBM and it offers implementation of cryptographic standards and algorithms. Written in golang, mainly to be used on Hyperledger Fabric. 
+
+	BCCSP is designed to be pluggable component into the fabric network. It can mount different public key cryptographic standards, depending on the client’s requirements. Supports both symmetric and asymmetric encryption. 
+Fabric needs both simple encryption/decryption and signed. One the key for the preferred algorithm is retrieved BCCSP exposes encryption and decryption methods to be called. The sign is obtained by the key as well, thereafter sign and verify methods are exposed to be used. \cite{bccsp}
+
+
+\subsubsection{Certificates and PKI}
+	Every organization in Fabric has a membership service provider (MSP) which is pluggable interface to support variety of credentials architectures. In other words, it takes what the BCCSP provides. The MSP is responsible for the identity and the authenticity of respective organizations’ peers and users. By default, the security implementation is Fabric-CA. Public key infrastructure that writes certificates defined by x.509 standard. MSP and CA will be explained in more detail in section \ref{felements}.
+
 
 \section{Fabric's Ledger}
 \label{fabricLedger}
@@ -506,7 +499,7 @@ Figure \ref{fabricBlock} shows how the blockchain is structured and their graphi
 \end{itemize}
 
 \subsection{Channel}
-In Ethereum or Bitcoin, when someone joins the network, they are connecting to the blockchain. That being just one ledger starting from genesis block. Every participant has all blocks or just the headers, however, the important note is that everybody keep information from the same blockchain.
+In Ethereum or Bitcoin, when someone joins the network, they are connecting to the blockchain. That being just one ledger starting from genesis block. Every participant has all blocks or just the headers, however, the important note is that everybody keeps information from the same blockchain.
 
 	Hyperledger Fabric, contrary to the blockchains above, can have several different ledgers in one network. Since it is build with the premise of business, having several ledgers in a network is beneficial. It is possible, because the ledger is owned by a channel. A channel is like a communication channel, it is the mechanism by which different organizations are interacting between each other. Those interactions are append on the immutable ledger. 
 	
@@ -524,7 +517,7 @@ Endorsement is driven by policy (m out of n signatures) upon which participants 
 
 	This phase starts with client application sending transaction proposal. A transaction proposal is an action that will change the state of one or more assets in the ledger. The endorsing peers are taking this proposal and simulate it into the network. The transaction has been signed with the result of the simulation. Depending on the policy, which is defined upon installation of the chaincode, there will be a number of signatures needed before the transaction to proceed into the block. If the policy is not fulfilled then the transaction is going to be rejected.
 	    
-	Now, at this point, nothing in the ledger is changed. Many different transaction proposals can be taken and put against the current ledger to check out whether the transaction is going to be valid or rejected. While it is done with the premise of scalability, this parallel validation is introducing one problem. 
+	At this point, nothing in the ledger is changed. Many different transaction proposals can be taken and put against the current ledger to check out whether the transaction is going to be valid or rejected. While it is done with the premise of scalability, this parallel validation is introducing one problem. 
 	
 	If there are two transactions being validated that update the state of the same asset, then they will be voted both valid from the endorsing peers. However, once the transactions are being sent to the next phase, the ordering, one of them will fail. Upon batching the transactions they are put into order. Depending on that order, what happens to be second transaction is going to fail.
 
@@ -861,6 +854,18 @@ isolation and in relation to what others have achieved in the same field. This
 self-analysis is particularly important. You should give a critical evaluation
 of what went well, and what might be improved.
 
+\section{Further readings}
+The following books and documentation will improve your understanding of blockchain, Hyperledger Fabric and Hyperledger Composer.
+
+\begin{itemize}
+	\item "Enterprise blockchain development with hyperledger Fabric and Composer" by Ernesto Lee and Sudip Ghosh
+	\item "Distributed systems: principles and paradigms" by Andrew S. Tanenbaum, Maarten van Steen
+	\item "Blockchain for dummies" by Manav Gupta 
+	\item IBM Red Books series - "Developing a Blockchain Business Network with Hyperledger Composer using the IBM Blockchain Platform Starter Plan" 
+	\item "Mastering Ethereum: Building Smart Contracts and DApps Book" by Andreas Antonopoulos and Gavin Wood Ph.D.
+	\item Fabric's documentation - https://hyperledger-fabric.readthedocs.io/en/latest/
+	\item Composer's documentation - https://hyperledger.github.io/composer/latest/introduction/introduction.html
+\end{itemize}
 % Citations
 
 \bibliographystyle{abbrv}

@@ -147,7 +147,7 @@ transaction applyToUniversity{
 
 event applyToUniversityEvent{
  --> Person owner 
- o String diploma
+ --> Diploma diploma
  --> University uni
 }
 

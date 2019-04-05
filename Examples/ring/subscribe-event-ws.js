@@ -23,18 +23,6 @@ var client = new WebSocketClient();
 client.on('connectFailed', function(error) {
     console.log('Connect Error: ' + error.toString());
 
-//writing on the file, to be then executed.    
-var fs = require("fs");
-
-var data = "#!/bin/bash \n echo Hello World ";
-
-fs.writeFile("temp.sh", data, function(err, data) {
-  if (err) console.log(err);
-  console.log("Successfully Written to File.");
-  
-  shell.exec('./temp.sh');
-});
-
 });
 
 // #4 Setup the on connection listener

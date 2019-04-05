@@ -52,7 +52,7 @@ function createDrivingLicence(createDL){
     var drivingSchool = createDL.ds;
     if(owner.personID === diploma.owner.personID){
          if(owner.age >= 18){
-             if(diploma.diplomaStatus === 'Confirmed'){       
+             if(createDL.diploma.diplomaStatus === 'Confirmed'){       
                     return getAssetRegistry('org.ssidentity.DrivingLicence')
                     .then(function(dl){
                     var factory = getFactory();
@@ -91,27 +91,37 @@ function createDrivingLicence(createDL){
  * @param {org.ssidentity.enrollInUniversity} enrollUni 
  * @transaction
  */
+ /**
+ * Diploma creation, that is the certificate from the highschool
+ * @param {org.ssidentity.enrollInUniversity} enrollUni 
+ * @transaction
+ */
  function enrollInUniversity(enrollUni){
      var uniDiplomaID = enrollUni.uniDiplomaID;
      var mathGrade = enrollUni.mathGrade;
      var englishGrade = enrollUni.englishGrade;
      var csGrade = enrollUni.csGrade;
+     
      if(enrollUni.owner.personID === enrollUni.diploma.owner.personID){
         if((enrollUni.diploma.mathGrade >= mathGrade) &&
             (enrollUni.diploma.englishGrade >= englishGrade) &&
             (enrollUni.diploma.csGrade >= csGrade)){
-                return getAssetRegistry('org.ssidentity.UniversityDiploma')
-                .then(function(uniDip){
-                  var factory = getFactory();
-                  var uniDipObject = factory.newResource('org.ssidentity','UniversityDiploma', uniDiplomaID);
-                  uniDipObject.uniStatus = 'Enrolled';
-                  uniDipObject.owner = enrollUni.owner;
-                  uniDipObject.uni = enrollUni.uni; 
-                  return uniDip.add(uniDipObject);
-                })
-                .catch(function(error){
-                    throw new Error (error);
-                });
+                if(enrollUni.diploma.diplomaStatus === 'Confirmed'){
+                    return getAssetRegistry('org.ssidentity.UniversityDiploma')
+                    .then(function(uniDip){
+                    var factory = getFactory();
+                    var uniDipObject = factory.newResource('org.ssidentity','UniversityDiploma', uniDiplomaID);
+                    uniDipObject.uniStatus = 'Enrolled';
+                    uniDipObject.owner = enrollUni.owner;
+                    uniDipObject.uni = enrollUni.uni; 
+                    return uniDip.add(uniDipObject);
+                    })
+                    .catch(function(error){
+                        throw new Error (error);
+                    });
+                }else{
+                    throw new Error ('This diploma is not approved yet');
+                }
             }else{
                 throw new Error ('Your grades are not good enough. Try again next year')
             }
@@ -122,6 +132,7 @@ function createDrivingLicence(createDL){
  }
 
 
+
 /**
  * To graduate uni
  * @param {org.ssidentity.confirmDiploma} cd 
@@ -130,6 +141,7 @@ function createDrivingLicence(createDL){
 
  function confirmDip(cd){
  if(cd.diploma.owner.personID === cd.owner.personID){
+     if( cd.diploma.diplomaStatus !=='Confirmed'){
     return getAssetRegistry('org.ssidentity.Diploma')
              .then(function(confirm){
                 cd.diploma.diplomaStatus = 'Confirmed';
@@ -137,10 +149,14 @@ function createDrivingLicence(createDL){
                 }).catch(function(error){
                     throw new Error (error);
                 });
+     }else{
+         throw new Error ('This diploma has already been confirmed');
+     }
     }else{
         throw new Error ('This is not the person that graduated');
     }
  }
+
 
  /**
  * To graduate uni
@@ -175,17 +191,21 @@ function createDrivingLicence(createDL){
 
 function confirmDrivingLicence(cdl){
     if(cdl.dl.owner.personID === cdl.owner.personID){
-       return getAssetRegistry('org.ssidentity.DrivingLicence')
-                .then(function(confirm){
-                   cdl.dsStatus = 'Confirmed';
-                   return confirm.update(cdl.dl);
-                }).catch(function(error){
-                       throw new Error (error);
-                   });
+        if(cdl.dl.dsStatus !== 'Confirmed'){
+            return getAssetRegistry('org.ssidentity.DrivingLicence')
+                        .then(function(confirm){
+                        cdl.dl.dsStatus = 'Confirmed';
+                        return confirm.update(cdl.dl);
+                        }).catch(function(error){
+                            throw new Error (error);
+                        });
         }else{
-            throw new Error ('This is not the person that graduated');
-        }
-    }
+			throw new Error ('This driving licence is already confirmed');
+         }
+    }else{
+        throw new Error ('This is not the person that graduated');
+   }
+}
 
  /**
  * To apply for University 
@@ -199,7 +219,7 @@ function confirmDrivingLicence(cdl){
                 var creatingOrderEvent = getFactory();
                 var notificationB = creatingOrderEvent.newEvent('org.ssidentity', 'applyToUniversityEvent');
                 notificationB.owner = atu.owner;
-                notificationB.diploma = atu.diploma.diplomaID;
+                notificationB.diploma = atu.diploma;
                 notificationB.uni = atu.uni;
                 emit(notificationB);  
             }else{
