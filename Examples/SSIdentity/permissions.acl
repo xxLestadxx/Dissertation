@@ -58,7 +58,7 @@ rule DrivingSchoolCanOnlySeeItself {
 }
 
 rule PersonToSeeTheirDiploma {
-  description: "Trader can see/work with their own Commodities"
+  description: "Person can see their own Diploma(s)"
   participant(t): "org.ssidentity.Person"
   operation: READ
   resource(c): "org.ssidentity.Diploma"
@@ -67,7 +67,7 @@ rule PersonToSeeTheirDiploma {
 }
 
 rule PersonToSeeTheirUniversityDiploma {
-  description: "Trader can see/work with their own Commodities"
+  description: "Person can with their own university diploma(s)"
   participant(t): "org.ssidentity.Person"
   operation: READ
   resource(c): "org.ssidentity.UniversityDiploma"
@@ -76,7 +76,7 @@ rule PersonToSeeTheirUniversityDiploma {
 }
 
 rule PersonToSeeTheirDrivingLicence {
-  description: "Trader can see/work with their own Commodities"
+  description: "Person can see and create their own driving licence"
   participant(t): "org.ssidentity.Person"
   operation: READ, CREATE
   resource(c): "org.ssidentity.DrivingLicence"
@@ -94,7 +94,7 @@ rule HighSchoolToSeeTheirDiplomas {
 }
 
 rule UniversitiesToSeeTheirDiplomas {
-  description: "Trader can see/work with their own Commodities"
+  description: "Uni can see/create uni diploma"
   participant(t): "org.ssidentity.University"
   operation: READ, CREATE
   resource(c): "org.ssidentity.UniversityDiploma"
@@ -103,7 +103,7 @@ rule UniversitiesToSeeTheirDiplomas {
 }
 
 rule DrivingSchoolToSeeTheirLicences {
-  description: "Trader can see/work with their own Commodities"
+  description: "DS can see and update driving licence (the update is only through call)"
   participant(t): "org.ssidentity.DrivingSchool"
   operation: READ, UPDATE
   resource(c): "org.ssidentity.DrivingLicence"
@@ -112,7 +112,7 @@ rule DrivingSchoolToSeeTheirLicences {
 }
 
 rule PersonToCreateDiploma {
-  description: "This rule allows only the highschool to be able to execute createDiploma transaction"
+  description: "This rule allows only the Person to be able to see and execute createDiploma transaction"
   participant: "org.ssidentity.Person"
   operation: CREATE, READ
   resource: "org.ssidentity.createDiploma"
@@ -120,7 +120,7 @@ rule PersonToCreateDiploma {
 }
 
 rule HighSchoolToConfirmDiploma {
-  description: "This rule allows only the highschool to be able to execute createDiploma transaction"
+  description: "This rule allows only the highschool to be able to see and execute confirmDiploma transaction"
   participant: "org.ssidentity.HighSchool"
   operation: CREATE, READ
   resource: "org.ssidentity.confirmDiploma"
@@ -128,7 +128,7 @@ rule HighSchoolToConfirmDiploma {
 }
 
 rule PersonToCreateDrivingLicence {
-  description: "This rule allows only the highschool to be able to execute createDiploma transaction"
+  description: "This rule allows only the Person to be able to execute createDrivingLicence transaction"
   participant: "org.ssidentity.Person"
   operation: CREATE, READ
   resource: "org.ssidentity.createDrivingLicence"
@@ -136,15 +136,15 @@ rule PersonToCreateDrivingLicence {
 }
 
 rule UniversityToGraduate {
-  description: "Allows the University to execute graduateUni transaction"
+  description: "Allows the University to read and execute graduateUni transaction"
   participant: "org.ssidentity.University"
-  operation: CREATE, UPDATE, READ
+  operation: CREATE, READ
   resource: "org.ssidentity.graduateUni"
   action: ALLOW
 }
 
 rule DrivingSchoolToConfirmDrivingLicence {
-  description: "This rule allows only the highschool to be able to execute createDiploma transaction"
+  description: "This rule allows only the driving school to be able to see and execute createDrivingLicence transaction"
   participant: "org.ssidentity.DrivingSchool"
   operation: CREATE, READ
   resource: "org.ssidentity.confirmDrivingLicence"
@@ -273,7 +273,7 @@ rule CustomsSeeApplications {
 }
 
 rule PersonApply {
-  description: "Person creates transaction applyToUniversity"
+  description: "Person reads and creates transaction applyToUniversity"
   participant: "org.ssidentity.Person"
   operation: READ, CREATE
   resource: "org.ssidentity.applyToUniversity"
@@ -281,10 +281,11 @@ rule PersonApply {
 }
 
 rule UniversitySeeApplications {
-  description: "University can see transaction applyToUniversity"
-  participant: "org.ssidentity.University"
+  description: "Respective University can see transaction applyToUniversity"
+  participant(t): "org.ssidentity.University"
   operation: READ
-  resource: "org.ssidentity.applyToUniversity"
+  resource(c): "org.ssidentity.applyToUniversity"
+  condition: (c.uni.getIdentifier() == t.getIdentifier())
   action: ALLOW
 }
 
@@ -316,3 +317,29 @@ rule UniversityToCreateAndUpdateUniversityDiploma {
   action: ALLOW
 }
 
+rule PersonSeeDiplomaConfirmation {
+  description: "Person can see when their diploma is confirmed"
+  participant(t): "org.ssidentity.Person"
+  operation: READ 
+  resource(c): "org.ssidentity.confirmDiploma"
+  condition: (c.uni.getIdentifier() == t.getIdentifier())
+  action: ALLOW
+}
+
+rule PersonSeeDLConfirmation {
+  description: "Person can see when their driving licence is confirmed"
+  participant(t): "org.ssidentity.Person"
+  operation: READ
+  resource(c): "org.ssidentity.confirmDrivingLicence"
+  condition: (c.uni.getIdentifier() == t.getIdentifier())
+  action: ALLOW
+}
+
+rule DSSeeDLConfirmation {
+  description: "Driving School can see when a person is creating driving licence"
+  participant(t): "org.ssidentity.DrivingSchool"
+  operation: READ
+  resource(c): "org.ssidentity.createDrivingLicence"
+  condition: (c.uni.getIdentifier() == t.getIdentifier())
+  action: ALLOW
+}
