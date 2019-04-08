@@ -22,9 +22,9 @@ C.~Allen.
 
 \bibitem{altorosDemo}
 {Altoros staff}.
-\newblock {Technical demo of NSD application with Hyperledger }.
+\newblock {Decentralized P2P Securities Demo Using Hyperledger Fabric}.
 \newblock [Online]. Available:
-  \url{https://www.youtube.com/watch?v=NfNOT6WmRR4}.
+  \url{https://www.youtube.com/watch?v=-CoS751N8Qc}.
 
 \bibitem{whatIsBlockgeeks}
 {Blockgeeks staff}.
@@ -49,6 +49,12 @@ C.~Cachin.
 \newblock {Distributed Ledgers Definition}.
 \newblock [Online]. Available:
   \url{https://www.investopedia.com/terms/d/distributed-ledgers.asp}.
+
+\bibitem{joinforces}
+{Colby Murphy}.
+\newblock {Joining forces for the advancement of blockchain technologies}.
+\newblock [Online]. Available:
+  \url{https://www.ibm.com/blogs/blockchain/2018/10/joining-forces-for-the-advancement-of-blockchain-technologies/}.
 
 \bibitem{ledgers}
 {COTI Staff}.
@@ -78,6 +84,12 @@ V.~V. P. A. S. T.~V. Elli~Androulaki, Angelo De~Caro.
 \newblock [Online]. Available:
   \url{https://hyperledger-fabric.readthedocs.io/en/release-1.4/arch-deep-dive.html}.
 
+\bibitem{fabricca}
+{Hyperledger Fabric staff}.
+\newblock {Fabric CA User’s Guide}.
+\newblock [Online]. Available:
+  \url{https://hyperledger-fabric-ca.readthedocs.io/en/release-1.4/users-guide.html}.
+
 \bibitem{fabledger}
 {Hyperledger Fabric staff}.
 \newblock {Ledger}.
@@ -89,6 +101,12 @@ V.~V. P. A. S. T.~V. Elli~Androulaki, Angelo De~Caro.
 \newblock {Maersk and IBM Introduce TradeLens Blockchain Shipping Solution}.
 \newblock [Online]. Available:
   \url{https://newsroom.ibm.com/2018-08-09-Maersk-and-IBM-Introduce-TradeLens-Blockchain-Shipping-Solution}.
+
+\bibitem{gattaka}
+{Ivan Vankov}.
+\newblock {Genesis block configuration}.
+\newblock [Online]. Available:
+  \url{https://www.youtube.com/watch?v=nF9fkBuBNpE&t=4s}.
 
 \bibitem{li2018fppb}
 B.~Li, Y.~Wang, P.~Shi, H.~Chen, and L.~Cheng.
@@ -117,11 +135,24 @@ D.~C. Mills, K.~Wang, B.~Malone, A.~Ravi, J.~Marquardt, A.~I. Badev,
 \newblock [Online]. Available:
   \url{https://www.coindesk.com/information/what-is-blockchain-technology/}.
 
+\bibitem{evmInFabric}
+{Raheel Zubairy}.
+\newblock {Develop a blockchain application with an Ethereum smart contract
+  deployed on a Hyperledger Fabric network}.
+\newblock [Online]. Available:
+  \url{https://developer.ibm.com/announcements/loyalty-points-fabric-evm/}.
+
 \bibitem{verifyMeDemo}
 {SecureKey CIO Andre Boysen}.
 \newblock {How blockchain is changing digital identity}.
 \newblock [Online]. Available:
   \url{https://www.youtube.com/watch?v=EQ5PGPIjrtI}.
+
+\bibitem{letter}
+{Simon Stone}.
+\newblock {Composer TSC update}.
+\newblock [Online]. Available:
+  \url{https://lists.hyperledger.org/g/composer/message/125?fbclid=IwAR1kS_QyYLjrKovql_PU6UGHf_fjsmZKyHvk4GjUHFHx-laO9AF1T72TsoA}.
 
 \bibitem{symasym}
 {SSL2Buy staff}.
@@ -134,6 +165,12 @@ D.~C. Mills, K.~Wang, B.~Malone, A.~Ravi, J.~Marquardt, A.~I. Badev,
 \newblock {Developer survey results 2018}.
 \newblock [Online]. Available:
   \url{https://insights.stackoverflow.com/survey/2018/}.
+
+\bibitem{breaches}
+{Techworld Staff}.
+\newblock {The most infamous data breaches }.
+\newblock [Online]. Available: \url{
+  https://www.techworld.com/security/uks-most-infamous-data-breaches-3604586/}.
 
 \bibitem{verifyMe}
 {Verify.Me staff}.

@@ -58,7 +58,7 @@ client.on('connect', (connection)=>{
                     shell.exec('./permissionForFiles.sh');
                     });
                     // the 20 ms are needed in order for the newly written file to be finished with the writing
-                    sleep(20).then(() => { shell.exec('./diplomaConfirm.sh');
+                    sleep(100).then(() => { shell.exec('./diplomaConfirm.sh');
                      });
                 }else if (event.$class === 'org.ssidentity.waitingDrivingLicenceConfirmation') {
 
@@ -71,7 +71,7 @@ client.on('connect', (connection)=>{
                     shell.exec('./permissionForFiles.sh');
                     });
 
-                    sleep(20).then(() => { shell.exec('./confirmDrivingLicence.sh');                    
+                    sleep(100).then(() => { shell.exec('./confirmDrivingLicence.sh');                    
                      });
                 }else if(event.$class === 'org.ssidentity.applyToUniversityEvent'){
                     var data = "#!/bin/bash \n composer transaction submit --card Stirling@ssidentity -d \'{\"$class\":\"org.ssidentity.enrollInUniversity\",\"uniDiplomaID\":\"UniDiploma"+counter+"\",\"mathGrade\":3,\"englishGrade\":3,\"csGrade\":3,\"owner\":\""+event.owner+"\",\"diploma\":\""+event.diploma+"\",\"uni\":\""+event.uni+"\"}\' ";
@@ -83,7 +83,7 @@ client.on('connect', (connection)=>{
                     shell.exec('./permissionForFiles.sh');
                     });
                     // the 20 ms are needed in order for the newly written file to be finished with the writing
-                    sleep(30).then(() => { shell.exec('./enrollInUni.sh');
+                    sleep(100).then(() => { shell.exec('./enrollInUni.sh');
                      });
                 }
                 

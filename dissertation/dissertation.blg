@@ -3,6 +3,10 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: dissertation.aux
 The style file: abbrv.bst
 Database file #1: ref.bib
+Repeated entry---line 40 of file ref.bib
+ : @misc{altorosDemo
+ :                  ,
+I'm skipping whatever remains of this entry
 Too many commas in name 1 of "Elli Androulaki, Angelo De Caro, Volodymyr (V.) Paprotski, Alessandro Sorniotti, Tamas Visegrady" for entry bccsp
 while executing---line 1049 of file abbrv.bst
 Too many commas in name 1 of "Elli Androulaki, Angelo De Caro, Volodymyr (V.) Paprotski, Alessandro Sorniotti, Tamas Visegrady" for entry bccsp
@@ -14,45 +18,45 @@ while executing---line 1090 of file abbrv.bst
 Warning--empty journal in bccsp
 Warning--empty year in bccsp
 Warning--empty journal in mills2016distributed
-You've used 23 entries,
+You've used 29 entries,
             2118 wiz_defined-function locations,
-            606 strings with 8117 characters,
-and the built_in function-call counts, 6023 in all, are:
-= -- 546
-> -- 290
+            630 strings with 9200 characters,
+and the built_in function-call counts, 7235 in all, are:
+= -- 654
+> -- 332
 < -- 3
-+ -- 121
-- -- 96
-* -- 283
-:= -- 1004
-add.period$ -- 70
-call.type$ -- 23
-change.case$ -- 115
++ -- 139
+- -- 108
+* -- 313
+:= -- 1202
+add.period$ -- 88
+call.type$ -- 29
+change.case$ -- 139
 chr.to.int$ -- 0
-cite$ -- 26
-duplicate$ -- 213
-empty$ -- 537
-format.name$ -- 96
-if$ -- 1273
+cite$ -- 32
+duplicate$ -- 255
+empty$ -- 669
+format.name$ -- 108
+if$ -- 1537
 int.to.chr$ -- 0
-int.to.str$ -- 23
+int.to.str$ -- 29
 missing$ -- 7
-newline$ -- 117
-num.names$ -- 46
-pop$ -- 238
+newline$ -- 147
+num.names$ -- 58
+pop$ -- 304
 preamble$ -- 1
-purify$ -- 92
+purify$ -- 110
 quote$ -- 0
-skip$ -- 170
+skip$ -- 206
 stack$ -- 0
-substring$ -- 194
-swap$ -- 43
+substring$ -- 224
+swap$ -- 49
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 92
+type$ -- 116
 warning$ -- 3
-while$ -- 54
-width$ -- 25
-write$ -- 219
-(There were 4 error messages)
+while$ -- 66
+width$ -- 31
+write$ -- 273
+(There were 5 error messages)

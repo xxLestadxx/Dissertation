@@ -322,7 +322,7 @@ rule PersonSeeDiplomaConfirmation {
   participant(t): "org.ssidentity.Person"
   operation: READ 
   resource(c): "org.ssidentity.confirmDiploma"
-  condition: (c.uni.getIdentifier() == t.getIdentifier())
+  condition: (c.owner.getIdentifier() == t.getIdentifier())
   action: ALLOW
 }
 
@@ -331,7 +331,7 @@ rule PersonSeeDLConfirmation {
   participant(t): "org.ssidentity.Person"
   operation: READ
   resource(c): "org.ssidentity.confirmDrivingLicence"
-  condition: (c.uni.getIdentifier() == t.getIdentifier())
+  condition: (c.owner.getIdentifier() == t.getIdentifier())
   action: ALLOW
 }
 
@@ -340,6 +340,23 @@ rule DSSeeDLConfirmation {
   participant(t): "org.ssidentity.DrivingSchool"
   operation: READ
   resource(c): "org.ssidentity.createDrivingLicence"
-  condition: (c.uni.getIdentifier() == t.getIdentifier())
+  condition: (c.ds.getIdentifier() == t.getIdentifier())
+  action: ALLOW
+}
+
+rule PersonSeeEnrollmentInUniversity {
+  description: "Person can see when they've been enrolled in university"
+  participant(t): "org.ssidentity.Person"
+  operation: READ
+  resource(c): "org.ssidentity.enrollInUniversity"
+  condition: (c.owner.getIdentifier() == t.getIdentifier())
+  action: ALLOW
+}
+rule PersonSeeGraduateUnitransaction {
+  description: "Person can see their grade, if they graduated"
+  participant(t): "org.ssidentity.Person"
+  operation: READ
+  resource(c): "org.ssidentity.graduateUni"
+  condition: (c.owner.getIdentifier() == t.getIdentifier())
   action: ALLOW
 }
