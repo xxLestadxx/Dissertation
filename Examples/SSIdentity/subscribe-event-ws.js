@@ -57,7 +57,7 @@ client.on('connect', (connection)=>{
                     
                     shell.exec('./permissionForFiles.sh');
                     });
-                    // the 20 ms are needed in order for the newly written file to be finished with the writing
+                    // the 100 ms are needed in order for the newly written file to be finished with the writing
                     sleep(100).then(() => { shell.exec('./diplomaConfirm.sh');
                      });
                 }else if (event.$class === 'org.ssidentity.waitingDrivingLicenceConfirmation') {

@@ -47,7 +47,7 @@ participant University identified by universityID {
   o Integer rating
 }
 
-//contains the grades for Math, English and Computer Science, equivalent to A levels
+//contains the grades for Math, English and Computer Science, equivalent to A levels 2-6 = F-A
 asset Diploma identified by diplomaID {
   o String diplomaID
   o Double mathGrade  range = [2.0, 6.0]

@@ -78,6 +78,12 @@ C.~Cachin.
 V.~V. P. A. S. T.~V. Elli~Androulaki, Angelo De~Caro.
 \newblock Blockchain crypto service provider.
 
+\bibitem{githubs}
+{Hyperledger Composer staff}.
+\newblock {Enabling authentication for the REST server}.
+\newblock [Online]. Available:
+  \url{https://hyperledger.github.io/composer/latest/integrating/enabling-rest-authentication}.
+
 \bibitem{transactionFlow}
 {Hyperledger Fabric staff}.
 \newblock {Fabric Architecture}.
@@ -118,8 +124,7 @@ B.~Li, Y.~Wang, P.~Shi, H.~Chen, and L.~Cheng.
   1368--1373. IEEE, 2018.
 
 \bibitem{mencias2018optimized}
-A.~N. Mencias, D.~Dillenberger, P.~Novotny, F.~Toth, T.~Morris, V.~Paprotski,
-  J.~Dayka, T.~Visegrady, B.~O'Farrell, J.~Lang, et~al.
+A.~N. Mencias, D.~Dillenberger, P.~Novotny, F.~Toth, and Morris.
 \newblock An optimized blockchain solution for the ibm z14.
 \newblock {\em IBM Journal of Research and Development}, 62(2/3):4--1, 2018.
 
@@ -176,5 +181,11 @@ D.~C. Mills, K.~Wang, B.~Malone, A.~Ravi, J.~Marquardt, A.~I. Badev,
 {Verify.Me staff}.
 \newblock {Website of the company}.
 \newblock [Online]. Available: \url{https://verified.me/}.
+
+\bibitem{npm}
+{W3Schools staff}.
+\newblock {What is npm?}
+\newblock [Online]. Available:
+  \url{https://www.w3schools.com/whatis/whatis_npm.asp}.
 
 \end{thebibliography}

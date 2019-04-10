@@ -18,45 +18,45 @@ while executing---line 1090 of file abbrv.bst
 Warning--empty journal in bccsp
 Warning--empty year in bccsp
 Warning--empty journal in mills2016distributed
-You've used 29 entries,
+You've used 31 entries,
             2118 wiz_defined-function locations,
-            630 strings with 9200 characters,
-and the built_in function-call counts, 7235 in all, are:
-= -- 654
-> -- 332
+            638 strings with 9412 characters,
+and the built_in function-call counts, 7456 in all, are:
+= -- 678
+> -- 316
 < -- 3
-+ -- 139
-- -- 108
-* -- 313
-:= -- 1202
-add.period$ -- 88
-call.type$ -- 29
-change.case$ -- 139
++ -- 133
+- -- 100
+* -- 300
+:= -- 1232
+add.period$ -- 94
+call.type$ -- 31
+change.case$ -- 142
 chr.to.int$ -- 0
-cite$ -- 32
-duplicate$ -- 255
-empty$ -- 669
-format.name$ -- 108
-if$ -- 1537
+cite$ -- 34
+duplicate$ -- 269
+empty$ -- 713
+format.name$ -- 100
+if$ -- 1595
 int.to.chr$ -- 0
-int.to.str$ -- 29
+int.to.str$ -- 31
 missing$ -- 7
-newline$ -- 147
-num.names$ -- 58
-pop$ -- 304
+newline$ -- 157
+num.names$ -- 62
+pop$ -- 321
 preamble$ -- 1
-purify$ -- 110
+purify$ -- 111
 quote$ -- 0
-skip$ -- 206
+skip$ -- 217
 stack$ -- 0
-substring$ -- 224
-swap$ -- 49
+substring$ -- 234
+swap$ -- 51
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 116
+type$ -- 124
 warning$ -- 3
-while$ -- 66
-width$ -- 31
-write$ -- 273
+while$ -- 70
+width$ -- 33
+write$ -- 291
 (There were 5 error messages)

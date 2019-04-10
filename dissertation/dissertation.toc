@@ -4,7 +4,7 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}
 \contentsline {section}{\numberline {1.1}Background and Context}{1}
 \contentsline {section}{\numberline {1.2}Scope and Objectives}{2}
-\contentsline {section}{\numberline {1.3}Achievements}{2}
+\contentsline {section}{\numberline {1.3}Achievements}{3}
 \contentsline {section}{\numberline {1.4}Overview of Dissertation}{3}
 \contentsline {chapter}{\numberline {2}State-of-The-Art}{4}
 \contentsline {section}{\numberline {2.1}Technical Background}{4}
@@ -16,75 +16,71 @@
 \contentsline {subsubsection}{Permissionless blockchain}{5}
 \contentsline {subsubsection}{Cryptocurrency}{6}
 \contentsline {subsection}{\numberline {2.1.3}Cryptography}{6}
-\contentsline {section}{\numberline {2.2}Successful projects made with Hyperledger Fabric}{7}
-\contentsline {subsection}{\numberline {2.2.1}Altoros}{7}
-\contentsline {subsection}{\numberline {2.2.2}Verified.Me}{8}
-\contentsline {subsection}{\numberline {2.2.3}TradeLens}{8}
-\contentsline {subsection}{\numberline {2.2.4}BitNation}{9}
-\contentsline {subsection}{\numberline {2.2.5}E-Residency}{9}
-\contentsline {subsection}{\numberline {2.2.6}AIA Group}{9}
-\contentsline {chapter}{\numberline {3}Technology}{10}
-\contentsline {section}{\numberline {3.1}Docker}{10}
-\contentsline {section}{\numberline {3.2}NPM}{10}
-\contentsline {section}{\numberline {3.3}Visual Studio Code}{10}
-\contentsline {chapter}{\numberline {4}Hyperledger Fabric}{13}
-\contentsline {subsubsection}{Permissioned blockchain}{13}
-\contentsline {subsubsection}{Hyperledger}{13}
-\contentsline {section}{\numberline {4.1}Fabric overview}{14}
-\contentsline {section}{\numberline {4.2}Essential Fabric elements}{15}
-\contentsline {subsubsection}{Committing peer node}{15}
-\contentsline {subsubsection}{Endorsing peer}{15}
-\contentsline {subsubsection}{Orderer node}{15}
-\contentsline {subsubsection}{Anchor peer}{16}
-\contentsline {subsubsection}{CA}{16}
-\contentsline {subsubsection}{Membership Service Provider}{16}
-\contentsline {subsubsection}{Cryptography in Fabric }{16}
-\contentsline {subsubsection}{Certificates and PKI}{16}
-\contentsline {section}{\numberline {4.3}Fabric's Ledger}{16}
-\contentsline {subsection}{\numberline {4.3.1}World state}{17}
-\contentsline {subsection}{\numberline {4.3.2}Blockchain}{17}
-\contentsline {subsubsection}{Blocks and their structure}{18}
-\contentsline {subsection}{\numberline {4.3.3}Channel}{19}
-\contentsline {section}{\numberline {4.4}Fabric Consensus}{19}
-\contentsline {subsection}{\numberline {4.4.1}Endorsement}{19}
-\contentsline {subsection}{\numberline {4.4.2}Ordering}{20}
-\contentsline {subsection}{\numberline {4.4.3}Validation}{21}
-\contentsline {section}{\numberline {4.5}Fabric's configuration}{21}
-\contentsline {subsection}{\numberline {4.5.1}Crypto-config}{22}
-\contentsline {subsection}{\numberline {4.5.2}Configtx}{23}
-\contentsline {chapter}{\numberline {5}Hyperledger Composer}{27}
-\contentsline {section}{\numberline {5.1}Overview}{27}
-\contentsline {subsection}{\numberline {5.1.1}Composer CLI}{27}
-\contentsline {section}{\numberline {5.2}Business Network Cards}{28}
-\contentsline {section}{\numberline {5.3}Composer Historian}{28}
-\contentsline {section}{\numberline {5.4}Composer programming}{28}
-\contentsline {subsection}{\numberline {5.4.1}Model file}{28}
-\contentsline {subsection}{\numberline {5.4.2}Logic file}{29}
-\contentsline {subsection}{\numberline {5.4.3}Access control language file}{30}
-\contentsline {chapter}{\numberline {6}Self-sovereign identity prototype}{31}
-\contentsline {section}{\numberline {6.1}Introduction}{31}
-\contentsline {subsection}{\numberline {6.1.1}Identity}{31}
-\contentsline {subsection}{\numberline {6.1.2}New approach to identity identification}{32}
-\contentsline {section}{\numberline {6.2}Design}{32}
-\contentsline {subsection}{\numberline {6.2.1}Entities}{32}
-\contentsline {subsubsection}{Person}{33}
-\contentsline {subsubsection}{High school}{33}
-\contentsline {subsubsection}{Driving school}{33}
-\contentsline {subsubsection}{Customs}{34}
-\contentsline {subsubsection}{University}{34}
-\contentsline {subsubsection}{Diploma}{34}
-\contentsline {subsubsection}{Driving licence}{34}
-\contentsline {subsubsection}{University diploma}{35}
-\contentsline {subsection}{\numberline {6.2.2}Principles followed}{35}
-\contentsline {section}{\numberline {6.3}Implementation}{36}
-\contentsline {subsection}{\numberline {6.3.1}Adding new unique set of participants}{36}
-\contentsline {subsection}{\numberline {6.3.2}Adding a participant to the system}{37}
-\contentsline {subsection}{\numberline {6.3.3}Asset associated with an identity}{37}
-\contentsline {subsection}{\numberline {6.3.4}Sequence diagrams}{38}
-\contentsline {section}{\numberline {6.4}REST Interactions}{38}
-\contentsline {chapter}{\numberline {7}Conclusion}{40}
-\contentsline {section}{\numberline {7.1}Evaluation}{40}
-\contentsline {section}{\numberline {7.2}Future Work}{40}
-\contentsline {section}{\numberline {7.3}Further readings}{40}
-\contentsline {chapter}{\numberline {A}User Manual}{45}
-\contentsline {section}{\numberline {A.1}Step one}{45}
+\contentsline {subsection}{\numberline {2.1.4}Docker}{7}
+\contentsline {subsection}{\numberline {2.1.5}Node Package Manager}{7}
+\contentsline {subsection}{\numberline {2.1.6}Visual Studio Code}{7}
+\contentsline {section}{\numberline {2.2}Successful projects made with Hyperledger Fabric}{9}
+\contentsline {subsection}{\numberline {2.2.1}Altoros}{9}
+\contentsline {subsection}{\numberline {2.2.2}Verified.Me}{10}
+\contentsline {subsection}{\numberline {2.2.3}TradeLens}{11}
+\contentsline {chapter}{\numberline {3}Hyperledger Fabric}{12}
+\contentsline {subsubsection}{Permissioned blockchain}{12}
+\contentsline {subsubsection}{Hyperledger}{12}
+\contentsline {section}{\numberline {3.1}Fabric overview}{13}
+\contentsline {section}{\numberline {3.2}Essential Fabric elements}{14}
+\contentsline {subsubsection}{Committing peer node}{14}
+\contentsline {subsubsection}{Endorsing peer}{14}
+\contentsline {subsubsection}{Orderer node}{14}
+\contentsline {subsubsection}{Anchor peer}{15}
+\contentsline {subsubsection}{CA}{15}
+\contentsline {subsubsection}{Membership Service Provider}{15}
+\contentsline {subsubsection}{Cryptography in Fabric }{15}
+\contentsline {subsubsection}{Certificates and PKI}{15}
+\contentsline {section}{\numberline {3.3}Fabric's Ledger}{15}
+\contentsline {subsection}{\numberline {3.3.1}World state}{16}
+\contentsline {subsection}{\numberline {3.3.2}Blockchain}{16}
+\contentsline {subsubsection}{Blocks and their structure}{17}
+\contentsline {subsection}{\numberline {3.3.3}Channel}{18}
+\contentsline {section}{\numberline {3.4}Fabric Consensus}{18}
+\contentsline {subsection}{\numberline {3.4.1}Endorsement}{18}
+\contentsline {subsection}{\numberline {3.4.2}Ordering}{19}
+\contentsline {subsection}{\numberline {3.4.3}Validation}{20}
+\contentsline {section}{\numberline {3.5}Fabric's configuration}{20}
+\contentsline {subsection}{\numberline {3.5.1}Crypto-config}{21}
+\contentsline {subsection}{\numberline {3.5.2}Configtx}{22}
+\contentsline {chapter}{\numberline {4}Hyperledger Composer}{26}
+\contentsline {section}{\numberline {4.1}Overview}{26}
+\contentsline {subsection}{\numberline {4.1.1}Composer CLI}{26}
+\contentsline {section}{\numberline {4.2}Business Network Cards}{27}
+\contentsline {section}{\numberline {4.3}Composer Historian}{27}
+\contentsline {section}{\numberline {4.4}Composer programming}{27}
+\contentsline {subsection}{\numberline {4.4.1}Model file}{27}
+\contentsline {subsection}{\numberline {4.4.2}Logic file}{28}
+\contentsline {subsection}{\numberline {4.4.3}Access control language file}{29}
+\contentsline {chapter}{\numberline {5}Self-sovereign identity prototype}{30}
+\contentsline {section}{\numberline {5.1}Introduction}{30}
+\contentsline {subsection}{\numberline {5.1.1}Identity}{30}
+\contentsline {subsection}{\numberline {5.1.2}New approach to identity identification}{31}
+\contentsline {section}{\numberline {5.2}Software design}{31}
+\contentsline {subsection}{\numberline {5.2.1}Entities}{31}
+\contentsline {subsubsection}{Person}{32}
+\contentsline {subsubsection}{High school}{32}
+\contentsline {subsubsection}{Driving school}{32}
+\contentsline {subsubsection}{Customs}{33}
+\contentsline {subsubsection}{University}{33}
+\contentsline {subsubsection}{Diploma}{33}
+\contentsline {subsubsection}{Driving licence}{33}
+\contentsline {subsubsection}{University diploma}{34}
+\contentsline {subsection}{\numberline {5.2.2}Principles followed}{34}
+\contentsline {subsection}{\numberline {5.2.3}Sequence diagrams}{36}
+\contentsline {section}{\numberline {5.3}Implementation}{38}
+\contentsline {subsection}{\numberline {5.3.1}Adding new unique set of participants}{38}
+\contentsline {subsection}{\numberline {5.3.2}Adding a participant to the system}{40}
+\contentsline {subsection}{\numberline {5.3.3}Asset associated with an identity}{40}
+\contentsline {subsection}{\numberline {5.3.4}ACL}{41}
+\contentsline {section}{\numberline {5.4}REST Interactions}{41}
+\contentsline {subsection}{\numberline {5.4.1}Automation}{42}
+\contentsline {chapter}{\numberline {6}Conclusion}{43}
+\contentsline {section}{\numberline {6.1}Evaluation}{43}
+\contentsline {section}{\numberline {6.2}Future Work}{44}
+\contentsline {section}{\numberline {6.3}Further readings}{44}
